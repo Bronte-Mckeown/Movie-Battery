@@ -1,7 +1,10 @@
 #Written by Brontë McKeown and Theodoros Karapanagiotidis
-from matplotlib.pyplot import pause
 from psychopy import visual 
+import psychopy
+psychopy.prefs.hardware['audioLib'] = ['PTB', 'pyo','pygame']
+from matplotlib.pyplot import pause
 
+import pandas as pd
 from psychopy import gui, data, core,event
 from taskScripts import ESQ
 import os.path
@@ -24,15 +27,28 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     
 
     # user can update instructions for task here if required.
-    instructions = """You will be presented with several video clips. These clips are rated 15 and contain extreme violence, aggression and bad language. If you find these types of clips distressing, please do not participate in this study. 
-    \nIf at any point, you become distressed and would like to stop the task, please inform the experimenter. You will not be penalised for withdrawing from the study. 
-    \nAt the end of each task block, you will be asked to rate several statements about the ongoing thoughts you experienced during that block. 
-    \nPress enter or return to begin the experiment now."""
+    instructions =      """You are about to watch a 30-minute introductory statistics video lecture.
+                        \nYou will not be able to pause or rewind the lecture
+                        \nduring this experiment.
+
+                        \nDuring the lecture, please listen attentively and try
+                        \nand learn as much as you can, as there will be test
+                        \nquestions both during and after the lecture.
+
+                        \nPlease do not take any notes during the lecture.
+
+                        \nPlease do not focus on another window, exit, backspace or refresh the screen. 
+                        \nIf you do so, a prompt will re-orient you back to the full screen mode.
+                        """
 
     # user can update start screen text here if required. 
-    start_screen = "The experiment is about to start. Please adjust the volume to a comfortable level using the keys on the top of the keyboard. \n Press return to continue."
+    start_screen = """Once the lecture is complete, you will complete a short quiz based on all the 
+                    \ninformation presented. This quiz is 9 questions in total, and consists of
+                    \n7 multiple-choice questions, and 2 open-ended questions.
 
-
+                    \nThese open-ended questions will require you to perform some of the
+                    \ncalculations taught in the lecture. There will be a calculator provided on
+                    \nscreen, as well as a text box to show your work."""
     
     # create text stimuli to be updated for start screen instructions.
     stim = visual.TextStim(win, "", color = [-1,-1,-1], wrapWidth = 1300, units = "pix", height=40)
@@ -69,10 +85,10 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     # Create two different lists of videos for trial 1 and trial 2. 
     
     trialvideo = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos') + "/" + list_of_videos[filename-1]
-
+    trialsplits = pd.read_csv(os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//csv//probetimes_orders.csv'))
     trialname = "Movie Task-" + trialvideo.split(".")[0].split("/")[-1]
-    
-    
+    vern = 0
+    trialsplit = trialsplits.iloc[vern]
     
     # Pick the video to show based on the trial version, we are just going to pick the one at the top of the list
     
@@ -84,27 +100,51 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     writer.writerow(resdict)
     resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = None,None,None
     
-
+    text_inst = visual.TextStim(win=win, name='text_1',
+                        text='Loading...',
+                        font='Open Sans',
+                        pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+                        color='black', colorSpace='rgb', opacity=None, 
+                        languageStyle='LTR',
+                        depth=0.0)
+    text_inst.draw()
+    win.flip()
      
-    mov = visual.MovieStim3(win, trialvideo, size=(1920, 1080), flipVert=False, flipHoriz=False, loop=False)
+    mov = visual.MovieStim3(win, trialvideo, size=(2560, 1440), flipVert=False, flipHoriz=False, loop=False)
+    
     expClock = core.Clock()
     
-    timelimit = random.randrange(10,int(runtime-10))
+    timelimit = trialsplit[0]
+    #trialsplit = trialsplit
+    trialsplit = trialsplit[:-1]
     esqshown = False
+    en = 0
     timelimitpercent = int(100*(timelimit/runtime))
     while mov.status != visual.FINISHED:
         if expClock.getTime() < runtime:
-            if esqshown == False:
-                if expClock.getTime() > timelimit: 
-                    mov.pause()
-                    timepause = runtime - expClock.getTime() 
-                    ESQ.runexp(None,timer,win,[writer,writera],resdict,None,None,None,movietype=trialname)
-                    resdict['Assoc Task'] = None
-                    mov.play()
-                    expClock.reset()
-                    runtime = timepause
-                    esqshown = True
-                    #break
+            time = expClock.getTime()
+            if expClock.getTime() > timelimit:
+
+                en += 1
+                timelimit = trialsplit.values[en]
+                mov.pause()
+                timepause = runtime - expClock.getTime()
+                ESQ.runexp(None,timer,win,[writer,writera],resdict,None,None,None,movietype=trialname)
+                text_inst.draw()
+                win.flip()
+                #mov.draw()
+                writera.writerow({'Timepoint':'EXPERIMENT DATA:','Time':'Experience Sampling Questions'})
+                writera.writerow({'Timepoint':'Start Time','Time':timer.getTime()})
+                resdict['Assoc Task'] = None
+                resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = 'Movie prompt {} {}'.format(en,list_of_videos[filename-1]), timer.getTime(), timelimitpercent
+                writer.writerow(resdict)
+                resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = None,None,None
+                #win.flip()
+                mov.play()
+                expClock.reset()
+                #runtime = timepause
+                esqshown = True
+                #break
 
             mov.draw()
             win.flip()
@@ -114,7 +154,5 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     
     
     
-    resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = 'Movie End {}'.format(list_of_videos[filename-1]), timer.getTime(), timelimitpercent
-    writer.writerow(resdict)
-    resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = None,None,None
+    
     return trialname

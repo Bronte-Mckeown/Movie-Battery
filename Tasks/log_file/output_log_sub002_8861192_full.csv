@@ -1,0 +1,506 @@
+METADATA:
+Experiment Seed,Subject
+8861192,sub002
+Time after setup,3.991613000020152
+Timepoint,Time,Is_correct,Experience Sampling Question,Experience Sampling Response,Task,Task Iteration,Participant ID,Response_Key,Auxillary Data,Assoc Task
+EXPERIMENT DATA:,Movie Task
+Start Time,9.627231599995866
+Movie Task Start,9.6272711000056,,,,Movie Task,1,sub002,,,
+Movie Init,17.346188900002744,,,,Movie Task,1,sub002,,,
+Movie Start,17.346226699999534,,,,Movie Task,1,sub002,,videodata.mp4,
+ESQ,144.23350450000726,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,148.24966760000098,,Distracting_response,5.6,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,148.2514344000083,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,152.1025961000123,,Past_response,3.7000000000000015,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,152.1049324000196,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,154.9885431000148,,Future_response,5.800000000000011,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,154.99047129999963,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,159.15804390000994,,Problem_response,4.800000000000002,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,159.15993970001,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,162.94480240001576,,Other_response,4.100000000000007,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,162.9468734000111,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,166.31470220000483,,Focus_response,6.399999999999996,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,166.31659420000506,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,170.3498077999975,,Knowledge_response,7.800000000000001,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,170.35173960000975,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,173.05266650000704,,Self_response,7.10000000000001,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,173.0555646000139,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,177.3386808000214,,Emotion_response,7.10000000000001,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,177.34062360000098,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,180.64249910000945,,Intrusive_response,7.0999999999999925,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,180.6446862000157,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,185.04559960000915,,Absorption_response,6.700000000000012,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,185.04748780000955,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,188.39769149999483,,Deliberate_response,3.500000000000013,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,188.39962320000632,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,191.06711679999717,,Detailed_response,6.400000000000009,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,191.06885390001116,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,194.35363329999382,,Sounds_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,194.35557360001258,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,196.85449680002057,,Words_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,196.85590759999468,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,201.27484719999484,,Images_response,7.199999999999996,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+Movie End videodata.mp4,201.2868645999988,,,,Movie Task,1,sub002,,0,
+ESQ,323.10614960000385,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,326.0072388999979,,Images_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,326.0090335000132,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,331.0776088999992,,Future_response,5.6000000000000085,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,331.0780669999949,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,333.7145547000109,,Deliberate_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,333.71505860000616,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,337.6836638000095,,Words_response,4.000000000000017,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,337.68558970000595,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,341.85360890001175,,Problem_response,6.199999999999998,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,341.85533489999943,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,345.3395107999968,,Detailed_response,5.9999999999999964,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,345.34003399999347,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,347.94151220002095,,Past_response,4.8000000000000105,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,347.9434096000041,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,350.44459830000415,,Self_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,350.44647870000335,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,353.6624465000059,,Other_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,353.66427840001415,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,357.4323542000202,,Intrusive_response,7.099999999999993,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,357.4328569000063,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,361.7854584000015,,Knowledge_response,7.599999999999993,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,361.7873189999955,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,364.83807940001134,,Distracting_response,6.800000000000008,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,364.8399786000082,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,367.7400403000065,,Focus_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,367.7418918000185,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,370.35957200001576,,Sounds_response,3.4000000000000057,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,370.36128630000167,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,374.1785232000111,,Emotion_response,6.699999999999994,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,374.18039500000305,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,377.64742700001807,,Absorption_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+Movie End videodata.mp4,377.6581944000209,,,,Movie Task,1,sub002,,0,
+ESQ,500.3420679999981,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,502.14628190000076,,Sounds_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,502.14801950001856,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,506.56664410000667,,Other_response,2.2999999999999976,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,506.5682813000167,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,509.26945770002203,,Deliberate_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,509.27121930001886,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,513.1723430000129,,Self_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,513.174487900018,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,516.5073032000219,,Problem_response,3.100000000000016,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,516.5095349000185,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,519.2947487000201,,Future_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,519.2966050000105,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,522.9963849000051,,Absorption_response,7.500000000000009,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,522.9982629000151,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,528.0670851000177,,Images_response,7.399999999999992,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,528.0689563000051,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,530.4362703000079,,Distracting_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,530.436743600003,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,533.8723259000108,,Emotion_response,4.3000000000000025,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,533.8741746000014,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,538.5924163000018,,Focus_response,7.9000000000000075,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,538.5945567000017,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,539.9433655000175,,Knowledge_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,539.9451535000117,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,543.4469168000214,,Intrusive_response,5.999999999999998,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,543.4487941999978,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,546.0323437000043,,Words_response,5.600000000000012,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,546.0342002999969,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,548.8833134000015,,Detailed_response,8.200000000000006,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,548.8851413000084,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,552.4194634000014,,Past_response,3.5000000000000004,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+Movie End videodata.mp4,552.430249099998,,,,Movie Task,1,sub002,,0,
+ESQ,676.4815499999968,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,678.0355484000174,,Sounds_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,678.0360023000103,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,679.3867484999937,,Emotion_response,2.0,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,679.3884742000082,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,680.7376609000203,,Past_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,680.739364500012,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,682.0555352999945,,Absorption_response,2.0,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,682.0574142000114,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,683.3576412000111,,Distracting_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,683.3595128000015,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,684.742662900011,,Detailed_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,684.7445280000102,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,686.0093658000114,,Focus_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,686.0112265000062,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,687.3094007000036,,Problem_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,687.3112758000207,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,688.5773474000162,,Images_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,688.57783200001,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,690.227383200021,,Self_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,690.2291061000142,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,691.6129976999946,,Knowledge_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,691.6142229000106,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,693.0140779000067,,Deliberate_response,8.0,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,693.0147301999968,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,694.3834000000206,,Intrusive_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,694.3852175000065,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,695.7011664000165,,Other_response,2.0,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,695.701976500015,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,697.0003900000011,,Future_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,697.0022405000054,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,698.268258199998,,Words_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+Movie End videodata.mp4,698.2979419000039,,,,Movie Task,1,sub002,,0,
+ESQ,822.8478060000052,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,830.0059725000174,,Images_response,5.9000000000000075,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,830.0081509000156,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,832.1071152999939,,Detailed_response,4.400000000000007,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,832.1089865000104,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,835.0765170000086,,Absorption_response,3.9000000000000097,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,835.0787108000077,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,838.3969414000167,,Sounds_response,1.3000000000000003,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,838.3988547000044,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,841.5983923000167,,Future_response,9.299999999999995,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,841.600253600016,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,843.2991448999965,,Other_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,843.3039936000132,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,845.7352806999988,,Intrusive_response,5.10000000000001,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,845.7419433000032,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,848.1192642000096,,Problem_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,848.1211461000203,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,850.4393253000162,,Distracting_response,7.799999999999994,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,850.4411931000068,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,853.7582000000111,,Words_response,4.400000000000002,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,853.7599245000165,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,856.677270300017,,Emotion_response,6.799999999999997,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,856.6777734000061,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,858.9455962000065,,Self_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,858.9474456000025,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,862.4148389000038,,Knowledge_response,6.599999999999994,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,862.4168221,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,866.902098999999,,Deliberate_response,6.599999999999998,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,866.9039745000191,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,870.3210339999932,,Focus_response,5.200000000000003,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,870.3229908000212,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,875.0428301000211,,Past_response,7.9,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+Movie End videodata.mp4,875.0493003000156,,,,Movie Task,1,sub002,,0,
+ESQ,1005.1407423000201,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1010.748846100003,,Knowledge_response,5.700000000000005,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,1010.7495438000187,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1013.4511355000141,,Problem_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,1013.4528260999941,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1017.1040603000147,,Past_response,5.300000000000013,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1017.1063882000162,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1023.2410741000203,,Intrusive_response,4.700000000000003,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,1023.2428145000013,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1024.7767531000136,,Other_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,1024.7783562999975,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1028.1955492999987,,Images_response,3.9000000000000026,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,1028.1971586,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1031.799116500013,,Sounds_response,3.5000000000000164,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,1031.8008398000093,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1035.168099100003,,Focus_response,3.5000000000000004,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1035.1699848000135,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1037.3545390000218,,Detailed_response,4.400000000000002,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,1037.3564179000095,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1039.8552268000203,,Absorption_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1039.856933700008,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1041.808607200015,,Distracting_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1041.8102089000167,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1044.5080752000213,,Words_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1044.5100434000196,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1047.761889300018,,Emotion_response,7.8999999999999915,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1047.7643164000183,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1050.7640496999957,,Deliberate_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1050.765917600016,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1054.0497769000067,,Self_response,6.500000000000009,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1054.0502827000164,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1056.9863292000082,,Future_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+Movie End videodata.mp4,1056.9984691000136,,,,Movie Task,1,sub002,,0,
+ESQ,1187.5738417000102,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1189.856855399994,,Sounds_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,1189.8586026999983,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1191.2084442000196,,Detailed_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,1191.2102179000212,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1192.5589341000014,,Deliberate_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,1192.559520800016,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1193.8599968000199,,Future_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1193.8617176999978,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1195.1448493000062,,Words_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,1195.1464429000043,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1196.4458939000033,,Past_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,1196.4464326000016,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1197.7290164000005,,Other_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,1197.7309022000118,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1199.015254900005,,Emotion_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1199.0171278000053,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1200.2817699000007,,Absorption_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1200.2836188999936,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1201.5830399999977,,Images_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,1201.5842334000045,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1202.8670614000002,,Focus_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1202.8689320000121,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1204.2353226999985,,Knowledge_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,1204.236621899996,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1205.6358927999972,,Problem_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1205.6376038000162,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1206.953967700014,,Self_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,1206.9555643000058,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1208.2717555999989,,Intrusive_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,1208.2740474000166,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1209.6071778000041,,Distracting_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+Movie End videodata.mp4,1209.6144464999961,,,,Movie Task,1,sub002,,0,
+ESQ,1333.0382184000046,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1336.5739843000192,,Problem_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1336.5757532000134,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1338.1088848999934,,Sounds_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1338.1106165999954,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1339.475692500011,,Deliberate_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1339.4774254000222,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1340.7768183000153,,Other_response,2.0,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,1340.7787024000136,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1342.0442326000193,,Knowledge_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,1342.0447259000211,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1343.2954598000215,,Emotion_response,8.0,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,1343.2973346000072,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1344.596442900016,,Detailed_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,1344.5970014000195,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1345.8467539999983,,Self_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1345.8486380999966,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1347.0317154000222,,Focus_response,2.0,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,1347.0334297000081,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1348.298898100009,,Images_response,2.0,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,1348.3007750000106,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1349.584167299996,,Intrusive_response,8.0,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,1349.5860427000152,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1350.9187914000067,,Past_response,2.0,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,1350.9200221000065,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1352.268777899997,,Words_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,1352.2704954000073,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1353.688988800015,,Distracting_response,2.0,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,1353.690602000017,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1354.9388764000032,,Future_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,1354.9399622000055,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1356.2389663000067,,Absorption_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+Movie End videodata.mp4,1356.2499499999976,,,,Movie Task,1,sub002,,0,
+ESQ,1512.8944684000162,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1514.8148847999983,,Other_response,2.9999999999999982,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,1514.8162401000154,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1518.0835369999986,,Problem_response,6.899999999999997,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,1518.084532000008,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1519.7690203000093,,Sounds_response,6.500000000000005,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,1519.7707477000076,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1522.2366870999977,,Past_response,6.000000000000007,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,1522.2384268000023,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1524.3887703000219,,Future_response,8.900000000000004,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,1524.390515200008,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1527.674524800008,,Emotion_response,8.699999999999989,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,1527.6762638000073,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1529.9592242000217,,Intrusive_response,6.9000000000000075,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1529.9605026000063,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1532.2276728000143,,Deliberate_response,6.500000000000005,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,1532.2294119000144,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1534.4287669000041,,Words_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1534.430486199999,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1536.9152723000152,,Images_response,8.0,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,1536.916997000022,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1539.1836799000157,,Detailed_response,8.200000000000006,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,1539.185440500005,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1542.6865858999954,,Distracting_response,10.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,1542.6883252999978,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1544.804599199997,,Focus_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,1544.8063482000143,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1548.5577466000104,,Knowledge_response,8.29999999999999,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,1548.5600605000218,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1551.0087761000032,,Absorption_response,8.199999999999992,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,1551.010524000012,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1553.8957771999994,,Self_response,8.600000000000005,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+Movie End videodata.mp4,1553.90707690001,,,,Movie Task,1,sub002,,0,
+ESQ,1716.937306900014,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1719.593795599998,,Problem_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1719.5942795000155,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1720.7939278999984,,Other_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,1720.7947987999942,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1722.9786592000164,,Focus_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,1722.98037070001,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1724.3635439000209,,Self_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1724.3652597000182,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1725.681618100003,,Intrusive_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,1725.6844236000034,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1727.9486232000054,,Past_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1727.9503450000193,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1729.316901800019,,Images_response,8.0,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,1729.3186385000008,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1730.6351649000135,,Sounds_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,1730.636903000006,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1731.9375450999942,,Absorption_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,1731.9388575000048,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1733.2553181000112,,Distracting_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1733.2557663000189,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1734.5737644000037,,Emotion_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,1734.5756316000188,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1735.9384688000137,,Future_response,3.0,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,1735.9389668000222,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1737.306505000015,,Detailed_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1737.307229500002,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1738.6749169999966,,Knowledge_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,1738.6766533000045,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1740.0586317999987,,Deliberate_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,1740.0603614000138,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1741.426484399999,,Words_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+Movie End videodata.mp4,1741.4388354000112,,,,Movie Task,1,sub002,,0,
+ESQ,1980.7315961999993,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1983.0513251000084,,Knowledge_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1983.0519324000052,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1985.0030222000205,,Intrusive_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,1985.0039321999939,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1987.3213020999974,,Problem_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,1987.3233318999992,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1989.3230755999975,,Sounds_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,1989.3240568000183,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1992.2753844000108,,Images_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,1992.2760026000033,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1994.7612492000044,,Focus_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,1994.7617502000066,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1997.1123664000188,,Past_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,1997.1130656000169,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,1999.7662547000218,,Emotion_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,1999.7681067000085,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2003.5676902999985,,Words_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,2003.568163799995,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2006.7035058000183,,Future_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,2006.704014100018,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2010.573247399996,,Other_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,2010.5749676999985,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2019.7303167000064,,Self_response,8.0,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,2019.732141000015,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2021.181599100004,,Distracting_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,2021.1822821999958,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2022.532588800008,,Detailed_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,2022.5342896000075,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2024.0504160000128,,Absorption_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,2024.0521775000088,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2025.3684609000047,,Deliberate_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+Movie End videodata.mp4,2025.3797874000156,,,,Movie Task,1,sub002,,0,
+ESQ,2152.832255700021,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2155.4546806,,Problem_response,8.0,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,2155.4563812999986,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2156.888373599999,,Detailed_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,2156.8899686000077,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2158.5563365000125,,Emotion_response,8.0,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,2158.558065399993,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2160.3249147000024,,Focus_response,8.0,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,2160.3256234000146,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2162.226355999999,,Knowledge_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,2162.227021800005,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2163.9444650000078,,Sounds_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,2163.9461940000183,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2165.4644910000206,,Absorption_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,2165.4663430000073,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2167.230345000018,,Other_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,2167.2322179000184,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2169.082483300008,,Past_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,2169.0841881000088,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2170.968346300011,,Future_response,2.0,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,2170.9702224000066,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2173.203311999998,,Self_response,10.0,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,2173.2051623000007,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2175.4382558000216,,Distracting_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,2175.4389061999973,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2178.2721968000114,,Images_response,8.0,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,2178.2740022000216,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2180.6745321000053,,Deliberate_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,2180.676412700006,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2187.1294050000142,,Intrusive_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,2187.1311105000204,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2190.316608699999,,Words_response,4.0,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+Movie End videodata.mp4,2190.331973099994,,,,Movie Task,1,sub002,,0,
+ESQ,2313.644924000022,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2317.7160694000195,,Words_response,1.0,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,2317.717359500006,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2319.736341800017,,Intrusive_response,9.099999999999993,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,2319.737438400014,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2321.418283100007,,Distracting_response,5.9000000000000075,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,2321.420160400012,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2323.0371967999963,,Self_response,5.400000000000006,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,2323.038930800016,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2324.7400875000167,,Future_response,4.700000000000003,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,2324.7418297000113,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2326.5232297000184,,Past_response,8.899999999999993,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,2326.525084599998,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2328.058290200017,,Emotion_response,2.899999999999998,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,2328.0601752999937,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2331.693955900002,,Sounds_response,2.5000000000000155,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,2331.6956861999934,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2334.245924500021,,Knowledge_response,7.099999999999994,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,2334.2478013999935,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2336.6812400000053,,Absorption_response,8.0,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,2336.6831074999936,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2341.0012506000057,,Deliberate_response,4.2,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,2341.0036416999938,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2342.936201400007,,Focus_response,6.899999999999994,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,2342.938105600013,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2346.022073800006,,Other_response,5.000000000000003,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,2346.023634400015,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2348.9743945999944,,Problem_response,3.4999999999999987,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,2348.9762656000094,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2351.326037599996,,Detailed_response,6.400000000000013,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,2351.3279885000084,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2353.928225200012,,Images_response,4.400000000000002,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+Movie End videodata.mp4,2353.9394474000146,,,,Movie Task,1,sub002,,0,
+ESQ,2475.4244810999953,,Future_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2476.976261600008,,Future_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,2476.9779865000164,,Intrusive_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2478.294565500022,,Intrusive_response,7.0,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+ESQ,2478.296276100009,,Problem_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2484.0309646000096,,Problem_response,6.10000000000001,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,2484.033520500001,,Past_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2487.267077299999,,Past_response,2.0,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,2487.2689272999996,,Other_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2490.7881333999976,,Other_response,7.3999999999999915,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,2490.790033600002,,Emotion_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2493.0382138999994,,Emotion_response,9.0,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,2493.039979299996,,Words_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2495.8077976000204,,Words_response,4.200000000000017,Movie Task,1,sub002,,Marker Started at 10,Movie Task-videodata
+ESQ,2495.8095268000034,,Detailed_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2497.108075199998,,Detailed_response,6.0,Movie Task,1,sub002,,Marker Started at 6,Movie Task-videodata
+ESQ,2497.109405299998,,Distracting_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2498.458146400022,,Distracting_response,5.0,Movie Task,1,sub002,,Marker Started at 5,Movie Task-videodata
+ESQ,2498.460079900018,,Absorption_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2500.9959840000083,,Absorption_response,9.699999999999994,Movie Task,1,sub002,,Marker Started at 8,Movie Task-videodata
+ESQ,2500.998017900012,,Knowledge_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2503.8962488000107,,Knowledge_response,6.599999999999997,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,2503.897978599998,,Self_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2506.8989675000194,,Self_response,6.6000000000000085,Movie Task,1,sub002,,Marker Started at 9,Movie Task-videodata
+ESQ,2506.9006746000086,,Sounds_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2509.134287199995,,Sounds_response,5.300000000000001,Movie Task,1,sub002,,Marker Started at 3,Movie Task-videodata
+ESQ,2509.137310399994,,Focus_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2510.7680978999997,,Focus_response,3.7000000000000015,Movie Task,1,sub002,,Marker Started at 2,Movie Task-videodata
+ESQ,2510.769171199994,,Images_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2512.6204148000106,,Images_response,6.099999999999997,Movie Task,1,sub002,,Marker Started at 4,Movie Task-videodata
+ESQ,2512.622254200018,,Deliberate_start,,Movie Task,1,sub002,,,Movie Task-videodata
+ESQ,2514.4880496000114,,Deliberate_response,8.999999999999993,Movie Task,1,sub002,,Marker Started at 7,Movie Task-videodata
+Movie End videodata.mp4,2514.5159458999988,,,,Movie Task,1,sub002,,0,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,2590.0766829000204
+ESQ,2598.367697000009,,Distracting_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2600.1728968000098,,Distracting_response,10.0,Experience Sampling Questions,1,sub002,,Marker Started at 10,Movie Task-Movie Task-videodata
+ESQ,2600.174640800018,,Self_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2601.592038700008,,Self_response,10.0,Experience Sampling Questions,1,sub002,,Marker Started at 10,Movie Task-Movie Task-videodata
+ESQ,2601.5937780000095,,Other_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2605.0434165000042,,Other_response,5.500000000000009,Experience Sampling Questions,1,sub002,,Marker Started at 8,Movie Task-Movie Task-videodata
+ESQ,2605.045545800007,,Future_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2609.3470009000157,,Future_response,3.0,Experience Sampling Questions,1,sub002,,Marker Started at 3,Movie Task-Movie Task-videodata
+ESQ,2609.3486290000146,,Knowledge_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2611.515325400018,,Knowledge_response,4.800000000000007,Experience Sampling Questions,1,sub002,,Marker Started at 7,Movie Task-Movie Task-videodata
+ESQ,2611.517212800012,,Deliberate_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2616.6688436999975,,Deliberate_response,8.0,Experience Sampling Questions,1,sub002,,Marker Started at 8,Movie Task-Movie Task-videodata
+ESQ,2616.670568900008,,Emotion_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2618.9369641999947,,Emotion_response,6.0,Experience Sampling Questions,1,sub002,,Marker Started at 6,Movie Task-Movie Task-videodata
+ESQ,2618.9389032000036,,Intrusive_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2620.538002200017,,Intrusive_response,7.0,Experience Sampling Questions,1,sub002,,Marker Started at 7,Movie Task-Movie Task-videodata
+ESQ,2620.539629900013,,Focus_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2622.841860000015,,Focus_response,7.499999999999995,Experience Sampling Questions,1,sub002,,Marker Started at 6,Movie Task-Movie Task-videodata
+ESQ,2622.8436839000206,,Sounds_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2624.8930230000115,,Sounds_response,7.10000000000001,Experience Sampling Questions,1,sub002,,Marker Started at 10,Movie Task-Movie Task-videodata
+ESQ,2624.8949113000126,,Problem_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2626.627249800018,,Problem_response,8.0,Experience Sampling Questions,1,sub002,,Marker Started at 8,Movie Task-Movie Task-videodata
+ESQ,2626.6288963000115,,Detailed_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2627.9449866000214,,Detailed_response,6.0,Experience Sampling Questions,1,sub002,,Marker Started at 6,Movie Task-Movie Task-videodata
+ESQ,2627.946888400009,,Absorption_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2629.245993999997,,Absorption_response,8.0,Experience Sampling Questions,1,sub002,,Marker Started at 8,Movie Task-Movie Task-videodata
+ESQ,2629.2477217999985,,Images_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2630.5480715000012,,Images_response,5.0,Experience Sampling Questions,1,sub002,,Marker Started at 5,Movie Task-Movie Task-videodata
+ESQ,2630.5493985000066,,Past_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2632.9983837000036,,Past_response,3.000000000000009,Experience Sampling Questions,1,sub002,,Marker Started at 8,Movie Task-Movie Task-videodata
+ESQ,2633.000291300006,,Words_start,,Experience Sampling Questions,1,sub002,,,Movie Task-Movie Task-videodata
+ESQ,2634.7669809999934,,Words_response,8.699999999999994,Experience Sampling Questions,1,sub002,,Marker Started at 7,Movie Task-Movie Task-videodata

@@ -383,25 +383,37 @@ for file in os.listdir("Tasks/log_file"):
                 
                 if row[0] == 'Runtime Mod':
                     line_dict["Runtime_mod"] = row[1]
+                
                 if row[0] == 'ESQ':
                     enum +=1
                     if ect == 0:
                         task_name = row[10]
-                        if task_name == "Movie Task-Movie Task-bridge":
-                            task_name = "Movie Task-bridge"
-                        if task_name == "Movie Task-Movie Task-incept":
-                            task_name = "Movie Task-incept"
+                        # if task_name == "Movie Task-Movie Task-bridge":
+                        #     task_name = "Movie Task-bridge"
+                        #     row[10] = "Movie Task-bridge"
+                        # if task_name == "Movie Task-Movie Task-incept":
+                        #     task_name = "Movie Task-incept"
+                        #     row[10] = "Movie Task-incept"
                         line_dict["Task_name"] = task_name
                         ect = 1
                     if task_name == row[10]:
                         line_dict[row[3]]=row[4]
                     if enum == 16:
+                        if task_name == "Movie Task-Movie Task-bridge":
+                            line_dict["Task_name"] = "Movie Task-bridge"
+                            #row[10] = "Movie Task-bridge"
+                        if task_name == "Movie Task-Movie Task-incept":
+                            line_dict["Task_name"] = "Movie Task-incept"
+                        if task_name == "Movie Task-Movie Task-videodata":
+                            line_dict["Task_name"] = "Movie Task-videodata"
+                            #row[10] = "Movie Task-incept"
                         grads = graddict[line_dict["Task_name"]]
                         line_dict["Gradient 1"],line_dict["Gradient 2"],line_dict["Gradient 3"] = grads
                         with open("Analysis/output.csv", 'a', newline="") as outf:
                             wr = csv.writer(outf)
-                            #wr.writerow(list(line_dict.keys()))
                             wr.writerow(list(line_dict.values()))
+                            ect = 0
+                            enum = 0
                         task_name = row[10]
                         line_dict[row[3]]=row[4]
                         line_dict["Task_name"] = task_name
@@ -446,19 +458,19 @@ for file in os.listdir("Tasks/log_file"):
                         sortingfunction(expdict["Experiment"],row,resps)  
                     
                 print(row)
-        with open("Analysis/accuracy.csv","a",newline="") as f:
-            newdict = {"Subject":resps['Subject'],
-             "Experience Sampling Questions Response Time":np.mean(resps['Experience Sampling Questions']['Response Time']),
-             "GoNoGo Task Response Time":np.mean(resps['GoNoGo Task']['Response Time']), "NoGo Task Accuracy":(resps['GoNoGo Task']['Accuracy - NoGo'].count(True)/len(resps['GoNoGo Task']['Accuracy - NoGo'])), "Go Task Accuracy":(resps['GoNoGo Task']['Accuracy - Go'].count(True)/len(resps['GoNoGo Task']['Accuracy - Go'])),
-             "Finger Tapping Task Response Time":np.mean(resps['Finger Tapping Task']['Response Time']), "Finger Tapping Task Accuracy":(resps['Finger Tapping Task']['Accuracy'].count(True)/len(resps['Finger Tapping Task']['Accuracy'])),
-             "Two-Back Task-faces Response Time":np.mean(resps['Two-Back Task-faces']['Response Time']), "Two-Back Task-faces Accuracy":(resps['Two-Back Task-faces']['Accuracy'].count(True)/len(resps['Two-Back Task-faces']['Accuracy'])),
-             "Two-Back Task-scenes Response Time":np.mean(resps['Two-Back Task-scenes']['Response Time']), "Two-Back Task-scenes Accuracy":(resps['Two-Back Task-scenes']['Accuracy'].count(True)/len(resps['Two-Back Task-scenes']['Accuracy'])),
-             "One-Back Task Response Time":np.mean(resps['One-Back Task']['Response Time']), "One-Back Task Accuracy":(resps['One-Back Task']['Accuracy'].count(True)/len(resps['One-Back Task']['Accuracy'])),
-             "Zero-Back Task Response Time":np.mean(resps['Zero-Back Task']['Response Time']), "Zero-Back Task Accuracy":(resps['Zero-Back Task']['Accuracy'].count(True)/len(resps['Zero-Back Task']['Accuracy'])),
-             "Hard Math Task Response Time":np.mean(resps['Hard Math Task']['Response Time']), "Hard Math Task Accuracy":(resps['Hard Math Task']['Accuracy'].count(True)/len(resps['Hard Math Task']['Accuracy'])),
-             "Easy Math Task Response Time":np.mean(resps['Easy Math Task']['Response Time']), "Easy Math Task Accuracy":(resps['Easy Math Task']['Accuracy'].count(True)/len(resps['Easy Math Task']['Accuracy'])),
-             "Friend Task Response Time":np.mean(resps['Friend Task']['Response Time']), "Friend Task Sentiment":(resps['Friend Task']['Sentiment'].count(True)/(len(resps['Friend Task']['Sentiment']) + 1e-6)),
-             "You Task Response Time":np.mean(resps['You Task']['Response Time']), "You Task Sentiment":(resps['You Task']['Sentiment'].count(True)/(len(resps['You Task']['Sentiment']) + 1e-6))
-             }
-            writer = csv.writer(f)
-            writer.writerow(newdict.values())
+        # with open("Analysis/accuracy.csv","a",newline="") as f:
+        #     newdict = {"Subject":resps['Subject'],
+        #      "Experience Sampling Questions Response Time":np.mean(resps['Experience Sampling Questions']['Response Time']),
+        #      "GoNoGo Task Response Time":np.mean(resps['GoNoGo Task']['Response Time']), "NoGo Task Accuracy":(resps['GoNoGo Task']['Accuracy - NoGo'].count(True)/len(resps['GoNoGo Task']['Accuracy - NoGo'])), "Go Task Accuracy":(resps['GoNoGo Task']['Accuracy - Go'].count(True)/len(resps['GoNoGo Task']['Accuracy - Go'])),
+        #      "Finger Tapping Task Response Time":np.mean(resps['Finger Tapping Task']['Response Time']), "Finger Tapping Task Accuracy":(resps['Finger Tapping Task']['Accuracy'].count(True)/len(resps['Finger Tapping Task']['Accuracy'])),
+        #      "Two-Back Task-faces Response Time":np.mean(resps['Two-Back Task-faces']['Response Time']), "Two-Back Task-faces Accuracy":(resps['Two-Back Task-faces']['Accuracy'].count(True)/len(resps['Two-Back Task-faces']['Accuracy'])),
+        #      "Two-Back Task-scenes Response Time":np.mean(resps['Two-Back Task-scenes']['Response Time']), "Two-Back Task-scenes Accuracy":(resps['Two-Back Task-scenes']['Accuracy'].count(True)/len(resps['Two-Back Task-scenes']['Accuracy'])),
+        #      "One-Back Task Response Time":np.mean(resps['One-Back Task']['Response Time']), "One-Back Task Accuracy":(resps['One-Back Task']['Accuracy'].count(True)/len(resps['One-Back Task']['Accuracy'])),
+        #      "Zero-Back Task Response Time":np.mean(resps['Zero-Back Task']['Response Time']), "Zero-Back Task Accuracy":(resps['Zero-Back Task']['Accuracy'].count(True)/len(resps['Zero-Back Task']['Accuracy'])),
+        #      "Hard Math Task Response Time":np.mean(resps['Hard Math Task']['Response Time']), "Hard Math Task Accuracy":(resps['Hard Math Task']['Accuracy'].count(True)/len(resps['Hard Math Task']['Accuracy'])),
+        #      "Easy Math Task Response Time":np.mean(resps['Easy Math Task']['Response Time']), "Easy Math Task Accuracy":(resps['Easy Math Task']['Accuracy'].count(True)/len(resps['Easy Math Task']['Accuracy'])),
+        #      "Friend Task Response Time":np.mean(resps['Friend Task']['Response Time']), "Friend Task Sentiment":(resps['Friend Task']['Sentiment'].count(True)/len(resps['Friend Task']['Sentiment'])),
+        #      "You Task Response Time":np.mean(resps['You Task']['Response Time']), "You Task Sentiment":(resps['You Task']['Sentiment'].count(True)/len(resps['You Task']['Sentiment']))
+        #      }
+        #     writer = csv.writer(f)
+        #     writer.writerow(newdict.values())
