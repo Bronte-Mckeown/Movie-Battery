@@ -1,0 +1,209 @@
+METADATA:
+Experiment Seed,Subject
+2085487,Enter Name Here
+Time after setup,28.628870800021105
+Timepoint,Time,Is_correct,Experience Sampling Question,Experience Sampling Response,Task,Task Iteration,Participant ID,Response_Key,Auxillary Data,Assoc Task
+EXPERIMENT DATA:,Movie Task
+Start Time,45.661643400089815
+Movie Task Start,45.661762900068425,,,,Movie Task,1,Enter Name Here,,,
+Movie Init,46.16206450003665,,,,Movie Task,1,Enter Name Here,,,
+Movie Start,46.17167519999202,,,,Movie Task,1,Enter Name Here,,gump.mp4,
+ESQ,128.69949360005558,,Distracting_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,130.22562630008906,,Distracting_response,3.0,Movie Task,1,Enter Name Here,,Marker Started at 3,Movie Task-gump
+ESQ,130.23033769999165,,Other_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,131.32573500007857,,Other_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,131.32919650000986,,Past_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,132.39199949998874,,Past_response,7.0,Movie Task,1,Enter Name Here,,Marker Started at 7,Movie Task-gump
+ESQ,132.39607850008179,,Deliberate_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,133.60845890000928,,Deliberate_response,9.0,Movie Task,1,Enter Name Here,,Marker Started at 9,Movie Task-gump
+ESQ,133.6130286999978,,Sounds_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,134.75817600009032,,Sounds_response,10.0,Movie Task,1,Enter Name Here,,Marker Started at 10,Movie Task-gump
+ESQ,134.76172920002136,,Problem_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,136.72564700001385,,Problem_response,9.0,Movie Task,1,Enter Name Here,,Marker Started at 9,Movie Task-gump
+ESQ,136.73041349998675,,Detailed_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,137.75809210003354,,Detailed_response,9.0,Movie Task,1,Enter Name Here,,Marker Started at 9,Movie Task-gump
+ESQ,137.76160580001306,,Future_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,138.9921288000187,,Future_response,3.0,Movie Task,1,Enter Name Here,,Marker Started at 3,Movie Task-gump
+ESQ,138.99581059999764,,Knowledge_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,140.1083311000839,,Knowledge_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,140.1106247000862,,Self_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,141.38996579998638,,Self_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,141.3929952000035,,Intrusive_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,142.64190610009246,,Intrusive_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,142.64375470008235,,Words_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,143.92539170000236,,Words_response,4.0,Movie Task,1,Enter Name Here,,Marker Started at 4,Movie Task-gump
+ESQ,143.9279854000779,,Emotion_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,145.14268490008544,,Emotion_response,5.0,Movie Task,1,Enter Name Here,,Marker Started at 5,Movie Task-gump
+ESQ,145.14620499999728,,Focus_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,146.29156220005825,,Focus_response,4.0,Movie Task,1,Enter Name Here,,Marker Started at 4,Movie Task-gump
+ESQ,146.29502120008692,,Images_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,147.42610100004822,,Images_response,3.0,Movie Task,1,Enter Name Here,,Marker Started at 3,Movie Task-gump
+ESQ,147.42918370000552,,Absorption_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,148.57495370006654,,Absorption_response,5.0,Movie Task,1,Enter Name Here,,Marker Started at 5,Movie Task-gump
+Movie prompt 1 gump.mp4,148.6075864000013,,,,Movie Task,1,Enter Name Here,,0,
+ESQ,311.63237260002643,,Sounds_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,313.2379370999988,,Sounds_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,313.2405940000899,,Self_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,314.45569660002366,,Self_response,5.0,Movie Task,1,Enter Name Here,,Marker Started at 5,Movie Task-gump
+ESQ,314.4593254000647,,Other_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,315.5387240999844,,Other_response,8.0,Movie Task,1,Enter Name Here,,Marker Started at 8,Movie Task-gump
+ESQ,315.54190110007767,,Images_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,316.7389648000244,,Images_response,4.0,Movie Task,1,Enter Name Here,,Marker Started at 4,Movie Task-gump
+ESQ,316.7411123000784,,Emotion_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,317.9057960000355,,Emotion_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,317.9091757000424,,Focus_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,319.0890314000426,,Focus_response,4.0,Movie Task,1,Enter Name Here,,Marker Started at 4,Movie Task-gump
+ESQ,319.09142160008196,,Future_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,320.15596110001206,,Future_response,4.0,Movie Task,1,Enter Name Here,,Marker Started at 4,Movie Task-gump
+ESQ,320.1608806999866,,Knowledge_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,321.30611820006743,,Knowledge_response,8.0,Movie Task,1,Enter Name Here,,Marker Started at 8,Movie Task-gump
+ESQ,321.30904640001245,,Problem_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,322.3725437000394,,Problem_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,322.374731500051,,Absorption_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,323.4049488999881,,Absorption_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,323.40815979999024,,Intrusive_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,324.5559454000322,,Intrusive_response,3.0,Movie Task,1,Enter Name Here,,Marker Started at 3,Movie Task-gump
+ESQ,324.55911890009884,,Words_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,325.6886997000547,,Words_response,5.0,Movie Task,1,Enter Name Here,,Marker Started at 5,Movie Task-gump
+ESQ,325.6913964000996,,Past_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,326.7216865000082,,Past_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,326.72407080000266,,Distracting_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,327.8720811000094,,Distracting_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,327.8749858000083,,Detailed_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,329.05564750009216,,Detailed_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,329.05913750000764,,Deliberate_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,330.27275870006997,,Deliberate_response,3.0,Movie Task,1,Enter Name Here,,Marker Started at 3,Movie Task-gump
+Movie prompt 2 gump.mp4,330.30454230005853,,,,Movie Task,1,Enter Name Here,,0,
+ESQ,490.24008710007183,,Past_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,491.70302190002985,,Past_response,5.0,Movie Task,1,Enter Name Here,,Marker Started at 5,Movie Task-gump
+ESQ,491.7060300000012,,Emotion_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,492.9370043000672,,Emotion_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,492.94045610004105,,Focus_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,494.10278950002976,,Focus_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,494.1054143999936,,Other_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,495.2357500999933,,Other_response,7.0,Movie Task,1,Enter Name Here,,Marker Started at 7,Movie Task-gump
+ESQ,495.23931760003325,,Sounds_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,496.43581870000344,,Sounds_response,9.0,Movie Task,1,Enter Name Here,,Marker Started at 9,Movie Task-gump
+ESQ,496.4382511000149,,Words_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,497.6710261000553,,Words_response,4.0,Movie Task,1,Enter Name Here,,Marker Started at 4,Movie Task-gump
+ESQ,497.67287300003227,,Future_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,498.8190733999945,,Future_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,498.82243530009873,,Distracting_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,500.0031386000337,,Distracting_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,500.0059256000677,,Detailed_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,501.1869161000941,,Detailed_response,4.0,Movie Task,1,Enter Name Here,,Marker Started at 4,Movie Task-gump
+ESQ,501.1904167000903,,Intrusive_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,502.2187524000183,,Intrusive_response,8.0,Movie Task,1,Enter Name Here,,Marker Started at 8,Movie Task-gump
+ESQ,502.2212610000279,,Self_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,503.4200574000133,,Self_response,8.0,Movie Task,1,Enter Name Here,,Marker Started at 8,Movie Task-gump
+ESQ,503.423601699993,,Deliberate_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,504.602169000078,,Deliberate_response,5.0,Movie Task,1,Enter Name Here,,Marker Started at 5,Movie Task-gump
+ESQ,504.60359370009974,,Images_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,505.8198815000942,,Images_response,9.0,Movie Task,1,Enter Name Here,,Marker Started at 9,Movie Task-gump
+ESQ,505.82339979999233,,Absorption_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,506.86875730007887,,Absorption_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,506.87196610006504,,Problem_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,507.9858555000974,,Problem_response,8.0,Movie Task,1,Enter Name Here,,Marker Started at 8,Movie Task-gump
+ESQ,507.98771320004016,,Knowledge_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,509.21887280000374,,Knowledge_response,8.0,Movie Task,1,Enter Name Here,,Marker Started at 8,Movie Task-gump
+Movie prompt 3 gump.mp4,509.2520364000229,,,,Movie Task,1,Enter Name Here,,0,
+ESQ,672.3105289000086,,Problem_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,673.917420300073,,Problem_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,673.9205402000807,,Focus_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,675.1668743999908,,Focus_response,10.0,Movie Task,1,Enter Name Here,,Marker Started at 10,Movie Task-gump
+ESQ,675.1691430000355,,Sounds_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,676.3840458000777,,Sounds_response,7.0,Movie Task,1,Enter Name Here,,Marker Started at 7,Movie Task-gump
+ESQ,676.3879095000448,,Past_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,677.6161658000201,,Past_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,677.6201799000846,,Words_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,678.7670249000657,,Words_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,678.768983200076,,Absorption_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,680.0170777000021,,Absorption_response,10.0,Movie Task,1,Enter Name Here,,Marker Started at 10,Movie Task-gump
+ESQ,680.0195726000238,,Detailed_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,681.266977100051,,Detailed_response,4.0,Movie Task,1,Enter Name Here,,Marker Started at 4,Movie Task-gump
+ESQ,681.2700416999869,,Knowledge_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,682.5334485000931,,Knowledge_response,8.0,Movie Task,1,Enter Name Here,,Marker Started at 8,Movie Task-gump
+ESQ,682.5360760000767,,Deliberate_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,683.8658253999893,,Deliberate_response,9.0,Movie Task,1,Enter Name Here,,Marker Started at 9,Movie Task-gump
+ESQ,683.8688831999898,,Other_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,684.9481365000829,,Other_response,3.0,Movie Task,1,Enter Name Here,,Marker Started at 3,Movie Task-gump
+ESQ,684.9514433000004,,Intrusive_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,686.1164377999958,,Intrusive_response,8.0,Movie Task,1,Enter Name Here,,Marker Started at 8,Movie Task-gump
+ESQ,686.1185262000654,,Future_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,687.1489166000392,,Future_response,10.0,Movie Task,1,Enter Name Here,,Marker Started at 10,Movie Task-gump
+ESQ,687.1512544000288,,Emotion_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,688.3838373000035,,Emotion_response,9.0,Movie Task,1,Enter Name Here,,Marker Started at 9,Movie Task-gump
+ESQ,688.3871910000453,,Self_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,689.6496799000306,,Self_response,3.0,Movie Task,1,Enter Name Here,,Marker Started at 3,Movie Task-gump
+ESQ,689.6528835000936,,Images_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,690.6825540000573,,Images_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,690.6852053999901,,Distracting_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,691.9321643000003,,Distracting_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+Movie prompt 4 gump.mp4,691.9651872999966,,,,Movie Task,1,Enter Name Here,,0,
+ESQ,833.6185468999902,,Future_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,835.0640558000887,,Future_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,835.0677415000973,,Detailed_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,836.2140522000846,,Detailed_response,8.0,Movie Task,1,Enter Name Here,,Marker Started at 8,Movie Task-gump
+ESQ,836.2184077000711,,Self_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,837.3798363000387,,Self_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,837.3840767000802,,Past_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,838.5470179000404,,Past_response,4.0,Movie Task,1,Enter Name Here,,Marker Started at 4,Movie Task-gump
+ESQ,838.5486934999935,,Deliberate_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,839.6476083000889,,Deliberate_response,7.0,Movie Task,1,Enter Name Here,,Marker Started at 7,Movie Task-gump
+ESQ,839.6495200000936,,Words_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,841.2302161999978,,Words_response,7.0,Movie Task,1,Enter Name Here,,Marker Started at 7,Movie Task-gump
+ESQ,841.2446605000878,,Sounds_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,842.3305298000341,,Sounds_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,842.3338817000622,,Distracting_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,843.3802024000324,,Distracting_response,7.0,Movie Task,1,Enter Name Here,,Marker Started at 7,Movie Task-gump
+ESQ,843.3833359000273,,Emotion_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,844.5472234000918,,Emotion_response,7.0,Movie Task,1,Enter Name Here,,Marker Started at 7,Movie Task-gump
+ESQ,844.5510108000599,,Absorption_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,845.6135861000512,,Absorption_response,9.0,Movie Task,1,Enter Name Here,,Marker Started at 9,Movie Task-gump
+ESQ,845.6174261000706,,Problem_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,846.8301599000115,,Problem_response,5.0,Movie Task,1,Enter Name Here,,Marker Started at 5,Movie Task-gump
+ESQ,846.8339683000231,,Intrusive_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,847.8804879999952,,Intrusive_response,2.0,Movie Task,1,Enter Name Here,,Marker Started at 2,Movie Task-gump
+ESQ,847.8831695000408,,Focus_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,848.9799409999978,,Focus_response,9.0,Movie Task,1,Enter Name Here,,Marker Started at 9,Movie Task-gump
+ESQ,848.9828574000858,,Images_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,850.0802475000964,,Images_response,6.0,Movie Task,1,Enter Name Here,,Marker Started at 6,Movie Task-gump
+ESQ,850.081811400014,,Other_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,851.2141420000698,,Other_response,5.0,Movie Task,1,Enter Name Here,,Marker Started at 5,Movie Task-gump
+ESQ,851.2186292000115,,Knowledge_start,,Movie Task,1,Enter Name Here,,,Movie Task-gump
+ESQ,852.3473678000737,,Knowledge_response,10.0,Movie Task,1,Enter Name Here,,Marker Started at 10,Movie Task-gump
+Movie prompt 5 gump.mp4,852.3792118000565,,,,Movie Task,1,Enter Name Here,,0,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,940.98277100001
+ESQ,942.9144081000704,,Sounds_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,944.4286064000335,,Sounds_response,4.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 4,Movie Task-Movie Task-gump
+ESQ,944.4324099000078,,Detailed_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,945.5790367000736,,Detailed_response,4.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 4,Movie Task-Movie Task-gump
+ESQ,945.5809019000735,,Images_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,946.912940600072,,Images_response,4.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 4,Movie Task-Movie Task-gump
+ESQ,946.9153688000515,,Absorption_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,948.2121057000477,,Absorption_response,10.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 10,Movie Task-Movie Task-gump
+ESQ,948.2160629000282,,Problem_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,949.7610067999922,,Problem_response,9.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 9,Movie Task-Movie Task-gump
+ESQ,949.7634430000326,,Self_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,951.4283857000992,,Self_response,8.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 8,Movie Task-Movie Task-gump
+ESQ,951.4319368000142,,Words_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,952.9618096000049,,Words_response,2.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 2,Movie Task-Movie Task-gump
+ESQ,952.9639983000234,,Other_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,954.2953560000751,,Other_response,8.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 8,Movie Task-Movie Task-gump
+ESQ,954.2988126000855,,Past_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,955.9112937999889,,Past_response,7.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 7,Movie Task-Movie Task-gump
+ESQ,955.912075900007,,Focus_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,957.061900400091,,Focus_response,7.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 7,Movie Task-Movie Task-gump
+ESQ,957.0636470000027,,Knowledge_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,958.7120876000263,,Knowledge_response,6.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 6,Movie Task-Movie Task-gump
+ESQ,958.7135391000193,,Deliberate_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,961.9117823000997,,Deliberate_response,9.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 9,Movie Task-Movie Task-gump
+ESQ,961.9144252000842,,Emotion_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,964.9456046000123,,Emotion_response,6.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 6,Movie Task-Movie Task-gump
+ESQ,964.9490082000848,,Distracting_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,966.0781285000267,,Distracting_response,8.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 8,Movie Task-Movie Task-gump
+ESQ,966.0808285000967,,Intrusive_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,967.2126713000471,,Intrusive_response,10.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 10,Movie Task-Movie Task-gump
+ESQ,967.2159044999862,,Future_start,,Experience Sampling Questions,1,Enter Name Here,,,Movie Task-Movie Task-gump
+ESQ,968.4113806000678,,Future_response,7.0,Experience Sampling Questions,1,Enter Name Here,,Marker Started at 7,Movie Task-Movie Task-gump

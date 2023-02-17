@@ -13,7 +13,7 @@ import os.path
 import random
 
 ###################################################################################################
-def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
+def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
     writera = writer[1]
     writer = writer[0]
     random.seed(seed)
@@ -87,7 +87,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     trialvideo = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos') + "/" + list_of_videos[filename-1]
     trialsplits = pd.read_csv(os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//csv//probetimes_orders.csv'))
     trialname = "Movie Task-" + trialvideo.split(".")[0].split("/")[-1]
-    vern = 0
+    vern = probever
     trialsplit = trialsplits.iloc[vern]
     
     # Pick the video to show based on the trial version, we are just going to pick the one at the top of the list
@@ -116,8 +116,9 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
     
     timelimit = trialsplit[0]
     #trialsplit = trialsplit
-    trialsplit = trialsplit[:-1]
+    trialsplit = trialsplit.diff()[1:]
     esqshown = False
+    resettime = True
     en = 0
     timelimitpercent = int(100*(timelimit/runtime))
     while mov.status != visual.FINISHED:
@@ -125,8 +126,11 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
             time = expClock.getTime()
             if expClock.getTime() > timelimit:
 
+                try:
+                    timelimit = trialsplit.values[en]
+                except:
+                    pass
                 en += 1
-                timelimit = trialsplit.values[en]
                 mov.pause()
                 timepause = runtime - expClock.getTime()
                 ESQ.runexp(None,timer,win,[writer,writera],resdict,None,None,None,movietype=trialname)
@@ -141,11 +145,14 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed):
                 resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = None,None,None
                 #win.flip()
                 mov.play()
-                expClock.reset()
+                resettime = True
+                
                 #runtime = timepause
                 esqshown = True
                 #break
-
+            if resettime:
+                expClock.reset()
+                resettime = False
             mov.draw()
             win.flip()
         else:

@@ -107,12 +107,12 @@ class taskbattery(metadatacollection):
 # Allows you to create different task instances, which will be useful for creating blocks (my current project)
 # Saves the log file after each task. It takes some extra time, but it prevents a crash from corrupting the file
 class task(taskbattery,metadatacollection):
-        def __init__(self, task_module, main_log_location, backup_log_location,  name, trialclass, runtime, dfile, ver, esq=False):#, trialfile, ver):
+        def __init__(self, task_module, main_log_location, backup_log_location,  name, trialclass, runtime, dfile, ver, probever=None,esq=False):#, trialfile, ver):
                 self.main_log_location = main_log_location
                 self.backup_log_location = backup_log_location # Not yet implemented
                 self.task_module = task_module # The imported task function
                 self.name = name # A name for each task to be written in the logfile
-                
+                self.probever = probever
                 self.trialclass = trialclass # Has something to do with writing task name into the logfile I think? Probably don't touch this.
                 self.runtime = runtime # A "universal" "maximum" time each task can take. Will not stop mid trial, but will prevent trial repetions after the set time in seconds
                 self.esq = esq
@@ -242,13 +242,13 @@ class task(taskbattery,metadatacollection):
                 taskbattery.resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : self.name, 'Task Iteration': '1', 'Participant ID': self.trialclass[1], 'Response_Key' : None, 'Auxillary Data': None, 'Assoc Task':None}
                 if self.esq == False:
                         if self.ver == 1:
-                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_a_name, int(metacoll.INFO['Experiment Seed']))
+                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_a_name, int(metacoll.INFO['Experiment Seed']),self.probever)
                         if self.ver == 2:
-                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_b_name, int(metacoll.INFO['Experiment Seed']))
+                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_b_name, int(metacoll.INFO['Experiment Seed']),self.probever)
                         if self.ver == 3:
-                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_c_name, int(metacoll.INFO['Experiment Seed']))
+                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_c_name, int(metacoll.INFO['Experiment Seed']),self.probever)
                         if self.ver == 4:
-                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_d_name, int(metacoll.INFO['Experiment Seed']))
+                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_d_name, int(metacoll.INFO['Experiment Seed']),self.probever)
                 
                 if self.esq == True:
                         
@@ -339,6 +339,9 @@ if __name__ == "__main__":
         INFO = {
                         'Experiment Seed': random.randint(1, 9999999),  
                         'Subject': 'Enter Name Here', 
+                        "Probe 1 Version":"Version",
+                        "Probe 2 Version":"Version",
+                        "Probe 3 Version":"Version",
                         
                 }
 
@@ -363,9 +366,9 @@ if __name__ == "__main__":
         ESQTask = task(taskScripts.ESQ, datafile, datafileBackup, "Experience Sampling Questions", metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources/GoNoGo_Task/gonogo_stimuli.csv',1, esq=True)
         
         # Defining each task as a task object
-        movieTask1 = task(taskScripts.movieTask, datafile, 1,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1)
-        movieTask2 = task(taskScripts.movieTask, datafile, 2,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2)
-        movieTask3 = task(taskScripts.movieTask, datafile, 3,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3)
+        movieTask1 = task(taskScripts.movieTask, datafile, 1,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1,int(metacoll.INFO['Probe 1 Version']))
+        movieTask2 = task(taskScripts.movieTask, datafile, 2,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2,int(metacoll.INFO['Probe 2 Version']))
+        movieTask3 = task(taskScripts.movieTask, datafile, 3,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3,int(metacoll.INFO['Probe 3 Version']))
         
         moviegroup = [movieTask1,movieTask2,movieTask3]
 
