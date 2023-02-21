@@ -129,6 +129,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
                 try:
                     timelimit = trialsplit.values[en]
                 except:
+                    timelimit = 10000
                     pass
                 en += 1
                 mov.pause()
