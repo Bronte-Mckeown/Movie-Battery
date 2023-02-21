@@ -339,9 +339,9 @@ if __name__ == "__main__":
         INFO = {
                         'Experiment Seed': random.randint(1, 9999999),  
                         'Subject': 'Enter Name Here', 
-                        "Probe 1 Version":"Version",
-                        "Probe 2 Version":"Version",
-                        "Probe 3 Version":"Version",
+                        "Probe 1 Version":"",
+                        "Probe 2 Version":"",
+                        "Probe 3 Version":"",
                         
                 }
 
