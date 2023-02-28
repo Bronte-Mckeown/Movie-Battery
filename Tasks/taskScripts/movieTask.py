@@ -27,28 +27,25 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
     
 
     # user can update instructions for task here if required.
-    instructions =      """You are about to watch a 30-minute introductory statistics video lecture.
-                        \nYou will not be able to pause or rewind the lecture
-                        \nduring this experiment.
+    instructions =      """This experiment will require you to watch a set of 3 movies.
 
-                        \nDuring the lecture, please listen attentively and try
-                        \nand learn as much as you can, as there will be test
-                        \nquestions both during and after the lecture.
+                    \nYou will not be able to pause or rewind. 
 
-                        \nPlease do not take any notes during the lecture.
+                    \nDuring these videos, please listen carefully. There are volume keys on the keyboard to adjust to your liking. You will be asked a series of questions regarding the content of each movie afterwards. 
 
-                        \nPlease do not focus on another window, exit, backspace or refresh the screen. 
-                        \nIf you do so, a prompt will re-orient you back to the full screen mode.
+                    \nPlease do not take any notes during the videos. 
+
+                    \nPlease do not focus on another window, external devices or attend to other distractions. Do not close this window.
+
                         """
 
     # user can update start screen text here if required. 
-    start_screen = """Once the lecture is complete, you will complete a short quiz based on all the 
-                    \ninformation presented. This quiz is 9 questions in total, and consists of
-                    \n7 multiple-choice questions, and 2 open-ended questions.
+    start_screen = """Throughout each of the movies, you will be prompted with questions about your thoughts.
 
-                    \nThese open-ended questions will require you to perform some of the
-                    \ncalculations taught in the lecture. There will be a calculator provided on
-                    \nscreen, as well as a text box to show your work."""
+                    \nPlease answer these questions as quickly and honestly as possible. There are no right or wrong answers.
+
+                    \nUse the arrow keys and enter/return key to submit your response. 
+                    """
     
     # create text stimuli to be updated for start screen instructions.
     stim = visual.TextStim(win, "", color = [-1,-1,-1], wrapWidth = 1300, units = "pix", height=40)

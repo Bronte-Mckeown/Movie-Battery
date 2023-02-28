@@ -35,12 +35,12 @@ class metadatacollection():
         # This writes info collected from the GUI into the logfile
         def collect_metadata(self):  
                 print(self.sbINFO.data)
-                if os.path.exists(os.path.join(os.getcwd()+self.sbINFO.data[1])): 
-                        os.remove(os.path.join(os.getcwd()+self.sbINFO.data[1]))
+                if os.path.exists(os.path.join(os.getcwd()+self.sbINFO.data[-1])): 
+                        os.remove(os.path.join(os.getcwd()+self.sbINFO.data[-1]))
                 if not os.path.exists(os.path.join(os.getcwd(),'log_file')):
                         os.mkdir(os.path.join(os.getcwd(),'log_file'))
-                f = open(os.path.join(os.getcwd() + '/log_file/output_log_{}_{}_full.csv'.format(self.sbINFO.data[1],self.INFO['Experiment Seed'])), 'w', newline='')
-                fq = open(os.path.join(os.getcwd() + '/log_file/output_log_{}_{}.csv'.format(self.sbINFO.data[1],self.INFO['Experiment Seed'])), 'w', newline='')
+                f = open(os.path.join(os.getcwd() + '/log_file/output_log_{}_{}_full.csv'.format(self.sbINFO.data[-1],self.INFO['Experiment Seed'])), 'w', newline='')
+                fq = open(os.path.join(os.getcwd() + '/log_file/output_log_{}_{}.csv'.format(self.sbINFO.data[-1],self.INFO['Experiment Seed'])), 'w', newline='')
                 metawriter = csv.writer(f)
                 metawriter2 = csv.writer(fq)
                 metawriter.writerow(["METADATA:"])
