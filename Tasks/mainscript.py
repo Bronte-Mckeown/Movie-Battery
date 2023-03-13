@@ -338,7 +338,7 @@ if __name__ == "__main__":
         # Info Dict
         INFO = {
                         'Experiment Seed': random.randint(1, 9999999),  
-                        'Subject': 'Enter Name Here', 
+                        'Subject': 'Enter ID Here', 
                         "Probe 1 Version":"",
                         "Probe 2 Version":"",
                         "Probe 3 Version":"",
