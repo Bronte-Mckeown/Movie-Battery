@@ -49,11 +49,14 @@ with open('Analysis/coords.csv','r') as ft:
             continue
         graddict.update({row[0]:[float(row[1]),float(row[2]),float(row[3])]})
         print(row)
-
+graddict = {"Movie Task-lms":[0,0,0],
+"Movie Task-c4":[0,0,0],
+"Movie Task-summer":[0,0,0]}
 
 line_dict= {"Task_name":None,
         "Participant #":None,
         "Runtime_mod":None,
+        "Movie_time":None,
         "Absorption_response":None,
         "Other_response":None,
         "Problem_response":None,
@@ -352,6 +355,7 @@ for file in os.listdir("Tasks/log_file"):
         line_dict= {"Task_name":None,
         "Participant #":None,
         "Runtime_mod":None,
+        "Movie_time":None,
         "Absorption_response":None,
         "Other_response":None,
         "Problem_response":None,
@@ -375,11 +379,30 @@ for file in os.listdir("Tasks/log_file"):
 
         _,_,subject,seed = ftemp.split("_")
         line_dict["Participant #"] = subject
-        
+        readstart = False
+        initstart = True
+        skipstart = False
         with open(os.path.join("Tasks/log_file",file)) as f:
             reader = csv.reader(f)
             
-            for row in reader:
+            for en,row in enumerate(reader):
+                if en == 118:
+                    print('e')
+                if readstart:
+                    if not row[1] == "Experience Sampling Questions":
+                        if skipstart:
+                            readstart = False
+                            skipstart = False
+                            
+                        line_dict["Movie_time"] = float(row[1])-float(starttime)
+                        readstart = False
+                    else:
+                        skipstart = True;
+                
+                
+                if row[0] == "Start Time":
+                    starttime = row[1]
+                    readstart = True
                 
                 if row[0] == 'Runtime Mod':
                     line_dict["Runtime_mod"] = row[1]
@@ -399,13 +422,13 @@ for file in os.listdir("Tasks/log_file"):
                     if task_name == row[10]:
                         line_dict[row[3]]=row[4]
                     if enum == 16:
-                        if task_name == "Movie Task-Movie Task-bridge":
-                            line_dict["Task_name"] = "Movie Task-bridge"
+                        if task_name == "Movie Task-Movie Task-summer":
+                            line_dict["Task_name"] = "Movie Task-summer"
                             #row[10] = "Movie Task-bridge"
-                        if task_name == "Movie Task-Movie Task-incept":
-                            line_dict["Task_name"] = "Movie Task-incept"
-                        if task_name == "Movie Task-Movie Task-videodata":
-                            line_dict["Task_name"] = "Movie Task-videodata"
+                        if task_name == "Movie Task-Movie Task-c4":
+                            line_dict["Task_name"] = "Movie Task-c4"
+                        if task_name == "Movie Task-Movie Task-lms":
+                            line_dict["Task_name"] = "Movie Task-lms"
                             #row[10] = "Movie Task-incept"
                         grads = graddict[line_dict["Task_name"]]
                         line_dict["Gradient 1"],line_dict["Gradient 2"],line_dict["Gradient 3"] = grads
@@ -417,6 +440,7 @@ for file in os.listdir("Tasks/log_file"):
                         task_name = row[10]
                         line_dict[row[3]]=row[4]
                         line_dict["Task_name"] = task_name
+                        skipstart = False
                     #print(row)
                 else:
                     ect = 0
@@ -424,6 +448,7 @@ for file in os.listdir("Tasks/log_file"):
                 
         print(file)
     else:
+        continue
         stats = {}
         expdict = {}
         captsubj = False
