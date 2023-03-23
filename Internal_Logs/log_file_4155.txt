@@ -1,0 +1,39 @@
+pygame 2.1.2 (SDL 2.0.18, Python 3.6.13)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[9383307, '12', '4', '5', '038']
+
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+Now starting ESQ for Movie Task-Movie Task-summer
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+Now starting ESQ for Movie Task-Movie Task-lms
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+Now starting ESQ for Movie Task-Movie Task-c4
+Success
+1.8553 	WARNING 	Speech-to-text recognition module not available (use command `pip install SpeechRecognition` to get it. Transcription will be unavailable.
+1.8930 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+23.6433 	WARNING 	Monitor specification not found. Creating a temporary one...
+23.6476 	WARNING 	User requested fullscreen with size [1440  960], but screen is actually [2560, 1440]. Using actual size
+263.7239 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+487.1731 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+731.1998 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+954.7456 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1108.3483 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1216.6012 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1436.9952 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1637.7375 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1790.1773 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1951.5872 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2113.9337 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2171.8465 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2398.4794 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2486.8644 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2616.4040 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2834.7584 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2944.3488 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3089.8133 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
