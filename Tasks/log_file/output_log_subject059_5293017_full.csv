@@ -1,0 +1,617 @@
+METADATA:
+Experiment Seed,Probe 1 Version,Probe 2 Version,Probe 3 Version,Subject
+5293017,1,13,0,subject059
+Time after setup,30.003602999961004
+Timepoint,Time,Is_correct,Experience Sampling Question,Experience Sampling Response,Task,Task Iteration,Participant ID,Response_Key,Auxillary Data,Assoc Task
+EXPERIMENT DATA:,Movie Task
+Start Time,49.8780028000474
+Movie Task Start,49.87803879997227,,,,Movie Task,1,1,,,
+Movie Init,62.75174209999386,,,,Movie Task,1,1,,,
+Movie Start,62.77128869993612,,,,Movie Task,1,1,,lms.mp4,
+ESQ,209.0563449000474,,Words_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,217.72113770002034,,Words_response,8.49999999999999,Movie Task,1,1,,Marker Started at 4,Movie Task-lms
+ESQ,217.72283179999795,,Distracting_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,224.44250749994535,,Distracting_response,2.0999999999999983,Movie Task,1,1,,Marker Started at 4,Movie Task-lms
+ESQ,224.44424089998938,,Future_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,230.88125139998738,,Future_response,8.89999999999999,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,230.88247970002703,,Focus_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,238.00342850002926,,Focus_response,7.0000000000000036,Movie Task,1,1,,Marker Started at 8,Movie Task-lms
+ESQ,238.00507640000433,,Knowledge_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,245.76068549999036,,Knowledge_response,8.699999999999994,Movie Task,1,1,,Marker Started at 7,Movie Task-lms
+ESQ,245.7623402000172,,Detailed_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,253.18245269998442,,Detailed_response,8.09999999999999,Movie Task,1,1,,Marker Started at 2,Movie Task-lms
+ESQ,253.18377120001242,,Deliberate_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,257.8363703000359,,Deliberate_response,4.000000000000006,Movie Task,1,1,,Marker Started at 7,Movie Task-lms
+ESQ,257.83838359999936,,Problem_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,263.92447660001926,,Problem_response,2.899999999999998,Movie Task,1,1,,Marker Started at 5,Movie Task-lms
+ESQ,263.9262177000055,,Past_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,269.1284876000136,,Past_response,2.000000000000015,Movie Task,1,1,,Marker Started at 10,Movie Task-lms
+ESQ,269.1297909000423,,Images_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,275.63353580003604,,Images_response,6.399999999999998,Movie Task,1,1,,Marker Started at 2,Movie Task-lms
+ESQ,275.6352061999496,,Self_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,278.1864901999943,,Self_response,9.0,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,278.1884030000074,,Other_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,282.7081873000134,,Other_response,5.999999999999999,Movie Task,1,1,,Marker Started at 2,Movie Task-lms
+ESQ,282.70980389998294,,Absorption_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,286.82657509995624,,Absorption_response,8.499999999999995,Movie Task,1,1,,Marker Started at 7,Movie Task-lms
+ESQ,286.8276900999481,,Sounds_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,290.9135748000117,,Sounds_response,2.899999999999998,Movie Task,1,1,,Marker Started at 5,Movie Task-lms
+ESQ,290.91532000002917,,Intrusive_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,295.65139739995357,,Intrusive_response,5.999999999999997,Movie Task,1,1,,Marker Started at 4,Movie Task-lms
+ESQ,295.65314309997484,,Emotion_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,301.25352140003815,,Emotion_response,6.000000000000007,Movie Task,1,1,,Marker Started at 8,Movie Task-lms
+Movie prompt 1 lms.mp4,301.27162010001484,,,,Movie Task,1,1,,0,
+ESQ,369.63898219994735,,Intrusive_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,375.8299362999387,,Intrusive_response,5.300000000000002,Movie Task,1,1,,Marker Started at 2,Movie Task-lms
+ESQ,375.831701099989,,Future_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,379.30001250002533,,Future_response,8.400000000000006,Movie Task,1,1,,Marker Started at 10,Movie Task-lms
+ESQ,379.30176089995075,,Absorption_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,383.10249089996796,,Absorption_response,7.499999999999995,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,383.10416520002764,,Sounds_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,387.7736572000431,,Sounds_response,1.4000000000000081,Movie Task,1,1,,Marker Started at 8,Movie Task-lms
+ESQ,387.77530430001207,,Other_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,393.4113586000167,,Other_response,8.299999999999988,Movie Task,1,1,,Marker Started at 5,Movie Task-lms
+ESQ,393.4130176999606,,Self_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,396.53049309994094,,Self_response,9.499999999999986,Movie Task,1,1,,Marker Started at 4,Movie Task-lms
+ESQ,396.5317979999818,,Focus_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,402.41947860002983,,Focus_response,7.899999999999992,Movie Task,1,1,,Marker Started at 2,Movie Task-lms
+ESQ,402.4207887999946,,Deliberate_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,406.60430200002156,,Deliberate_response,3.699999999999999,Movie Task,1,1,,Marker Started at 5,Movie Task-lms
+ESQ,406.6047722999938,,Images_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,408.8403228999814,,Images_response,9.0,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,408.84206369996537,,Knowledge_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,413.8108838000335,,Knowledge_response,8.199999999999992,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,413.81251560000237,,Problem_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,417.9312818000326,,Problem_response,8.100000000000003,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,417.93292920000385,,Emotion_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,422.61724449996836,,Emotion_response,6.400000000000006,Movie Task,1,1,,Marker Started at 8,Movie Task-lms
+ESQ,422.61898469994776,,Detailed_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,425.4866639999673,,Detailed_response,8.0,Movie Task,1,1,,Marker Started at 8,Movie Task-lms
+ESQ,425.4884018000448,,Past_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,429.05712230002973,,Past_response,2.3999999999999986,Movie Task,1,1,,Marker Started at 4,Movie Task-lms
+ESQ,429.05870669998694,,Distracting_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,433.62818060000427,,Distracting_response,7.100000000000007,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,433.6295506999595,,Words_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,440.28141910000704,,Words_response,7.399999999999994,Movie Task,1,1,,Marker Started at 2,Movie Task-lms
+Movie prompt 2 lms.mp4,440.3157784999348,,,,Movie Task,1,1,,0,
+ESQ,655.6216811999911,,Deliberate_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,659.8252836000174,,Deliberate_response,4.100000000000003,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,659.826037199935,,Images_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,662.7085762999486,,Images_response,4.0,Movie Task,1,1,,Marker Started at 4,Movie Task-lms
+ESQ,662.7097385999514,,Focus_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,666.3796163999941,,Focus_response,7.500000000000005,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,666.3809522000374,,Absorption_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,670.6819298999617,,Absorption_response,6.999999999999993,Movie Task,1,1,,Marker Started at 5,Movie Task-lms
+ESQ,670.6837221999886,,Knowledge_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,674.3021745999577,,Knowledge_response,7.399999999999992,Movie Task,1,1,,Marker Started at 4,Movie Task-lms
+ESQ,674.3038282999769,,Intrusive_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,677.5710309999995,,Intrusive_response,4.600000000000003,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,677.5726895999396,,Other_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,681.0410139999585,,Other_response,8.29999999999999,Movie Task,1,1,,Marker Started at 4,Movie Task-lms
+ESQ,681.042771199951,,Detailed_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,683.9934597000247,,Detailed_response,9.200000000000003,Movie Task,1,1,,Marker Started at 10,Movie Task-lms
+ESQ,683.9952378999442,,Past_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,689.2818995999405,,Past_response,8.099999999999993,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,689.2834891999373,,Future_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,693.9366240999661,,Future_response,8.199999999999992,Movie Task,1,1,,Marker Started at 2,Movie Task-lms
+ESQ,693.9383960999548,,Problem_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,699.5390814000275,,Problem_response,8.19999999999999,Movie Task,1,1,,Marker Started at 3,Movie Task-lms
+ESQ,699.540745300008,,Sounds_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,703.1761768000433,,Sounds_response,1.600000000000001,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,703.1831214999547,,Emotion_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,706.3936644999776,,Emotion_response,7.0,Movie Task,1,1,,Marker Started at 7,Movie Task-lms
+ESQ,706.3953227000311,,Words_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,709.330080899992,,Words_response,7.400000000000006,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,709.3317474999931,,Distracting_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,712.1151768999407,,Distracting_response,7.599999999999994,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,712.1168389000231,,Self_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,715.0339635999408,,Self_response,8.499999999999995,Movie Task,1,1,,Marker Started at 7,Movie Task-lms
+Movie prompt 3 lms.mp4,715.0520892000059,,,,Movie Task,1,1,,0,
+ESQ,780.4691945000086,,Sounds_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,783.1721916999668,,Sounds_response,3.0,Movie Task,1,1,,Marker Started at 3,Movie Task-lms
+ESQ,783.173540799995,,Problem_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,786.7751580999466,,Problem_response,6.599999999999994,Movie Task,1,1,,Marker Started at 5,Movie Task-lms
+ESQ,786.7768954000203,,Other_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,792.1479216000298,,Other_response,8.300000000000002,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,792.1497331999708,,Past_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,796.8187791999662,,Past_response,8.399999999999991,Movie Task,1,1,,Marker Started at 2,Movie Task-lms
+ESQ,796.8205054999562,,Knowledge_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,800.3535778999794,,Knowledge_response,8.999999999999986,Movie Task,1,1,,Marker Started at 5,Movie Task-lms
+ESQ,800.3551761000417,,Focus_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,805.6068805999821,,Focus_response,6.600000000000001,Movie Task,1,1,,Marker Started at 7,Movie Task-lms
+ESQ,805.6085291999625,,Deliberate_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,808.8938315999694,,Deliberate_response,7.0,Movie Task,1,1,,Marker Started at 7,Movie Task-lms
+ESQ,808.8955711999442,,Images_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,811.5617145999568,,Images_response,8.400000000000002,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,811.5621757999761,,Self_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,814.380688300007,,Self_response,8.399999999999988,Movie Task,1,1,,Marker Started at 5,Movie Task-lms
+ESQ,814.3820398999378,,Detailed_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,816.5158095000079,,Detailed_response,9.0,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,816.5172447999939,,Future_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,819.2012718999758,,Future_response,8.099999999999989,Movie Task,1,1,,Marker Started at 5,Movie Task-lms
+ESQ,819.202831099974,,Emotion_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,822.1368126999587,,Emotion_response,7.199999999999996,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,822.1388177999761,,Intrusive_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,824.9397381000454,,Intrusive_response,3.8000000000000016,Movie Task,1,1,,Marker Started at 2,Movie Task-lms
+ESQ,824.9414928000188,,Distracting_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,829.4426324999658,,Distracting_response,6.20000000000001,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,829.4439640999772,,Words_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,832.9114664000226,,Words_response,2.300000000000012,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,832.9119943999685,,Absorption_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,836.5639828999992,,Absorption_response,7.899999999999991,Movie Task,1,1,,Marker Started at 4,Movie Task-lms
+Movie prompt 4 lms.mp4,836.5824937999714,,,,Movie Task,1,1,,0,
+ESQ,960.9636484000366,,Problem_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,965.6516973000253,,Problem_response,7.399999999999994,Movie Task,1,1,,Marker Started at 2,Movie Task-lms
+ESQ,965.6533586999867,,Deliberate_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,968.1536904999521,,Deliberate_response,8.0,Movie Task,1,1,,Marker Started at 8,Movie Task-lms
+ESQ,968.1554464999354,,Images_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,971.9237919000443,,Images_response,8.49999999999999,Movie Task,1,1,,Marker Started at 2,Movie Task-lms
+ESQ,971.9256000999594,,Focus_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,975.6601050000172,,Focus_response,7.700000000000008,Movie Task,1,1,,Marker Started at 10,Movie Task-lms
+ESQ,975.6617606999353,,Intrusive_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,979.680051399977,,Intrusive_response,2.699999999999999,Movie Task,1,1,,Marker Started at 4,Movie Task-lms
+ESQ,979.6816938000266,,Sounds_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,982.4315212999936,,Sounds_response,2.2999999999999985,Movie Task,1,1,,Marker Started at 4,Movie Task-lms
+ESQ,982.4332773999777,,Emotion_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,985.6173101000022,,Emotion_response,7.099999999999996,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,985.6181931999745,,Future_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,990.5382727000397,,Future_response,7.800000000000004,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,990.543079599971,,Knowledge_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,993.4069069999969,,Knowledge_response,8.59999999999999,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,993.4086413000477,,Detailed_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,997.960635800031,,Detailed_response,7.999999999999991,Movie Task,1,1,,Marker Started at 3,Movie Task-lms
+ESQ,997.9623880999861,,Other_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,1000.8476017999928,,Other_response,8.300000000000006,Movie Task,1,1,,Marker Started at 10,Movie Task-lms
+ESQ,1000.8489080000436,,Absorption_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,1003.4659755999455,,Absorption_response,8.100000000000003,Movie Task,1,1,,Marker Started at 9,Movie Task-lms
+ESQ,1003.4677003000397,,Past_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,1007.0360079000238,,Past_response,8.099999999999993,Movie Task,1,1,,Marker Started at 6,Movie Task-lms
+ESQ,1007.037735800026,,Self_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,1009.9212082000449,,Self_response,8.19999999999999,Movie Task,1,1,,Marker Started at 3,Movie Task-lms
+ESQ,1009.9217241000151,,Words_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,1013.2549308999442,,Words_response,7.999999999999991,Movie Task,1,1,,Marker Started at 3,Movie Task-lms
+ESQ,1013.2566706000362,,Distracting_start,,Movie Task,1,1,,,Movie Task-lms
+ESQ,1017.5931486999616,,Distracting_response,8.0,Movie Task,1,1,,Marker Started at 8,Movie Task-lms
+Movie prompt 5 lms.mp4,1017.6269231999759,,,,Movie Task,1,1,,0,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,1095.44740309997
+ESQ,1097.9892140999436,,Absorption_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1100.6106710999738,,Absorption_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8,Movie Task-Movie Task-lms
+ESQ,1100.612306999974,,Problem_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1102.961153000011,,Problem_response,4.0,Experience Sampling Questions,1,1,,Marker Started at 4,Movie Task-Movie Task-lms
+ESQ,1102.962881400017,,Future_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1105.9629523999756,,Future_response,3.899999999999999,Experience Sampling Questions,1,1,,Marker Started at 5,Movie Task-Movie Task-lms
+ESQ,1105.964290700038,,Other_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1109.3654293,,Other_response,5.0,Experience Sampling Questions,1,1,,Marker Started at 5,Movie Task-Movie Task-lms
+ESQ,1109.3670374000212,,Distracting_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1111.9854250999633,,Distracting_response,3.0,Experience Sampling Questions,1,1,,Marker Started at 3,Movie Task-Movie Task-lms
+ESQ,1111.9869499000488,,Images_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1117.2055179999443,,Images_response,4.400000000000003,Experience Sampling Questions,1,1,,Marker Started at 6,Movie Task-Movie Task-lms
+ESQ,1117.2068558000028,,Deliberate_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1121.5259714999702,,Deliberate_response,7.700000000000008,Experience Sampling Questions,1,1,,Marker Started at 10,Movie Task-Movie Task-lms
+ESQ,1121.5277185000014,,Emotion_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1124.077486700029,,Emotion_response,6.6999999999999975,Experience Sampling Questions,1,1,,Marker Started at 6,Movie Task-Movie Task-lms
+ESQ,1124.079119800008,,Knowledge_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1128.5315859999973,,Knowledge_response,7.599999999999993,Experience Sampling Questions,1,1,,Marker Started at 2,Movie Task-Movie Task-lms
+ESQ,1128.5332185999723,,Past_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1132.6681418999797,,Past_response,7.0999999999999925,Experience Sampling Questions,1,1,,Marker Started at 5,Movie Task-Movie Task-lms
+ESQ,1132.6698946999386,,Sounds_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1135.5205611999845,,Sounds_response,4.0,Experience Sampling Questions,1,1,,Marker Started at 4,Movie Task-Movie Task-lms
+ESQ,1135.5221805999754,,Words_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1137.6902396000223,,Words_response,7.0,Experience Sampling Questions,1,1,,Marker Started at 7,Movie Task-Movie Task-lms
+ESQ,1137.691890600021,,Self_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1140.3917515999638,,Self_response,8.700000000000005,Experience Sampling Questions,1,1,,Marker Started at 10,Movie Task-Movie Task-lms
+ESQ,1140.3935132999904,,Detailed_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1142.4420484999428,,Detailed_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8,Movie Task-Movie Task-lms
+ESQ,1142.4433593000285,,Focus_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1146.4636859999737,,Focus_response,7.799999999999992,Experience Sampling Questions,1,1,,Marker Started at 3,Movie Task-Movie Task-lms
+ESQ,1146.4653476999374,,Intrusive_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-lms
+ESQ,1151.1996157999383,,Intrusive_response,4.800000000000003,Experience Sampling Questions,1,1,,Marker Started at 6,Movie Task-Movie Task-lms
+EXPERIMENT DATA:,Movie Task
+Start Time,1151.213707900024
+Movie Task Start,1151.21374190005,,,,Movie Task,1,1,,,
+Movie Init,1161.2163870999357,,,,Movie Task,1,1,,,
+Movie Start,1161.2182457000017,,,,Movie Task,1,1,,summer.mp4,
+ESQ,1241.6348941000178,,Other_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1245.274091899977,,Other_response,2.500000000000012,Movie Task,1,1,,Marker Started at 9,Movie Task-summer
+ESQ,1245.2757676000474,,Intrusive_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1248.4605210999725,,Intrusive_response,2.200000000000008,Movie Task,1,1,,Marker Started at 8,Movie Task-summer
+ESQ,1248.4610515999375,,Absorption_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1251.3960465999553,,Absorption_response,4.0,Movie Task,1,1,,Marker Started at 4,Movie Task-summer
+ESQ,1251.3976514999522,,Past_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1253.7981340000406,,Past_response,2.0,Movie Task,1,1,,Marker Started at 2,Movie Task-summer
+ESQ,1253.7986311999848,,Deliberate_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1257.184126600041,,Deliberate_response,8.0,Movie Task,1,1,,Marker Started at 8,Movie Task-summer
+ESQ,1257.185868200031,,Images_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1259.886505399947,,Images_response,6.10000000000001,Movie Task,1,1,,Marker Started at 9,Movie Task-summer
+ESQ,1259.8881200000178,,Distracting_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1262.906981499982,,Distracting_response,2.4000000000000012,Movie Task,1,1,,Marker Started at 6,Movie Task-summer
+ESQ,1262.9087432000088,,Self_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1265.592450600001,,Self_response,7.499999999999991,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1265.5940890000202,,Future_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1274.7155272000236,,Future_response,6.799999999999994,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1274.7170520999935,,Problem_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1280.06891859998,,Problem_response,5.0,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1280.0702231000178,,Emotion_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1284.0393114000326,,Emotion_response,5.899999999999998,Movie Task,1,1,,Marker Started at 4,Movie Task-summer
+ESQ,1284.0409337000456,,Detailed_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1286.5581075999653,,Detailed_response,5.0,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1286.559227299993,,Words_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1289.1251000999473,,Words_response,3.3999999999999986,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1289.1268477999838,,Focus_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1292.9794095000252,,Focus_response,6.0,Movie Task,1,1,,Marker Started at 6,Movie Task-summer
+ESQ,1292.981020599953,,Sounds_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1295.7315800000215,,Sounds_response,3.2000000000000055,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1295.73320779996,,Knowledge_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1297.8171721999533,,Knowledge_response,9.0,Movie Task,1,1,,Marker Started at 9,Movie Task-summer
+Movie prompt 1 summer.mp4,1297.8337944999803,,,,Movie Task,1,1,,0,
+ESQ,1452.5746935999487,,Self_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1455.5755902000237,,Self_response,2.899999999999998,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1455.5773350000381,,Images_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1458.061265700031,,Images_response,7.0,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1458.0618285000091,,Problem_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1460.8316961999517,,Problem_response,2.799999999999998,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1460.8334629000165,,Words_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1463.5493390000192,,Words_response,3.5999999999999988,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1463.550974600017,,Distracting_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1466.2842434999766,,Distracting_response,2.800000000000005,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1466.2859070999548,,Sounds_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1470.2709654000355,,Sounds_response,5.100000000000007,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1470.2725884999381,,Past_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1473.474910399993,,Past_response,2.2999999999999985,Movie Task,1,1,,Marker Started at 4,Movie Task-summer
+ESQ,1473.4754377999343,,Focus_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1477.8772977000335,,Focus_response,3.1000000000000054,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1477.8789195000427,,Emotion_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1481.7466226000106,,Emotion_response,6.600000000000012,Movie Task,1,1,,Marker Started at 10,Movie Task-summer
+ESQ,1481.7486335999565,,Future_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1485.3152612999547,,Future_response,2.3000000000000083,Movie Task,1,1,,Marker Started at 8,Movie Task-summer
+ESQ,1485.316887199995,,Knowledge_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1488.5849402999738,,Knowledge_response,6.899999999999994,Movie Task,1,1,,Marker Started at 4,Movie Task-summer
+ESQ,1488.5865813000128,,Intrusive_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1490.7556495999452,,Intrusive_response,2.0,Movie Task,1,1,,Marker Started at 2,Movie Task-summer
+ESQ,1490.757405100041,,Other_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1493.9405041999416,,Other_response,2.2000000000000117,Movie Task,1,1,,Marker Started at 9,Movie Task-summer
+ESQ,1493.9422596000368,,Detailed_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1497.3762059999863,,Detailed_response,7.499999999999993,Movie Task,1,1,,Marker Started at 3,Movie Task-summer
+ESQ,1497.3779381000204,,Deliberate_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1501.8295187000185,,Deliberate_response,8.399999999999991,Movie Task,1,1,,Marker Started at 6,Movie Task-summer
+ESQ,1501.8312718999805,,Absorption_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1505.4990468999604,,Absorption_response,4.000000000000006,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+Movie prompt 2 summer.mp4,1505.5163030000404,,,,Movie Task,1,1,,0,
+ESQ,1617.460033099982,,Words_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1619.7406958000502,,Words_response,3.0999999999999983,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1619.7423393999925,,Future_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1622.1102071000496,,Future_response,3.300000000000002,Movie Task,1,1,,Marker Started at 6,Movie Task-summer
+ESQ,1622.1111874999478,,Knowledge_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1624.9104812999722,,Knowledge_response,8.0,Movie Task,1,1,,Marker Started at 8,Movie Task-summer
+ESQ,1624.912208499969,,Focus_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1629.1643306999467,,Focus_response,3.100000000000009,Movie Task,1,1,,Marker Started at 8,Movie Task-summer
+ESQ,1629.1659728999948,,Problem_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1630.9820784999756,,Problem_response,7.0,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1630.9838324999437,,Absorption_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1636.403257900034,,Absorption_response,8.100000000000007,Movie Task,1,1,,Marker Started at 10,Movie Task-summer
+ESQ,1636.4049175999826,,Deliberate_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1639.9398598000407,,Deliberate_response,4.100000000000003,Movie Task,1,1,,Marker Started at 6,Movie Task-summer
+ESQ,1639.9411918999394,,Emotion_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1642.9244106999831,,Emotion_response,4.700000000000001,Movie Task,1,1,,Marker Started at 3,Movie Task-summer
+ESQ,1642.9259582000086,,Distracting_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1646.1442895999644,,Distracting_response,4.400000000000007,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1646.1460502999835,,Other_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1648.3132574999472,,Other_response,7.0,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1648.3148958999664,,Self_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1650.1648002000293,,Self_response,8.0,Movie Task,1,1,,Marker Started at 8,Movie Task-summer
+ESQ,1650.1665166999446,,Sounds_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1654.3844291999703,,Sounds_response,3.700000000000006,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1654.3857332000043,,Intrusive_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1656.704257400008,,Intrusive_response,3.0,Movie Task,1,1,,Marker Started at 3,Movie Task-summer
+ESQ,1656.7060261999723,,Past_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1660.0557120000012,,Past_response,2.899999999999998,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1660.0573294999776,,Images_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1662.6574175000424,,Images_response,7.20000000000001,Movie Task,1,1,,Marker Started at 10,Movie Task-summer
+ESQ,1662.6594061000505,,Detailed_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1665.9784729999956,,Detailed_response,7.799999999999992,Movie Task,1,1,,Marker Started at 3,Movie Task-summer
+Movie prompt 3 summer.mp4,1665.9940930999583,,,,Movie Task,1,1,,0,
+ESQ,1776.0982877999777,,Images_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1779.868609600002,,Images_response,8.0,Movie Task,1,1,,Marker Started at 8,Movie Task-summer
+ESQ,1779.8702315000119,,Past_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1782.5866707999958,,Past_response,3.5999999999999988,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1782.5871638000244,,Deliberate_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1785.5574867000105,,Deliberate_response,8.300000000000006,Movie Task,1,1,,Marker Started at 10,Movie Task-summer
+ESQ,1785.5590946000302,,Words_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1787.6416140999645,,Words_response,3.0,Movie Task,1,1,,Marker Started at 3,Movie Task-summer
+ESQ,1787.6431423999602,,Intrusive_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1790.5597421999555,,Intrusive_response,3.6000000000000023,Movie Task,1,1,,Marker Started at 6,Movie Task-summer
+ESQ,1790.5613640999654,,Knowledge_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1793.1120834000176,,Knowledge_response,8.499999999999995,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1793.113705900032,,Self_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1796.397873800015,,Self_response,8.199999999999989,Movie Task,1,1,,Marker Started at 4,Movie Task-summer
+ESQ,1796.3991904000286,,Distracting_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1799.4018463999964,,Distracting_response,6.000000000000011,Movie Task,1,1,,Marker Started at 9,Movie Task-summer
+ESQ,1799.402302499977,,Problem_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1802.4022711999714,,Problem_response,3.4000000000000057,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1802.4038947999943,,Other_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1804.854432699969,,Other_response,7.300000000000006,Movie Task,1,1,,Marker Started at 9,Movie Task-summer
+ESQ,1804.8560546999797,,Future_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1809.959610800026,,Future_response,7.599999999999993,Movie Task,1,1,,Marker Started at 2,Movie Task-summer
+ESQ,1809.9613295999588,,Absorption_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1813.3788593999343,,Absorption_response,7.999999999999992,Movie Task,1,1,,Marker Started at 2,Movie Task-summer
+ESQ,1813.3806292000227,,Detailed_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1816.7143856999464,,Detailed_response,7.0,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1816.7153676999733,,Focus_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1819.91861719999,,Focus_response,6.099999999999998,Movie Task,1,1,,Marker Started at 3,Movie Task-summer
+ESQ,1819.919922400033,,Emotion_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1822.468981700018,,Emotion_response,6.0,Movie Task,1,1,,Marker Started at 6,Movie Task-summer
+ESQ,1822.4705977999838,,Sounds_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1825.4211581000127,,Sounds_response,4.400000000000017,Movie Task,1,1,,Marker Started at 10,Movie Task-summer
+Movie prompt 4 summer.mp4,1825.4383963999571,,,,Movie Task,1,1,,0,
+ESQ,1965.2825010999804,,Other_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1968.984694099985,,Other_response,2.699999999999998,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1968.9862535999855,,Focus_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1972.7886524000205,,Focus_response,3.400000000000013,Movie Task,1,1,,Marker Started at 9,Movie Task-summer
+ESQ,1972.7900595000247,,Images_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1976.3084948000032,,Images_response,7.200000000000003,Movie Task,1,1,,Marker Started at 8,Movie Task-summer
+ESQ,1976.3089275000384,,Absorption_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1979.294582500006,,Absorption_response,8.49999999999999,Movie Task,1,1,,Marker Started at 4,Movie Task-summer
+ESQ,1979.2962229000404,,Distracting_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1981.7622042000294,,Distracting_response,2.700000000000005,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1981.7627402000362,,Knowledge_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1987.9844668000005,,Knowledge_response,4.8000000000000105,Movie Task,1,1,,Marker Started at 8,Movie Task-summer
+ESQ,1987.986210700008,,Self_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1990.9355131000048,,Self_response,7.69999999999999,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,1990.9374929999467,,Deliberate_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1994.05469489994,,Deliberate_response,8.699999999999994,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,1994.0563415000215,,Future_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,1996.6576238999842,,Future_response,4.400000000000001,Movie Task,1,1,,Marker Started at 3,Movie Task-summer
+ESQ,1996.6580683999928,,Detailed_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,2001.2285886999452,,Detailed_response,7.89999999999999,Movie Task,1,1,,Marker Started at 5,Movie Task-summer
+ESQ,2001.2302252999507,,Emotion_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,2005.932011500001,,Emotion_response,3.4000000000000012,Movie Task,1,1,,Marker Started at 2,Movie Task-summer
+ESQ,2005.9336631000042,,Problem_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,2010.2369312000228,,Problem_response,7.300000000000006,Movie Task,1,1,,Marker Started at 9,Movie Task-summer
+ESQ,2010.238934700028,,Past_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,2014.971926499973,,Past_response,6.1999999999999975,Movie Task,1,1,,Marker Started at 3,Movie Task-summer
+ESQ,2014.9735658999998,,Words_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,2018.7246278999373,,Words_response,3.3999999999999995,Movie Task,1,1,,Marker Started at 4,Movie Task-summer
+ESQ,2018.726260000025,,Intrusive_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,2021.4446279000258,,Intrusive_response,3.3000000000000056,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+ESQ,2021.4462641000282,,Sounds_start,,Movie Task,1,1,,,Movie Task-summer
+ESQ,2024.0954828000395,,Sounds_response,3.700000000000006,Movie Task,1,1,,Marker Started at 7,Movie Task-summer
+Movie prompt 5 summer.mp4,2024.1136376999784,,,,Movie Task,1,1,,0,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,2116.864281599992
+ESQ,2118.435349300038,,Future_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2121.307796600042,,Future_response,3.9000000000000026,Experience Sampling Questions,1,1,,Marker Started at 6,Movie Task-Movie Task-summer
+ESQ,2121.30847779999,,Problem_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2124.3601748000365,,Problem_response,3.000000000000016,Experience Sampling Questions,1,1,,Marker Started at 10,Movie Task-Movie Task-summer
+ESQ,2124.361949900049,,Distracting_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2127.3621367999585,,Distracting_response,3.500000000000013,Experience Sampling Questions,1,1,,Marker Started at 9,Movie Task-Movie Task-summer
+ESQ,2127.3628158000065,,Emotion_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2131.3320771999424,,Emotion_response,3.5000000000000013,Experience Sampling Questions,1,1,,Marker Started at 2,Movie Task-Movie Task-summer
+ESQ,2131.3338556999806,,Sounds_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2133.567546300008,,Sounds_response,4.0,Experience Sampling Questions,1,1,,Marker Started at 4,Movie Task-Movie Task-summer
+ESQ,2133.5691180999856,,Knowledge_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2136.03474319994,,Knowledge_response,7.0,Experience Sampling Questions,1,1,,Marker Started at 7,Movie Task-Movie Task-summer
+ESQ,2136.036480700015,,Focus_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2138.7046206999803,,Focus_response,4.000000000000002,Experience Sampling Questions,1,1,,Marker Started at 2,Movie Task-Movie Task-summer
+ESQ,2138.7062677999493,,Words_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2141.690694399993,,Words_response,7.0999999999999925,Experience Sampling Questions,1,1,,Marker Started at 5,Movie Task-Movie Task-summer
+ESQ,2141.6924718000228,,Absorption_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2144.677113899961,,Absorption_response,7.999999999999993,Experience Sampling Questions,1,1,,Marker Started at 6,Movie Task-Movie Task-summer
+ESQ,2144.6788856999483,,Images_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2147.1111388000427,,Images_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8,Movie Task-Movie Task-summer
+ESQ,2147.112750799977,,Detailed_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2150.6320889999624,,Detailed_response,7.2999999999999945,Experience Sampling Questions,1,1,,Marker Started at 2,Movie Task-Movie Task-summer
+ESQ,2150.6333886999637,,Other_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2153.249553899979,,Other_response,7.300000000000006,Experience Sampling Questions,1,1,,Marker Started at 9,Movie Task-Movie Task-summer
+ESQ,2153.2511973000364,,Self_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2155.9187170999357,,Self_response,7.399999999999994,Experience Sampling Questions,1,1,,Marker Started at 2,Movie Task-Movie Task-summer
+ESQ,2155.9203636000166,,Past_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2159.489826099947,,Past_response,8.29999999999999,Experience Sampling Questions,1,1,,Marker Started at 3,Movie Task-Movie Task-summer
+ESQ,2159.4915678999387,,Intrusive_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2162.3057060999563,,Intrusive_response,3.7000000000000015,Experience Sampling Questions,1,1,,Marker Started at 2,Movie Task-Movie Task-summer
+ESQ,2162.3076354999794,,Deliberate_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-summer
+ESQ,2165.3424406000413,,Deliberate_response,8.300000000000002,Experience Sampling Questions,1,1,,Marker Started at 9,Movie Task-Movie Task-summer
+EXPERIMENT DATA:,Movie Task
+Start Time,2165.3558063999517
+Movie Task Start,2165.3558413999854,,,,Movie Task,1,1,,,
+Movie Init,2168.880995500018,,,,Movie Task,1,1,,,
+Movie Start,2168.882843200001,,,,Movie Task,1,1,,c4.mp4,
+ESQ,2348.734999099979,,Problem_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2354.460077499971,,Problem_response,4.3000000000000025,Movie Task,1,1,,Marker Started at 6,Movie Task-c4
+ESQ,2354.4617190000135,,Focus_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2357.3289146999596,,Focus_response,8.200000000000006,Movie Task,1,1,,Marker Started at 10,Movie Task-c4
+ESQ,2357.3304939999944,,Sounds_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2360.431457199971,,Sounds_response,3.800000000000006,Movie Task,1,1,,Marker Started at 7,Movie Task-c4
+ESQ,2360.43308550003,,Past_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2364.884748499957,,Past_response,4.200000000000003,Movie Task,1,1,,Marker Started at 6,Movie Task-c4
+ESQ,2364.886050799978,,Words_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2370.5409730999963,,Words_response,7.799999999999993,Movie Task,1,1,,Marker Started at 2,Movie Task-c4
+ESQ,2370.542218699935,,Absorption_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2375.5601293999935,,Absorption_response,2.800000000000016,Movie Task,1,1,,Marker Started at 10,Movie Task-c4
+ESQ,2375.561748099979,,Detailed_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2379.631568199955,,Detailed_response,7.099999999999993,Movie Task,1,1,,Marker Started at 4,Movie Task-c4
+ESQ,2379.6331833000295,,Knowledge_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2382.0987312999787,,Knowledge_response,5.20000000000001,Movie Task,1,1,,Marker Started at 8,Movie Task-c4
+ESQ,2382.1003102000104,,Deliberate_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2384.81769679999,,Deliberate_response,4.800000000000014,Movie Task,1,1,,Marker Started at 9,Movie Task-c4
+ESQ,2384.818772700033,,Other_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2387.5692050999496,,Other_response,6.399999999999997,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,2387.569701900007,,Intrusive_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2390.1720157000236,,Intrusive_response,3.7000000000000095,Movie Task,1,1,,Marker Started at 8,Movie Task-c4
+ESQ,2390.173651400022,,Future_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2392.2248717000475,,Future_response,8.000000000000007,Movie Task,1,1,,Marker Started at 10,Movie Task-c4
+ESQ,2392.2266214999836,,Emotion_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2395.0093183999415,,Emotion_response,7.400000000000006,Movie Task,1,1,,Marker Started at 9,Movie Task-c4
+ESQ,2395.011062699952,,Self_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2398.4116049000295,,Self_response,7.499999999999993,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,2398.4133801000426,,Images_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2400.4985193000175,,Images_response,3.200000000000002,Movie Task,1,1,,Marker Started at 6,Movie Task-c4
+ESQ,2400.500084099942,,Distracting_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2402.9321683000308,,Distracting_response,4.200000000000003,Movie Task,1,1,,Marker Started at 6,Movie Task-c4
+Movie prompt 1 c4.mp4,2402.9493643000023,,,,Movie Task,1,1,,0,
+ESQ,2515.12053179997,,Emotion_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2518.774839199963,,Emotion_response,4.100000000000007,Movie Task,1,1,,Marker Started at 7,Movie Task-c4
+ESQ,2518.7764986000257,,Past_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2521.6766905999975,,Past_response,4.8000000000000105,Movie Task,1,1,,Marker Started at 8,Movie Task-c4
+ESQ,2521.677194799995,,Sounds_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2524.6135201000143,,Sounds_response,3.7000000000000095,Movie Task,1,1,,Marker Started at 8,Movie Task-c4
+ESQ,2524.6148782999953,,Deliberate_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2527.7983778000344,,Deliberate_response,6.1999999999999975,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,2527.8002924999455,,Future_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2530.484050099971,,Future_response,5.500000000000009,Movie Task,1,1,,Marker Started at 8,Movie Task-c4
+ESQ,2530.4853305999422,,Other_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2533.852610199945,,Other_response,7.599999999999993,Movie Task,1,1,,Marker Started at 2,Movie Task-c4
+ESQ,2533.8541842999402,,Detailed_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2536.1227191999787,,Detailed_response,3.0,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,2536.1243684999645,,Intrusive_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2538.873641800019,,Intrusive_response,8.200000000000003,Movie Task,1,1,,Marker Started at 9,Movie Task-c4
+ESQ,2538.8752903999994,,Self_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2541.642493500025,,Self_response,7.699999999999992,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,2541.6441611000337,,Distracting_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2543.6449676000047,,Distracting_response,3.0,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,2543.646632499993,,Absorption_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2546.1798186999513,,Absorption_response,7.599999999999994,Movie Task,1,1,,Marker Started at 6,Movie Task-c4
+ESQ,2546.181453899946,,Words_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2548.5488051000284,,Words_response,3.3999999999999986,Movie Task,1,1,,Marker Started at 5,Movie Task-c4
+ESQ,2548.5504125000443,,Knowledge_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2550.8658219999634,,Knowledge_response,7.199999999999993,Movie Task,1,1,,Marker Started at 4,Movie Task-c4
+ESQ,2550.8673794999486,,Images_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2553.33485069999,,Images_response,8.400000000000006,Movie Task,1,1,,Marker Started at 10,Movie Task-c4
+ESQ,2553.3361732000485,,Problem_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2555.770443000016,,Problem_response,7.0,Movie Task,1,1,,Marker Started at 7,Movie Task-c4
+ESQ,2555.772094200016,,Focus_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2559.2895310999593,,Focus_response,3.1999999999999993,Movie Task,1,1,,Marker Started at 4,Movie Task-c4
+Movie prompt 2 c4.mp4,2559.3075480000116,,,,Movie Task,1,1,,0,
+ESQ,2678.036591500044,,Distracting_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2683.8724543999415,,Distracting_response,3.6000000000000005,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,2683.874118900043,,Absorption_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2687.177383500035,,Absorption_response,6.399999999999998,Movie Task,1,1,,Marker Started at 2,Movie Task-c4
+ESQ,2687.179404799943,,Emotion_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2689.844901100034,,Emotion_response,4.100000000000001,Movie Task,1,1,,Marker Started at 2,Movie Task-c4
+ESQ,2689.8465702999383,,Images_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2692.1455981000327,,Images_response,5.200000000000002,Movie Task,1,1,,Marker Started at 2,Movie Task-c4
+ESQ,2692.1469149000477,,Words_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2694.9817616000073,,Words_response,3.799999999999999,Movie Task,1,1,,Marker Started at 5,Movie Task-c4
+ESQ,2694.983518299996,,Past_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2698.9017504999647,,Past_response,3.5999999999999996,Movie Task,1,1,,Marker Started at 4,Movie Task-c4
+ESQ,2698.9034972999943,,Knowledge_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2701.6197604000336,,Knowledge_response,7.799999999999994,Movie Task,1,1,,Marker Started at 6,Movie Task-c4
+ESQ,2701.620532699977,,Problem_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2704.7050414000405,,Problem_response,6.800000000000011,Movie Task,1,1,,Marker Started at 10,Movie Task-c4
+ESQ,2704.70648059994,,Focus_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2708.39438339998,,Focus_response,3.5999999999999996,Movie Task,1,1,,Marker Started at 4,Movie Task-c4
+ESQ,2708.3957290999824,,Deliberate_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2711.0111685999436,,Deliberate_response,3.1999999999999984,Movie Task,1,1,,Marker Started at 5,Movie Task-c4
+ESQ,2711.0129438999575,,Detailed_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2714.0469992000144,,Detailed_response,7.199999999999992,Movie Task,1,1,,Marker Started at 5,Movie Task-c4
+ESQ,2714.0486211000243,,Self_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2716.349102100008,,Self_response,8.200000000000003,Movie Task,1,1,,Marker Started at 9,Movie Task-c4
+ESQ,2716.351107100025,,Intrusive_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2719.0180877000093,,Intrusive_response,3.2000000000000126,Movie Task,1,1,,Marker Started at 9,Movie Task-c4
+ESQ,2719.020227400004,,Other_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2722.4538857999723,,Other_response,3.000000000000009,Movie Task,1,1,,Marker Started at 8,Movie Task-c4
+ESQ,2722.455470600049,,Future_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2724.7404469000176,,Future_response,6.800000000000004,Movie Task,1,1,,Marker Started at 8,Movie Task-c4
+ESQ,2724.7420849000337,,Sounds_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2727.4569769999944,,Sounds_response,3.300000000000009,Movie Task,1,1,,Marker Started at 8,Movie Task-c4
+Movie prompt 3 c4.mp4,2727.4748701000353,,,,Movie Task,1,1,,0,
+ESQ,2866.6363142000046,,Distracting_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2870.838951600017,,Distracting_response,7.499999999999993,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,2870.840686199954,,Focus_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2874.1581362000434,,Focus_response,7.799999999999991,Movie Task,1,1,,Marker Started at 4,Movie Task-c4
+ESQ,2874.1597487999825,,Knowledge_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2876.943108699983,,Knowledge_response,6.7999999999999945,Movie Task,1,1,,Marker Started at 4,Movie Task-c4
+ESQ,2876.9437406000216,,Absorption_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2880.030109800049,,Absorption_response,8.599999999999994,Movie Task,1,1,,Marker Started at 7,Movie Task-c4
+ESQ,2880.031647099997,,Problem_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2883.4152751000365,,Problem_response,3.1999999999999984,Movie Task,1,1,,Marker Started at 5,Movie Task-c4
+ESQ,2883.4168905999977,,Detailed_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2885.8348424000433,,Detailed_response,9.0,Movie Task,1,1,,Marker Started at 9,Movie Task-c4
+ESQ,2885.8365090000443,,Sounds_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2888.58796299994,,Sounds_response,4.800000000000002,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,2888.589961200021,,Words_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2890.8215418000473,,Words_response,7.199999999999992,Movie Task,1,1,,Marker Started at 5,Movie Task-c4
+ESQ,2890.823202200001,,Other_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2894.256902999943,,Other_response,6.600000000000012,Movie Task,1,1,,Marker Started at 10,Movie Task-c4
+ESQ,2894.2585392999463,,Past_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2896.2770556999603,,Past_response,4.500000000000002,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,2896.278774000006,,Self_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2898.5112921999535,,Self_response,8.399999999999995,Movie Task,1,1,,Marker Started at 7,Movie Task-c4
+ESQ,2898.5128272,,Intrusive_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2901.481291400036,,Intrusive_response,3.4000000000000092,Movie Task,1,1,,Marker Started at 8,Movie Task-c4
+ESQ,2901.483779400005,,Images_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2903.632953900029,,Images_response,5.0,Movie Task,1,1,,Marker Started at 5,Movie Task-c4
+ESQ,2903.6346671000356,,Future_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2906.015753200045,,Future_response,4.3000000000000025,Movie Task,1,1,,Marker Started at 2,Movie Task-c4
+ESQ,2906.016295199981,,Emotion_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2909.335401999997,,Emotion_response,4.0,Movie Task,1,1,,Marker Started at 4,Movie Task-c4
+ESQ,2909.3371230999473,,Deliberate_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,2912.555122699938,,Deliberate_response,8.29999999999999,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+Movie prompt 4 c4.mp4,2912.5727185000433,,,,Movie Task,1,1,,0,
+ESQ,3007.1155675000045,,Other_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3010.984032899956,,Other_response,5.700000000000015,Movie Task,1,1,,Marker Started at 10,Movie Task-c4
+ESQ,3010.98537270003,,Knowledge_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3014.135239599971,,Knowledge_response,3.6000000000000014,Movie Task,1,1,,Marker Started at 2,Movie Task-c4
+ESQ,3014.1368638999993,,Intrusive_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3016.32293080003,,Intrusive_response,4.700000000000001,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,3016.3245750999777,,Distracting_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3018.5899495000485,,Distracting_response,4.0,Movie Task,1,1,,Marker Started at 4,Movie Task-c4
+ESQ,3018.5906189000234,,Self_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3022.143055099994,,Self_response,6.899999999999994,Movie Task,1,1,,Marker Started at 4,Movie Task-c4
+ESQ,3022.143551300047,,Sounds_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3024.6123168000486,,Sounds_response,4.600000000000001,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,3024.613972299965,,Absorption_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3026.813009000034,,Absorption_response,3.9000000000000017,Movie Task,1,1,,Marker Started at 2,Movie Task-c4
+ESQ,3026.814757699962,,Emotion_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3029.615278900019,,Emotion_response,4.700000000000006,Movie Task,1,1,,Marker Started at 7,Movie Task-c4
+ESQ,3029.617279900005,,Detailed_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3032.2852575000143,,Detailed_response,6.899999999999995,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,3032.2868845999474,,Problem_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3034.2692661000183,,Problem_response,3.5000000000000013,Movie Task,1,1,,Marker Started at 2,Movie Task-c4
+ESQ,3034.2708939999575,,Images_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3036.3365862999344,,Images_response,5.799999999999998,Movie Task,1,1,,Marker Started at 4,Movie Task-c4
+ESQ,3036.3382233999437,,Future_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3039.2228843000485,,Future_response,5.899999999999999,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,3039.2245407999726,,Focus_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3041.709108000039,,Focus_response,3.0,Movie Task,1,1,,Marker Started at 3,Movie Task-c4
+ESQ,3041.7102449999657,,Deliberate_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3044.344101800001,,Deliberate_response,7.89999999999999,Movie Task,1,1,,Marker Started at 5,Movie Task-c4
+ESQ,3044.345742900041,,Words_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3046.295259900042,,Words_response,3.300000000000001,Movie Task,1,1,,Marker Started at 2,Movie Task-c4
+ESQ,3046.2968996999552,,Past_start,,Movie Task,1,1,,,Movie Task-c4
+ESQ,3049.8481451999396,,Past_response,6.600000000000012,Movie Task,1,1,,Marker Started at 10,Movie Task-c4
+Movie prompt 5 c4.mp4,3049.865578399971,,,,Movie Task,1,1,,0,
+EXPERIMENT DATA:,Experience Sampling Questions
+Start Time,3127.6861787999514
+ESQ,3129.3091201999923,,Problem_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3133.798615399981,,Problem_response,4.8000000000000105,Experience Sampling Questions,1,1,,Marker Started at 8,Movie Task-Movie Task-c4
+ESQ,3133.80029569997,,Intrusive_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3136.1853196000447,,Intrusive_response,4.0,Experience Sampling Questions,1,1,,Marker Started at 4,Movie Task-Movie Task-c4
+ESQ,3136.1870664999587,,Focus_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3138.018722799956,,Focus_response,6.199999999999997,Experience Sampling Questions,1,1,,Marker Started at 4,Movie Task-Movie Task-c4
+ESQ,3138.020493200049,,Future_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3139.63774070004,,Future_response,7.000000000000007,Experience Sampling Questions,1,1,,Marker Started at 9,Movie Task-Movie Task-c4
+ESQ,3139.6397373999935,,Sounds_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3141.6737118000165,,Sounds_response,6.399999999999995,Experience Sampling Questions,1,1,,Marker Started at 5,Movie Task-Movie Task-c4
+ESQ,3141.6752225999953,,Images_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3143.5558726999443,,Images_response,5.30000000000001,Experience Sampling Questions,1,1,,Marker Started at 8,Movie Task-Movie Task-c4
+ESQ,3143.557489000028,,Past_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3145.341278900043,,Past_response,6.299999999999995,Experience Sampling Questions,1,1,,Marker Started at 5,Movie Task-Movie Task-c4
+ESQ,3145.342584899976,,Absorption_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3147.6282947999425,,Absorption_response,3.0000000000000004,Experience Sampling Questions,1,1,,Marker Started at 2,Movie Task-Movie Task-c4
+ESQ,3147.6300542999525,,Words_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3150.3784408000065,,Words_response,4.0,Experience Sampling Questions,1,1,,Marker Started at 4,Movie Task-Movie Task-c4
+ESQ,3150.380125100026,,Knowledge_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3152.079933800036,,Knowledge_response,4.000000000000001,Experience Sampling Questions,1,1,,Marker Started at 3,Movie Task-Movie Task-c4
+ESQ,3152.0810227999464,,Detailed_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3153.948204000015,,Detailed_response,7.100000000000003,Experience Sampling Questions,1,1,,Marker Started at 8,Movie Task-Movie Task-c4
+ESQ,3153.950215799967,,Distracting_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3155.851368600037,,Distracting_response,5.699999999999998,Experience Sampling Questions,1,1,,Marker Started at 4,Movie Task-Movie Task-c4
+ESQ,3155.852994499961,,Deliberate_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3157.785325399949,,Deliberate_response,5.300000000000006,Experience Sampling Questions,1,1,,Marker Started at 7,Movie Task-Movie Task-c4
+ESQ,3157.7869814999867,,Emotion_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3159.735291399993,,Emotion_response,8.0,Experience Sampling Questions,1,1,,Marker Started at 8,Movie Task-Movie Task-c4
+ESQ,3159.737093899981,,Other_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3161.6038565000053,,Other_response,6.600000000000005,Experience Sampling Questions,1,1,,Marker Started at 8,Movie Task-Movie Task-c4
+ESQ,3161.605481400038,,Self_start,,Experience Sampling Questions,1,1,,,Movie Task-Movie Task-c4
+ESQ,3163.7726687999675,,Self_response,3.8000000000000096,Experience Sampling Questions,1,1,,Marker Started at 8,Movie Task-Movie Task-c4
