@@ -421,7 +421,7 @@ for file in os.listdir("Tasks/log_file"):
                         vv += 1
                         if line_dict["Task_name"] is not None:
                             if line_dict["Task_name"] != task_name and "Movie Task-" + line_dict["Task_name"] != task_name:
-                        
+                                
                                 v += 1
                                 vv = 0
                         elif line_dict["Task_name"] is None:
@@ -431,23 +431,31 @@ for file in os.listdir("Tasks/log_file"):
                     if task_name == row[10]:
                         line_dict[row[3]]=row[4]
                     if enum == 16:
-                        if task_name == "Movie Task-Movie Task-summer":
+                        if task_name in ("Movie Task-Movie Task-summer", "Movie Task-summer"):
                             
                             line_dict["Task_name"] = "Movie Task-summer"
+                            linenumber = 2
                             #row[10] = "Movie Task-bridge"
-                        if task_name == "Movie Task-Movie Task-c4":
+                        if task_name in ("Movie Task-Movie Task-c4", "Movie Task-c4"):
                             
                             line_dict["Task_name"] = "Movie Task-c4"
-                        if task_name == "Movie Task-Movie Task-lms":
+                            linenumber = 0
+                        if task_name in ("Movie Task-Movie Task-lms", "Movie Task-lms"):
                             
                             line_dict["Task_name"] = "Movie Task-lms"
+                            linenumber = 1
                             #row[10] = "Movie Task-incept"
+                        # else:
+                        #     print("oh no")
                         grads = graddict[line_dict["Task_name"]]
                         #line_dict["Gradient 1"],line_dict["Gradient 2"],line_dict["Gradient 3"] = grads
-                        line_dict["Probe Version"] = probeversions[v]
+                        line_dict["Probe Version"] = probeversions[linenumber]
                         line_dict["Probe Number"] = vv
                         if vv != 5:
-                            line_dict["Probe Duration"] = probedurs[vv][int(probeversions[v])]
+                            if int(probeversions[linenumber]) == 16:
+                                line_dict["Probe Duration"] = probedurs[vv][15]
+                            else:
+                                line_dict["Probe Duration"] = probedurs[vv][int(probeversions[linenumber])]
                         else:
                             line_dict["Probe Duration"] = str(line_dict["Movie_time"]) + "_end"
                         with open("Analysis/output.csv", 'a', newline="") as outf:
