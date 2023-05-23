@@ -69,7 +69,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
     
     # Create two lists, one with the control videos, and one with action videos
     # Videos are sorted based on their file name
-    list_of_videos = os.listdir(os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos'))
+    #list_of_videos = os.listdir(os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos'))
     
     #I've been trying to do randomize the selection of the videos but can't get it to work, basically just fucking around w trying to
     #code random.shuffle ??? anyways i took it out bc otherwise it'll break. hopefully u see the vision
@@ -80,9 +80,11 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
     resdict['Timepoint'], resdict['Time'] = None,None
     
     # Create two different lists of videos for trial 1 and trial 2. 
-    
-    trialvideo = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos') + "/" + list_of_videos[filename-1]
-    trialsplits = pd.read_csv(os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//csv//probetimes_orders.csv'))
+    trialvideo = os.path.join(os.getcwd(),"taskScripts",filename[1])
+    trialsplits = pd.read_csv(os.path.join(os.getcwd(),"taskScripts",filename[0]))
+    #trialvideo = os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//videos') + "/" + list_of_videos[filename-1]
+    #trialsplits = pd.read_csv(os.path.join(os.getcwd(), 'taskScripts//resources//Movie_Task//csv//probetimes_orders.csv'))
+    videoname = filename[1].rsplit("/",1)[-1]
     trialname = "Movie Task-" + trialvideo.split(".")[0].split("/")[-1]
     vern = probever
     trialsplit = trialsplits.iloc[vern]
@@ -93,7 +95,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
     
     
     # present film using moviestim
-    resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = 'Movie Start', timer.getTime(), list_of_videos[filename-1]
+    resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = 'Movie Start', timer.getTime(), videoname
     writer.writerow(resdict)
     resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = None,None,None
     
@@ -107,7 +109,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
     text_inst.draw()
     win.flip()
      
-    mov = visual.MovieStim3(win, trialvideo, size=(2560, 1440), flipVert=False, flipHoriz=False, loop=False)
+    mov = visual.MovieStim3(win, trialvideo, size=(1920, 1080), flipVert=False, flipHoriz=False, loop=False)
     
     expClock = core.Clock()
     
@@ -138,7 +140,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
                 writera.writerow({'Timepoint':'EXPERIMENT DATA:','Time':'Experience Sampling Questions'})
                 writera.writerow({'Timepoint':'Start Time','Time':timer.getTime()})
                 resdict['Assoc Task'] = None
-                resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = 'Movie prompt {} {}'.format(en,list_of_videos[filename-1]), timer.getTime(), timelimitpercent
+                resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = 'Movie prompt {} {}'.format(en,videoname), timer.getTime(), timelimitpercent
                 writer.writerow(resdict)
                 resdict['Timepoint'], resdict['Time'],resdict['Auxillary Data'] = None,None,None
                 #win.flip()

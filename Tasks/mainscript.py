@@ -1,7 +1,6 @@
 
 # Main script written by Ian Goodall-Halliwell. Subscripts are individually credited. Many have been extensively modified, for better or for worse (probably for worse o__o ).
 
-
 from psychopy import visual 
 from psychopy import core, gui, event
 
@@ -9,7 +8,6 @@ import time
 import csv
 
 import yaml
-#from Tasks.taskScripts import memoryTask
 import taskScripts
 import os
 import random
@@ -342,6 +340,7 @@ if __name__ == "__main__":
                         "Probe 1 Version":"",
                         "Probe 2 Version":"",
                         "Probe 3 Version":"",
+                        "Probe 4 Version":"",
                         
                 }
 
@@ -366,12 +365,14 @@ if __name__ == "__main__":
         ESQTask = task(taskScripts.ESQ, datafile, datafileBackup, "Experience Sampling Questions", metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources/GoNoGo_Task/gonogo_stimuli.csv',1, esq=True)
         
         # Defining each task as a task object
-        movieTask1 = task(taskScripts.movieTask, datafile, 1,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1,int(metacoll.INFO['Probe 1 Version']))
-        movieTask2 = task(taskScripts.movieTask, datafile, 2,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2,int(metacoll.INFO['Probe 2 Version']))
-        movieTask3 = task(taskScripts.movieTask, datafile, 3,"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3,int(metacoll.INFO['Probe 3 Version']))
-        
-        moviegroup = [movieTask1,movieTask2,movieTask3]
+        movieTask1 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/c4.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1,int(metacoll.INFO['Probe 1 Version']))
+        movieTask2 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/lms.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2,int(metacoll.INFO['Probe 2 Version']))
+        movieTask3 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/summer.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3,int(metacoll.INFO['Probe 3 Version']))
+        movieTask4 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/videoz.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 4,int(metacoll.INFO['Probe 4 Version']))
 
+        #moviegroup = [movieTask1,movieTask2,movieTask3]
+
+        moviegroup = [movieTask4]
         movie_main = taskgroup([moviegroup],"resources/group_inst/movie_main.txt")
 
 
