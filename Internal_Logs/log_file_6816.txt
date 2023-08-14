@@ -1,0 +1,5 @@
+pygame 2.5.0 (SDL 2.28.0, Python 3.6.13)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[4277052, '2', '3', '5', 'Enter ID Here']
+3.7512 	WARNING 	Speech-to-text recognition module not available (use command `pip install SpeechRecognition` to get it. Transcription will be unavailable.
+4.0257 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).

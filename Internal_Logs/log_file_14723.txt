@@ -1,0 +1,10 @@
+pygame 2.5.0 (SDL 2.28.0, Python 3.6.13)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[2529447, '12', '9', '16', 'test4']
+
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+4.2287 	WARNING 	Speech-to-text recognition module not available (use command `pip install SpeechRecognition` to get it. Transcription will be unavailable.
+4.4102 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+19.3220 	WARNING 	Monitor specification not found. Creating a temporary one...

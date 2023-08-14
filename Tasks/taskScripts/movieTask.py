@@ -14,6 +14,8 @@ import random
 
 ###################################################################################################
 def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
+    screen_width, screen_height = win.size
+    
     writera = writer[1]
     writer = writer[0]
     random.seed(seed)
@@ -22,36 +24,42 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
     writer.writerow(resdict)
     resdict['Timepoint'], resdict['Time'] = None,None
     
-    
-
-    
 
     # user can update instructions for task here if required.
-    instructions =      """This experiment will require you to watch a set of 3 movies.
-
-                    \nYou will not be able to pause or rewind. 
-
-                    \nDuring these videos, please listen carefully. There are volume keys on the keyboard to adjust to your liking. You will be asked a series of questions regarding the content of each movie afterwards. 
-
-                    \nPlease do not take any notes during the videos. 
-
-                    \nPlease do not focus on another window, external devices or attend to other distractions. Do not close this window.
-
+    start_screen =      """If you are ready to start listening, press enter.
                         """
 
     # user can update start screen text here if required. 
-    start_screen = """Throughout each of the movies, you will be prompted with questions about your thoughts.
+    instructions1 = """Throughout the audiobook, you will be prompted with questions about your thoughts.
 
                     \nPlease answer these questions as quickly and honestly as possible. There are no right or wrong answers.
 
                     \nUse the arrow keys and enter/return key to submit your response. 
                     """
+                    
+    instructions2 = """As before, while you listen to the audiobook, you will be prompted with questions about your thoughts.
+
+                        \nPlease answer these questions as quickly and honestly as possible. There are no right or wrong answers.
+
+                        \nUse the arrow keys and enter/return key to submit your response. 
+                        """
+                    
+    end_screen_text = """Thank you for listening.
+                    Press Enter to finish."""
     
     # create text stimuli to be updated for start screen instructions.
-    stim = visual.TextStim(win, "", color = [-1,-1,-1], wrapWidth = 1300, units = "pix", height=40)
+    stim = visual.TextStim(win, "",
+                           font='Arial',
+                           anchorHoriz='center', anchorVert='center', wrapWidth=600, ori=0, 
+                           color='black', colorSpace='rgb', opacity=1, 
+                           languageStyle='LTR',
+                           depth=0.0)
 
     # update text stim to include instructions for task. 
-    stim.setText(instructions)
+    if filename[1] == "resources/Movie_Task/videos/audio_en_run1_withpics_914.mp4":
+        stim.setText(instructions1)
+    else:
+        stim.setText(instructions2)
     stim.draw()
     win.flip()
     # Wait for user to press enter to continue. 
@@ -109,7 +117,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
     text_inst.draw()
     win.flip()
      
-    mov = visual.MovieStim3(win, trialvideo, size=(1920, 1080), flipVert=False, flipHoriz=False, loop=False)
+    mov = visual.MovieStim3(win, trialvideo, size=(screen_width, screen_height), flipVert=False, flipHoriz=False, loop=False)
     
     expClock = core.Clock()
     
@@ -157,9 +165,22 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever):
             win.flip()
         else:
             break
+    
+    if filename[1] == "resources/Movie_Task/videos/audio_en_run1_withpics_914.mp4":
+        # Present the first question
+        question1 = "Question 1: What is your response to the first question?\n1. Option 1\n2. Option 2\n3. Option 3\n4. Option 4"
+        stim.setText(question1)
+        stim.draw()
+        win.flip()
+        keys = event.waitKeys(keyList=['1', '2', '3', '4'])
+        response1 = keys[0]  # Store the selected option
 
-    
-    
-    
-    
+        # Present the second question
+        question2 = "Question 2: What is your response to the second question?\n1. Option 1\n2. Option 2\n3. Option 3\n4. Option 4"
+        stim.setText(question2)
+        stim.draw()
+        win.flip()
+        keys = event.waitKeys(keyList=['1', '2', '3', '4'])
+        response2 = keys[0]  # Store the selected option
+
     return trialname

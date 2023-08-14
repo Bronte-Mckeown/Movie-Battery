@@ -68,11 +68,12 @@ class taskbattery(metadatacollection):
                 taskbattery.ESQtask = ESQtask
                 self.INFO = INFO
                 self.taskexeclist = []
-                self.win = visual.Window(size=(1440, 960),color='white',fullscr=False)
+                self.win = visual.Window(size=(1440, 960),color='white',fullscr=True)
+                
                 self.text = text_2 = visual.TextStim(win=self.win, name='text_2',
-                        text='Welcome to our experiment. \n Please follow the instructions on-screen and notify the attending researcher if anything is unclear \n We are thankful for your participation. \n Press <return/enter> to continue.',
+                        text='Welcome to our experiment. \n\n Please follow the instructions on-screen and notify the attending researcher if anything is unclear. \n\n We are thankful for your participation. \n\n Press <return/enter> to continue.',
                         font='Arial',
-                        anchorHoriz='center', anchorVert='center', wrapWidth=None, ori=0, 
+                        anchorHoriz='center', anchorVert='center', wrapWidth=600, ori=0, 
                         color='black', colorSpace='rgb', opacity=1, 
                         languageStyle='LTR',
                         depth=0.0)
@@ -270,13 +271,15 @@ class taskgroup(taskbattery,metadatacollection):
                 
                 
         def show(self):
+        
                 text_inst = visual.TextStim(win=taskbattery.win, name='text_4',
                         text='',
-                        font='Open Sans',
-                        pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
-                        color='black', colorSpace='rgb', opacity=None, 
+                        font='Arial',
+                        anchorHoriz='center', anchorVert='center', wrapWidth=600, ori=0, 
+                        color='black', colorSpace='rgb', opacity=1, 
                         languageStyle='LTR',
-                        depth=0.0)
+                        depth=0.0
+                        )
                 try:
                         with open(os.path.join(os.path.join(os.getcwd(),"taskScripts"),self.instrpath), newline="") as f:
                                 lines1 = f.read()
@@ -305,10 +308,10 @@ class taskgroup(taskbattery,metadatacollection):
                         
         def end(self):
                 text_inst = visual.TextStim(win=taskbattery.win, name='text_1',
-                        text='This is the end of this phase of the experiment. \n Please take a break if you need to before continuing with the study',
-                        font='Open Sans',
-                        pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
-                        color='black', colorSpace='rgb', opacity=None, 
+                        text='This is the end of this phase of the experiment. \n\n Please take a break if you need to before continuing with the study.',
+                        font='Arial',
+                        anchorHoriz='center', anchorVert='center', wrapWidth=600, ori=0, 
+                        color='black', colorSpace='rgb', opacity=1, 
                         languageStyle='LTR',
                         depth=0.0)
                 text_inst.draw()
@@ -340,14 +343,12 @@ if __name__ == "__main__":
                         "Probe 1 Version":"",
                         "Probe 2 Version":"",
                         "Probe 3 Version":"",
-                        "Probe 4 Version":"",
                         
                 }
 
 
 
         # Main and backup data file
-
 
         # Run the GUI and save output to logfile
         metacoll = metadatacollection(INFO)
@@ -365,14 +366,13 @@ if __name__ == "__main__":
         ESQTask = task(taskScripts.ESQ, datafile, datafileBackup, "Experience Sampling Questions", metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources/GoNoGo_Task/gonogo_stimuli.csv',1, esq=True)
         
         # Defining each task as a task object
-        movieTask1 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/c4.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1,int(metacoll.INFO['Probe 1 Version']))
-        movieTask2 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/lms.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2,int(metacoll.INFO['Probe 2 Version']))
-        movieTask3 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/summer.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3,int(metacoll.INFO['Probe 3 Version']))
-        movieTask4 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/videoz.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 4,int(metacoll.INFO['Probe 4 Version']))
+        movieTask1 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/audio_en_run1_withpics_914.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1,int(metacoll.INFO['Probe 1 Version']))
+        movieTask2 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/audio_en_run2_947.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2,int(metacoll.INFO['Probe 2 Version']))
+        movieTask3 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3,int(metacoll.INFO['Probe 3 Version']))
 
-        #moviegroup = [movieTask1,movieTask2,movieTask3]
+        moviegroup = [movieTask1,movieTask2,movieTask3]
 
-        moviegroup = [movieTask4]
+
         movie_main = taskgroup([moviegroup],"resources/group_inst/movie_main.txt")
 
 
@@ -383,11 +383,11 @@ if __name__ == "__main__":
         
         
         # Shuffles the order of the tasks in taskgroups
-        for enum, blk in enumerate(fulltasklist):
-                blk.shuffle()
+        #for enum, blk in enumerate(fulltasklist):
+        #        blk.shuffle()
         
         # Shuffle the order of the taskgroups
-        random.shuffle(fulltasklist)
+        #random.shuffle(fulltasklist)
         tasks = fulltasklist
 
         tbt = taskbattery(tasks, ESQTask, INFO)
