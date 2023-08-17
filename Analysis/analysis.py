@@ -3,58 +3,14 @@ import os
 import csv
 import numpy as np
 import pandas as pd
-os.chdir(".")
+os.chdir("C:\\Users\\bront\\Documents\\CanadaPostdoc\\audio\\Movie-Battery")
 graddict = {}
 global sentimentdict
 sentimentdict = {}
 
-probedurs = pd.read_csv("Tasks/taskScripts/resources/Movie_Task/csv/probe_durations.csv",header=None).to_dict()
 
-if os.path.exists("Analysis/accuracy.csv"):
-    os.remove("Analysis/accuracy.csv")
-with open("Analysis/accuracy.csv","a") as f:
-    newdict = {"Subject":None,"Experience Sampling Questions Response Time":None,
-        "GoNoGo Task Response Time":None, "Go Task Accuracy":None,"NoGo Task Accuracy":None,
-        "Finger Tapping Task Response Time":None, "Finger Tapping Task Accuracy":None,
-        "Two-Back Task-faces Response Time":None, "Two-Back Task-faces Accuracy":None,
-        "Two-Back Task-scenes Response Time":None, "Two-Back Task-scenes Accuracy":None,
-        "One-Back Task Response Time":None, "One-Back Task Accuracy":None,
-        "Zero-Back Task Response Time":None, "Zero-Back Task Accuracy":None,
-        "Hard Math Task Response Time":None, "Hard Math Task Accuracy":None,
-        "Easy Math Task Response Time":None, "Easy Math Task Accuracy":None,
-        "Friend Task Response Time":None, "Friend Task Sentiment":None,
-        "You Task Response Time":None, "You Task Sentiment":None
-        }
-    writer = csv.writer(f)
-    writer.writerow(newdict)
-
-
-with open("Tasks/taskScripts/resources/Self_Task/Self_Stimuli.csv",'r') as f:
-    reader = csv.reader(f)
-    for e,row in enumerate(reader):
-        if e == 0:
-            continue
-        sentimentdict.update({row[6]:row[8]})
-        print(row)
-
-with open("Tasks/taskScripts/resources/Other_Task/Other_Stimuli.csv",'r') as f:
-    reader = csv.reader(f)
-    for e,row in enumerate(reader):
-        if e == 0:
-            continue
-        sentimentdict.update({row[6]:row[8]})
-        print(row)
-
-with open('Analysis/coords.csv','r') as ft:
-    rd = csv.reader(ft)
-    for e,row in enumerate(rd):
-        if e == 0:
-            continue
-        graddict.update({row[0]:[float(row[1]),float(row[2]),float(row[3])]})
-        print(row)
-graddict = {"Movie Task-lms":[0,0,0],
-"Movie Task-c4":[0,0,0],
-"Movie Task-summer":[0,0,0]}
+probeords= pd.read_csv("Tasks/taskScripts/resources/Movie_Task/csv/probetimes_orders_test.csv",header=None).to_dict()
+probedurs = pd.read_csv("Tasks/taskScripts/resources/Movie_Task/csv/probe_durations_test.csv",header=None).to_dict()
 
 line_dict= {"Task_name":None,
         "Participant #":None,
@@ -78,25 +34,21 @@ line_dict= {"Task_name":None,
         "Knowledge_response":None,
         "Probe Version":None,
         "Probe Number":None,
+        "Probe Time": None,
         "Probe Duration":None,
         }
 
 if os.path.exists(os.path.join(os.getcwd(),"Analysis/output.csv")):
         os.remove(os.path.join(os.getcwd(),"Analysis/output.csv"))
 
-
 with open(os.path.join(os.getcwd(),"Analysis/output.csv"), 'a', newline="") as outf:
     wr = csv.writer(outf)
     wr.writerow(list(line_dict.keys()))
 
 
-
 def sortingfunction(exp,row,resps):
     global prevtime
     global en
-    if exp == "Reading Task":
-        # Collect no data
-        pass
     if exp == "Experience Sampling Questions":
         # Collect response time
         
@@ -107,235 +59,6 @@ def sortingfunction(exp,row,resps):
             resptime = float(row[1]) - prevtime  
             resps[exp]["Response Time"].append(resptime)
         pass
-    if exp == "Memory Task":
-        # Collect no data
-        pass
-    if exp == "GoNoGo Task":
-        # Collect response time, % correct
-        try:
-            # Resp time
-            if row[0].split(" ")[1] == "start":
-                prevtime = float(row[1])
-            elif row[0].split(" ")[1] == "end":
-                resptime = float(row[1]) - prevtime  
-                resps[exp]["Response Time"].append(resptime)
-            # Accuracy
-            if row[2] != '':
-                if row[2] == 'noResponse':
-                    if row[9] == 'Type: Go':
-                        resps[exp]["Accuracy - Go"].append(False)
-                if row[2].upper() == 'FALSE':
-                    if row[9] == 'Type: Go':
-                        resps[exp]["Accuracy - Go"].append(True)
-                if row[2].upper() == 'FALSE':
-                    if row[9] == 'Type: NoGo':
-                        resps[exp]["Accuracy - NoGo"].append(False)
-                if row[2].upper() == 'TRUE':
-                    if row[9] == 'Type: NoGo':
-                        resps[exp]["Accuracy - NoGo"].append(True)
-        except Exception as e:
-            print(e)
-            pass
-        pass
-    if exp == "Finger Tapping Task": #### NO RESPONSE TIME
-        print(row)
-        if row[1] != "":    
-            try:
-                if row[0].split(" ",2)[2] == "Trial Start":
-                    prevtime = float(row[1])
-                elif row[0].split(" ",2)[2] == "Trial End":
-                    resptime = float(row[1]) - prevtime  
-                    resps[exp]["Response Time"].append(resptime)
-            except:
-                pass
-        if row[0] == 'Finger Tapping Trial End':
-            if row[2].upper() == "TRUE":
-                resps[exp]["Accuracy"].append(True)
-            elif row[2].upper() == "FALSE":
-                resps[exp]["Accuracy"].append(False)
-            else:
-                return 1/0
-        # Collect response time, % correct
-        pass
-    if exp == "Two-Back Task-faces": #DONT HAVE THE CORRECT TRUE/FALSE ON TRIALS
-        print(row)
-        if row[0] == "Choice presented":
-            prevtime = float(row[1])
-        elif row[0] == "2-back Trial End":
-            resptime = float(row[1]) - prevtime  
-            resps[exp]["Response Time"].append(resptime)
-        # Collect response time, % correct
-        if row[0] == "2-back Trial End":
-            if row[2].upper() == "TRUE":
-                resps[exp]["Accuracy"].append(True)
-            elif row[2].upper() == "FALSE":
-                resps[exp]["Accuracy"].append(False)
-            else:
-                return 1/0
-        pass
-    if exp == "Two-Back Task-scenes": #DONT HAVE THE CORRECT TRUE/FALSE ON TRIALS
-        print(row)
-        if row[0] == "Choice presented":
-            prevtime = float(row[1])
-        elif row[0] == "2-back Trial End":
-            resptime = float(row[1]) - prevtime  
-            resps[exp]["Response Time"].append(resptime)
-        # Collect response time, % correct
-        if row[0] == "2-back Trial End":
-            if row[2].upper() == "TRUE":
-                resps[exp]["Accuracy"].append(True)
-            elif row[2].upper() == "FALSE":
-                resps[exp]["Accuracy"].append(False)
-            else:
-                return 1/0
-        pass
-    if exp == "One-Back Task": #DONT HAVE THE CORRECT TRUE/FALSE ON TRIALS
-        print(row)
-        if row[0] == "OneBackStimulus Start":
-            prevtime = float(row[1])
-        elif row[0] == "OneBackStimulus End":
-            resptime = float(row[1]) - prevtime  
-            resps[exp]["Response Time"].append(resptime)
-        # Collect response time, % correct
-        if row[0] == "OneBackStimulus End":
-            if row[2].upper() == "TRUE":
-                resps[exp]["Accuracy"].append(True)
-            elif row[2].upper() == "FALSE":
-                resps[exp]["Accuracy"].append(False)
-            else:
-                return 1/0
-        pass
-    if exp == "Zero-Back Task":
-        if row[0] == "ZeroBackStimulus Start":
-            prevtime = float(row[1])
-        elif row[0] == "ZeroBackStimulus End":
-            resptime = float(row[1]) - prevtime  
-            resps[exp]["Response Time"].append(resptime)
-        # Collect response time, % correct
-        if row[0] == "ZeroBackStimulus End":
-            if row[2].upper() == "TRUE":
-                resps[exp]["Accuracy"].append(True)
-            elif row[2].upper() == "FALSE":
-                resps[exp]["Accuracy"].append(False)
-            else:
-                return 1/0
-        pass
-        # Collect response time, % correct
-        pass
-    if exp == "Hard Math Task":
-        print(row)
-        if row[0] == 'Choice presented':
-            prevtime = float(row[1])
-        elif row[0] == 'Choice made':
-            resptime = float(row[1]) - prevtime  
-            resps[exp]["Response Time"].append(resptime)
-        # Collect response time, % correct
-        if row[0] == 'Math Trial End':
-            if not "en" in globals():
-                
-                en = 0
-            if en == 0:
-                en = 1
-                if row[2].upper() == "TRUE":
-                    resps[exp]["Accuracy"].append(True)
-                elif row[2].upper() == "FALSE":
-                    resps[exp]["Accuracy"].append(False)
-                else:
-                    return 1/0
-            elif en == 1:
-                en = 0
-            
-        pass
-    if exp == "Easy Math Task":
-        if row[0] == 'Choice presented':
-            prevtime = float(row[1])
-        elif row[0] == 'Choice made':
-            resptime = float(row[1]) - prevtime  
-            resps[exp]["Response Time"].append(resptime)
-        # Collect response time, % correct
-        if row[0] == 'Math Trial End':
-            if not "en" in globals():
-                # global en
-                en = 0
-            if en == 0:
-                en = 1
-                if row[2].upper() == "TRUE":
-                    resps[exp]["Accuracy"].append(True)
-                elif row[2].upper() == "FALSE":
-                    resps[exp]["Accuracy"].append(False)
-                else:
-                    return 1/0
-            elif en == 1:
-                en = 0
-        # Collect response time, % correct
-        pass
-    if exp == "Friend Task": #NO RESPONSE TIMES
-        print(row)
-        if row[0].split('_')[0] == 'Start':
-            prevtime = float(row[1])
-        elif row[0].split('_')[0] == 'End':
-            resptime = float(row[1]) - prevtime  
-            resps[exp]["Response Time"].append(resptime)
-        # Collect response time, sentiment
-        if row[0].split('_')[0] == 'End':
-            sentdirection = sentimentdict[row[0].split('_')[2]]
-            
-            if row[8] == 'right':
-                applies = True
-            if row[8] == 'left':
-                applies = False
-            if row[8] == "None":
-                #resps[exp]["Sentiment"].append("noresponse")
-                return  
-            if sentdirection == 'Negative':
-                if applies == True:
-                    resps[exp]["Sentiment"].append(False)      
-                elif applies == False:
-                    resps[exp]["Sentiment"].append(True)  
-                
-            if sentdirection == 'Positive':
-                if applies == True:
-                    resps[exp]["Sentiment"].append(True)      
-                elif applies == False:
-                    resps[exp]["Sentiment"].append(False)  
-                        
-            
-            
-        pass
-    if exp == "You Task":
-        if row[0].split('_')[0] == 'Start':
-            prevtime = float(row[1])
-        elif row[0].split('_')[0] == 'End':
-            resptime = float(row[1]) - prevtime  
-            resps[exp]["Response Time"].append(resptime)
-        # Collect response time, sentiment
-        if row[0].split('_')[0] == 'End':
-            sentdirection = sentimentdict[row[0].split('_')[2]]
-            
-            if row[8] == 'right':
-                applies = True
-            if row[8] == 'left':
-                applies = False
-            if row[8] == "None":
-                #resps[exp]["Sentiment"].append("noresponse")
-                return  
-            if sentdirection == 'Negative':
-                if applies == True:
-                    resps[exp]["Sentiment"].append(False)      
-                elif applies == False:
-                    resps[exp]["Sentiment"].append(True)  
-                
-            if sentdirection == 'Positive':
-                if applies == True:
-                    resps[exp]["Sentiment"].append(True)      
-                elif applies == False:
-                    resps[exp]["Sentiment"].append(False)  
-        # Collect response time, sentiment
-        pass
-    
-        #print("e")    
-    pass
-
 
 
 for file in os.listdir("Tasks/log_file"):
@@ -377,6 +100,7 @@ for file in os.listdir("Tasks/log_file"):
         "Knowledge_response":None,
         "Probe Version": None,
         "Probe Number": None,
+        "Probe Time": None,
         "Probe Duration": None
         }
         import re
@@ -391,6 +115,8 @@ for file in os.listdir("Tasks/log_file"):
             reader = csv.reader(f)
             
             for en,row in enumerate(reader):
+                print (en)
+                print (row)
                 if en == 2:
                     probeversions = [row[1],row[2],row[3]]
                     v = 0
@@ -431,23 +157,22 @@ for file in os.listdir("Tasks/log_file"):
                     if task_name == row[10]:
                         line_dict[row[3]]=row[4]
                     if enum == 16:
-                        if task_name in ("Movie Task-Movie Task-summer", "Movie Task-summer"):
+                        if task_name in ("Movie Task-Movie Task-test1", "Movie Task-test1"):
                             
-                            line_dict["Task_name"] = "Movie Task-summer"
-                            linenumber = 2
-                            #row[10] = "Movie Task-bridge"
-                        if task_name in ("Movie Task-Movie Task-c4", "Movie Task-c4"):
-                            
-                            line_dict["Task_name"] = "Movie Task-c4"
+                            line_dict["Task_name"] = "Movie Task-test1"
                             linenumber = 0
-                        if task_name in ("Movie Task-Movie Task-lms", "Movie Task-lms"):
+
+                        if task_name in ("Movie Task-Movie Task-test2", "Movie Task-test2"):
                             
-                            line_dict["Task_name"] = "Movie Task-lms"
+                            line_dict["Task_name"] = "Movie Task-test2"
                             linenumber = 1
-                            #row[10] = "Movie Task-incept"
+                        if task_name in ("Movie Task-Movie Task-test3", "Movie Task-test3"):
+                            
+                            line_dict["Task_name"] = "Movie Task-test3"
+                            linenumber = 2
                         # else:
                         #     print("oh no")
-                        grads = graddict[line_dict["Task_name"]]
+                        # grads = graddict[line_dict["Task_name"]]
                         #line_dict["Gradient 1"],line_dict["Gradient 2"],line_dict["Gradient 3"] = grads
                         line_dict["Probe Version"] = probeversions[linenumber]
                         line_dict["Probe Number"] = vv
@@ -509,19 +234,3 @@ for file in os.listdir("Tasks/log_file"):
                         sortingfunction(expdict["Experiment"],row,resps)  
                     
                 print(row)
-        # with open("Analysis/accuracy.csv","a",newline="") as f:
-        #     newdict = {"Subject":resps['Subject'],
-        #      "Experience Sampling Questions Response Time":np.mean(resps['Experience Sampling Questions']['Response Time']),
-        #      "GoNoGo Task Response Time":np.mean(resps['GoNoGo Task']['Response Time']), "NoGo Task Accuracy":(resps['GoNoGo Task']['Accuracy - NoGo'].count(True)/len(resps['GoNoGo Task']['Accuracy - NoGo'])), "Go Task Accuracy":(resps['GoNoGo Task']['Accuracy - Go'].count(True)/len(resps['GoNoGo Task']['Accuracy - Go'])),
-        #      "Finger Tapping Task Response Time":np.mean(resps['Finger Tapping Task']['Response Time']), "Finger Tapping Task Accuracy":(resps['Finger Tapping Task']['Accuracy'].count(True)/len(resps['Finger Tapping Task']['Accuracy'])),
-        #      "Two-Back Task-faces Response Time":np.mean(resps['Two-Back Task-faces']['Response Time']), "Two-Back Task-faces Accuracy":(resps['Two-Back Task-faces']['Accuracy'].count(True)/len(resps['Two-Back Task-faces']['Accuracy'])),
-        #      "Two-Back Task-scenes Response Time":np.mean(resps['Two-Back Task-scenes']['Response Time']), "Two-Back Task-scenes Accuracy":(resps['Two-Back Task-scenes']['Accuracy'].count(True)/len(resps['Two-Back Task-scenes']['Accuracy'])),
-        #      "One-Back Task Response Time":np.mean(resps['One-Back Task']['Response Time']), "One-Back Task Accuracy":(resps['One-Back Task']['Accuracy'].count(True)/len(resps['One-Back Task']['Accuracy'])),
-        #      "Zero-Back Task Response Time":np.mean(resps['Zero-Back Task']['Response Time']), "Zero-Back Task Accuracy":(resps['Zero-Back Task']['Accuracy'].count(True)/len(resps['Zero-Back Task']['Accuracy'])),
-        #      "Hard Math Task Response Time":np.mean(resps['Hard Math Task']['Response Time']), "Hard Math Task Accuracy":(resps['Hard Math Task']['Accuracy'].count(True)/len(resps['Hard Math Task']['Accuracy'])),
-        #      "Easy Math Task Response Time":np.mean(resps['Easy Math Task']['Response Time']), "Easy Math Task Accuracy":(resps['Easy Math Task']['Accuracy'].count(True)/len(resps['Easy Math Task']['Accuracy'])),
-        #      "Friend Task Response Time":np.mean(resps['Friend Task']['Response Time']), "Friend Task Sentiment":(resps['Friend Task']['Sentiment'].count(True)/len(resps['Friend Task']['Sentiment'])),
-        #      "You Task Response Time":np.mean(resps['You Task']['Response Time']), "You Task Sentiment":(resps['You Task']['Sentiment'].count(True)/len(resps['You Task']['Sentiment']))
-        #      }
-        #     writer = csv.writer(f)
-        #     writer.writerow(newdict.values())

@@ -1,0 +1,38 @@
+pygame 2.5.0 (SDL 2.28.0, Python 3.6.13)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[8794879, '11', '2', '2', 'Enter ID Here']
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+3.9319 	WARNING 	Speech-to-text recognition module not available (use command `pip install SpeechRecognition` to get it. Transcription will be unavailable.
+4.2239 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+10.4052 	WARNING 	Monitor specification not found. Creating a temporary one...
+13.8699 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+14.1130 	WARNING 	t of last frame was 243.49ms (=1/4)
+18.2160 	WARNING 	t of last frame was 4103.01ms (=1/0)
+18.3669 	WARNING 	t of last frame was 150.91ms (=1/6)
+20.3331 	WARNING 	t of last frame was 1966.18ms (=1/0)
+21.1158 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+25.6389 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+25.6390 	WARNING 	FrameRate could not be supplied by psychopy; defaulting to 60.0
+31.3523 	WARNING 	0.14222656667698175: Video catchup needed, advancing self._nextFrameT from 0.06666666666666667 to 0.1
+31.4530 	WARNING 	0.24294176668627188: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.19999999999999998
+31.5205 	WARNING 	0.31042546668322757: Video catchup needed, advancing self._nextFrameT from 0.2333333333333333 to 0.26666666666666666
+31.5862 	WARNING 	0.37614606667193584: Video catchup needed, advancing self._nextFrameT from 0.3 to 0.3333333333333333
+31.6523 	WARNING 	0.44228516667499207: Video catchup needed, advancing self._nextFrameT from 0.36666666666666664 to 0.39999999999999997
+31.7197 	WARNING 	0.5096782666805666: Video catchup needed, advancing self._nextFrameT from 0.4333333333333333 to 0.4666666666666666
+31.7862 	WARNING 	0.5761304666812066: Video catchup needed, advancing self._nextFrameT from 0.49999999999999994 to 0.5333333333333333
+31.8526 	WARNING 	0.642579666688107: Video catchup needed, advancing self._nextFrameT from 0.5666666666666667 to 0.6
+31.9192 	WARNING 	0.7092107666830998: Video catchup needed, advancing self._nextFrameT from 0.6333333333333333 to 0.6666666666666666
+31.9864 	WARNING 	0.7763122666801792: Video catchup needed, advancing self._nextFrameT from 0.7 to 0.7333333333333333
+31.9864 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+112.9612 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+283.1198 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+707.7454 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+843.8686 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)

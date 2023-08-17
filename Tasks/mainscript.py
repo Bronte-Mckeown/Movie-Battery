@@ -14,6 +14,7 @@ import random
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 if not os.path.exists(os.path.join(os.getcwd(),"log_file")):
         os.mkdir(os.path.join(os.getcwd(),"log_file"))
+        
 # This class is responsible for creating and holding the information about how each task should run.
 # It contains the number of repetitions and a global runtime variable.
 # It also contains the subject ID, and will eventually use the experiment seed to randomize trial order.
@@ -61,24 +62,25 @@ class metadatacollection():
 # Creates a list of all the tasks, and allows you to iterate through them without closing the window
 class taskbattery(metadatacollection):
         time = core.Clock()
-        resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : None, 'Task Iteration': None, 'Participant ID': None, 'Response_Key':None, 'Auxillary Data': None, 'Assoc Task':None}
+        resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : None, 'Task Iteration': None, 'Probe Order': None, 'Response_Key':None, 'Auxillary Data': None, 'Assoc Task':None}
         #self.win = visual.Window(size=(1280, 800),color='white', winType='pyglet',fullscr=True)
         def __init__(self, tasklist, ESQtask, INFO):
                 self.tasklist = tasklist
                 taskbattery.ESQtask = ESQtask
                 self.INFO = INFO
                 self.taskexeclist = []
-                self.win = visual.Window(size=(1440, 960),color='white',fullscr=True)
+                self.win = visual.Window(size=(3240,2160 ),color='white',fullscr=False)
+                
+                win_width, win_height = self.win.size
                 
                 self.text = text_2 = visual.TextStim(win=self.win, name='text_2',
                         text='Welcome to our experiment. \n\n Please follow the instructions on-screen and notify the attending researcher if anything is unclear. \n\n We are thankful for your participation. \n\n Press <return/enter> to continue.',
                         font='Arial',
-                        anchorHoriz='center', anchorVert='center', wrapWidth=600, ori=0, 
+                        anchorHoriz='center', anchorVert='center', wrapWidth=win_width*0.8, ori=0,
                         color='black', colorSpace='rgb', opacity=1, 
                         languageStyle='LTR',
                         depth=0.0)
                 taskbattery.win = self.win
-        
         
         #def initializeBattery(self):
                 #for i in self.tasklist:
@@ -238,25 +240,25 @@ class task(taskbattery,metadatacollection):
                 writer2 = csv.DictWriter(fr, fieldnames=taskbattery.resultdict)
                 fre.writerow(["EXPERIMENT DATA:",self.name])
                 fre.writerow(["Start Time", taskbattery.time.getTime()])
-                taskbattery.resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : self.name, 'Task Iteration': '1', 'Participant ID': self.trialclass[1], 'Response_Key' : None, 'Auxillary Data': None, 'Assoc Task':None}
+                taskbattery.resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : self.name, 'Task Iteration': '1', 'Probe Order': self.trialclass[1], 'Response_Key' : None, 'Auxillary Data': None, 'Assoc Task':None}
                 if self.esq == False:
                         if self.ver == 1:
-                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_a_name, int(metacoll.INFO['Experiment Seed']),self.probever)
+                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_a_name, int(metacoll.INFO['Experiment Seed']),self.probever, metacoll.INFO['Subject'])
                         if self.ver == 2:
-                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_b_name, int(metacoll.INFO['Experiment Seed']),self.probever)
+                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_b_name, int(metacoll.INFO['Experiment Seed']),self.probever, metacoll.INFO['Subject'])
                         if self.ver == 3:
-                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_c_name, int(metacoll.INFO['Experiment Seed']),self.probever)
+                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_c_name, int(metacoll.INFO['Experiment Seed']),self.probever, metacoll.INFO['Subject'])
                         if self.ver == 4:
-                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_d_name, int(metacoll.INFO['Experiment Seed']),self.probever)
+                                dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_d_name, int(metacoll.INFO['Experiment Seed']),self.probever, metacoll.INFO['Subject'])
                 
                 if self.esq == True:
                         
-                        taskbattery.resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : self.name, 'Task Iteration': '1', 'Participant ID': self.trialclass[1], 'Response_Key' : None, 'Auxillary Data': None, 'Assoc Task':taskbattery.prevname}
+                        taskbattery.resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : self.name, 'Task Iteration': '1', 'Probe Order': self.trialclass[1], 'Response_Key' : None, 'Auxillary Data': None, 'Assoc Task':taskbattery.prevname}
                         self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, None, int(metacoll.INFO['Experiment Seed']))
                         dataver = None
                 f.close()
                 fr.close()
-                taskbattery.resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : None, 'Task Iteration': None, 'Participant ID': None,'Response_Key':None, 'Auxillary Data': None, 'Assoc Task':None}
+                taskbattery.resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : None, 'Task Iteration': None, 'Probe Order': None,'Response_Key':None, 'Auxillary Data': None, 'Assoc Task':None}
                 if dataver != None:
                         self.name = self.name + "-" + dataver
                 taskbattery.prevname = self.name
@@ -303,12 +305,12 @@ class taskgroup(taskbattery,metadatacollection):
                                 task.setver3()
                                 print("Now running {}".format(task.name))
                                 task.run()
-                                print("Now starting ESQ for {}".format(task.name))
-                                taskbattery.ESQtask.run()
+                                # print("Now starting ESQ for {}".format(task.name))
+                                # taskbattery.ESQtask.run()
                         
         def end(self):
                 text_inst = visual.TextStim(win=taskbattery.win, name='text_1',
-                        text='This is the end of this phase of the experiment. \n\n Please take a break if you need to before continuing with the study.',
+                        text='This is the end of this phase of the experiment. \n\n Please let the attending researcher know you have finished.',
                         font='Arial',
                         anchorHoriz='center', anchorVert='center', wrapWidth=600, ori=0, 
                         color='black', colorSpace='rgb', opacity=1, 
@@ -343,7 +345,7 @@ if __name__ == "__main__":
                         "Probe 1 Version":"",
                         "Probe 2 Version":"",
                         "Probe 3 Version":"",
-                        
+  
                 }
 
 
@@ -366,9 +368,9 @@ if __name__ == "__main__":
         ESQTask = task(taskScripts.ESQ, datafile, datafileBackup, "Experience Sampling Questions", metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources/GoNoGo_Task/gonogo_stimuli.csv',1, esq=True)
         
         # Defining each task as a task object
-        movieTask1 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/audio_en_run1_withpics_914.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1,int(metacoll.INFO['Probe 1 Version']))
-        movieTask2 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/audio_en_run2_947.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2,int(metacoll.INFO['Probe 2 Version']))
-        movieTask3 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders.csv","resources/Movie_Task/videos/.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3,int(metacoll.INFO['Probe 3 Version']))
+        movieTask1 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders_test.csv","resources/Movie_Task/videos/test1.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1,int(metacoll.INFO['Probe 1 Version']))
+        movieTask2 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders_test.csv","resources/Movie_Task/videos/test2.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2,int(metacoll.INFO['Probe 2 Version']))
+        movieTask3 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders_test.csv","resources/Movie_Task/videos/test3.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3,int(metacoll.INFO['Probe 3 Version']))
 
         moviegroup = [movieTask1,movieTask2,movieTask3]
 
