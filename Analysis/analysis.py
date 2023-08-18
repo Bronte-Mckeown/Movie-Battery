@@ -8,8 +8,10 @@ graddict = {}
 global sentimentdict
 sentimentdict = {}
 
+n_probes_per_clip = 4
+num_esq = 16
 
-probeords= pd.read_csv("Tasks/taskScripts/resources/Movie_Task/csv/probetimes_orders_test.csv",header=None).to_dict()
+probeorders= pd.read_csv("Tasks/taskScripts/resources/Movie_Task/csv/probetimes_orders_test.csv",header=None, index_col = False).to_dict()
 probedurs = pd.read_csv("Tasks/taskScripts/resources/Movie_Task/csv/probe_durations_test.csv",header=None).to_dict()
 
 line_dict= {"Task_name":None,
@@ -104,7 +106,7 @@ for file in os.listdir("Tasks/log_file"):
         "Probe Duration": None
         }
         import re
-        vv = 0
+        probe_iteration = 0
         _,_,subject,seed = ftemp.split("_")
         subject = "subject_"+str(int(re.findall(r'\d+', subject)[0]))
         line_dict["Participant #"] = subject
@@ -114,19 +116,27 @@ for file in os.listdir("Tasks/log_file"):
         with open(os.path.join("Tasks/log_file",file)) as f:
             reader = csv.reader(f)
             
+            # loop over rows in every log file with enumerate
             for en,row in enumerate(reader):
-                print (en)
-                print (row)
+                # if it's the second row, extra probe order versions
                 if en == 2:
                     probeversions = [row[1],row[2],row[3]]
-                    v = 0
-                    
+                    # v = 0
+                
+                # on first row, this will always be false
+                # but gets set to true below once 1st row value == 'start time'
+                # from then on, goes into this if statement
                 if readstart:
+                    # if second column is not experience sampling questions
                     if not row[1] == "Experience Sampling Questions":
+                        # and if skipstart is true
                         if skipstart:
+                            # set readstart to false
                             readstart = False
                             skipstart = False
-                            
+                        
+                        # movie time is kinda pointless
+                        # it is the difference between 'start time' of movie task and 'start time' of first ESQ item
                         line_dict["Movie_time"] = float(row[1])-float(starttime)
                         readstart = False
                     else:
@@ -142,16 +152,19 @@ for file in os.listdir("Tasks/log_file"):
                 
                 if row[0] == 'ESQ':
                     enum +=1
+                    # when ect is equal to 0, ready to receive ESQ data
                     if ect == 0:
-                        task_name = row[10]
-                        vv += 1
+                        task_name = row[10] # store task name
+                        # increase probe_iteration by 1
+                        probe_iteration += 1
                         if line_dict["Task_name"] is not None:
+                            # when task name changes, probe_iteration is reset to zero
                             if line_dict["Task_name"] != task_name and "Movie Task-" + line_dict["Task_name"] != task_name:
                                 
-                                v += 1
-                                vv = 0
+                                # v += 1
+                                probe_iteration = 0
                         elif line_dict["Task_name"] is None:
-                            vv = 0
+                            probe_iteration = 0
                         line_dict["Task_name"] = task_name
                         ect = 1
                     if task_name == row[10]:
@@ -170,19 +183,13 @@ for file in os.listdir("Tasks/log_file"):
                             
                             line_dict["Task_name"] = "Movie Task-test3"
                             linenumber = 2
-                        # else:
-                        #     print("oh no")
-                        # grads = graddict[line_dict["Task_name"]]
-                        #line_dict["Gradient 1"],line_dict["Gradient 2"],line_dict["Gradient 3"] = grads
+
                         line_dict["Probe Version"] = probeversions[linenumber]
-                        line_dict["Probe Number"] = vv
-                        if vv != 5:
-                            if int(probeversions[linenumber]) == 16:
-                                line_dict["Probe Duration"] = probedurs[vv][15]
-                            else:
-                                line_dict["Probe Duration"] = probedurs[vv][int(probeversions[linenumber])]
-                        else:
-                            line_dict["Probe Duration"] = str(line_dict["Movie_time"]) + "_end"
+                        line_dict["Probe Number"] = probe_iteration
+
+                        line_dict["Probe Duration"] = probedurs[probe_iteration][int(probeversions[linenumber])]
+                        line_dict["Probe Time"] = probeorders[probe_iteration][int(probeversions[linenumber])+1]
+
                         with open("Analysis/output.csv", 'a', newline="") as outf:
                             wr = csv.writer(outf)
                             wr.writerow(list(line_dict.values()))
