@@ -92,27 +92,133 @@ you need {num_participants_full_sample} participants. \n""")
 # Create value_mapping
 value_mapping = create_value_mapping(num_participants, probe_interval, probe_coverage_duration_secs)
 
-# Generate full_sample_order_dictionary
-full_sample_order_dictionary = {}
 
-for idx, _ in enumerate(range(num_samples_per_interval)):
-    order_dict = generate_order_dict(num_participants, num_samples_per_interval, min_participant_break, probe_interval)
-    modified_order_dict = {}
+order_dict = generate_order_dict(num_participants, num_samples_per_interval, min_participant_break, probe_interval)
     
-    for key, values in order_dict.items():
-        modified_key = str(int(key) + (idx * num_participants))
-        modified_order_dict[modified_key] = values
+print("Order dictionary:\n", order_dict, "\n")
+
+# Apply value_mapping to each order_dict
+for key in order_dict:
+    for i in range(len(order_dict[key])):
+        if order_dict[key][i] in value_mapping:
+            order_dict[key][i] = value_mapping[order_dict[key][i]] + i * probe_coverage_duration_secs
+
+print("Order dictionary in seconds:\n", order_dict, "\n")
+
+# # Create the new dictionary to store selected keys for each participant
+# selected_keys_dict = {}
+
+# # Iterate over num_participants using enumerate
+# for participant_num, _ in enumerate(range(num_participants), start=1):
+#     # Get three random keys without replacement from the order_dict
+#     random_keys = random.sample(list(order_dict.keys()), 3)
+#     selected_keys_dict[participant_num] = random_keys
+
+# print("Selected keys dictionary:\n")
+# print(selected_keys_dict)
+
+# # Create the new dictionary to store selected orders for each clip and participant
+# selected_orders_dict = {}
+
+# # Get the list of clip numbers (assuming clips are numbered 1, 2, and 3)
+# clip_numbers = list(range(1, num_clips + 1))
+
+# # Get a list of keys (orders) from order_dict
+# order_keys = list(order_dict.keys())
+
+# # Create a list of available orders for each clip
+# available_orders = {clip_num: list(order_keys) for clip_num in clip_numbers}
+
+# # Iterate over num_participants
+# for participant_num in range(1, num_participants + 1):
+#     selected_orders_dict[participant_num] = {}
+    
+#     # Select an order for each clip
+#     for clip_num in clip_numbers:
+#         # Select a random order from available_orders for the current clip
+#         selected_order = random.choice(available_orders[clip_num])
         
-    full_sample_order_dictionary[idx + 1] = modified_order_dict
+#         # Remove the selected order from the available options
+#         available_orders[clip_num].remove(selected_order)
+        
+#         # Add the selected order to the participant's entry in the dictionary
+#         selected_orders_dict[participant_num][clip_num] = selected_order
 
-# Print the generated dictionaries
-for idx, order_dict in full_sample_order_dictionary.items():
-    print(f"Order dictionary {idx}:\n", order_dict)
+# print("Selected orders dictionary:\n")
+# print(selected_orders_dict)
+
+# # Loop over the outer keys (participant numbers) in the selected_orders_dict
+# for participant_num, participant_data in selected_orders_dict.items():
+#     # Create a set to store the selected orders for the current participant
+#     selected_orders_set = set()
     
-    # Apply value_mapping to each order_dict
-    for key in order_dict:
-        for i in range(len(order_dict[key])):
-            if order_dict[key][i] in value_mapping:
-                order_dict[key][i] = value_mapping[order_dict[key][i]] + i * probe_coverage_duration_secs
+#     # Loop over the inner keys (clip numbers) and values (selected orders) for the current participant
+#     for clip_num, selected_order in participant_data.items():
+#         # Check if the selected order has been seen before
+#         if selected_order in selected_orders_set:
+#             print("Same order selected for different clips")
+#             break  # No need to check further, we found a duplicate
+#         else:
+#             selected_orders_set.add(selected_order)
 
-    print(f"Order dictionary {idx} in seconds:\n", order_dict)
+
+
+# Get the list of clip numbers (assuming clips are numbered 1, 2, and 3)
+clip_numbers = list(range(1, num_clips + 1))
+
+# Get a list of keys (orders) from order_dict
+order_keys = list(order_dict.keys())
+
+while True:
+    # Create the new dictionary to store selected orders for each clip and participant
+    selected_orders_dict = {}
+    
+    # Create a list of available orders for each clip
+    available_orders = {clip_num: list(order_keys) for clip_num in clip_numbers}
+    
+    # Iterate over num_participants
+    for participant_num in range(1, num_participants + 1):
+        selected_orders_dict[participant_num] = {}
+        
+        # Select an order for each clip
+        for clip_num in clip_numbers:
+            # Select a random order from available_orders for the current clip
+            selected_order = random.choice(available_orders[clip_num])
+            
+            # Remove the selected order from the available options
+            available_orders[clip_num].remove(selected_order)
+            
+            # Add the selected order to the participant's entry in the dictionary
+            selected_orders_dict[participant_num][clip_num] = selected_order
+        
+        # Check for duplicates within the current participant's selected orders
+        selected_orders_set = set()
+        has_duplicates = False
+        for selected_order in selected_orders_dict[participant_num].values():
+            if selected_order in selected_orders_set:
+                has_duplicates = True
+                break
+            else:
+                selected_orders_set.add(selected_order)
+        
+        # If duplicates are found, restart the loop to generate new orders
+        if has_duplicates:
+            break
+    else:
+        # If no duplicates are found for any participant, exit the loop
+        break
+
+print("Selected orders dictionary:\n")
+print(selected_orders_dict)
+
+# now I just want to loop over 
+
+
+
+
+
+
+
+
+
+
