@@ -28,9 +28,30 @@ def check_consecutive_same(lst):
     
 #     return True
 
+# def check_spacing(numbers, min_participant_break, probe_interval):
+#     spacings = set()
+#     encountered_spacings = []  # List to store encountered spacings
+    
+#     for i in range(len(numbers) - 1):
+#         spacing = abs(numbers[i] - numbers[i+1])
+        
+#         if spacing < (min_participant_break / probe_interval) or spacing in spacings:
+#             return False, []  # Return an empty list along with False
+        
+#         spacings.add(spacing)
+#         encountered_spacings.append(spacing)  # Save the encountered spacing
+    
+#     return True, encountered_spacings  # Return True and the list of encountered spacings
+
 def check_spacing(numbers, min_participant_break, probe_interval):
     spacings = set()
     encountered_spacings = []  # List to store encountered spacings
+
+    # Calculate first spacing by taking first probe and adding pre_clip secs
+    first_spacing = abs(numbers[0] - 0)
+    
+    spacings.add(first_spacing)
+    encountered_spacings.append(first_spacing)
     
     for i in range(len(numbers) - 1):
         spacing = abs(numbers[i] - numbers[i+1])
@@ -41,8 +62,8 @@ def check_spacing(numbers, min_participant_break, probe_interval):
         spacings.add(spacing)
         encountered_spacings.append(spacing)  # Save the encountered spacing
     
+    
     return True, encountered_spacings  # Return True and the list of encountered spacings
-
 
 def initialize_flexible_dict(num_keys):
     order_dict = {}
@@ -67,6 +88,7 @@ def generate_order_dict(num_participants, num_samples_per_interval, min_particip
                 available_numbers.remove(assigned_number)
                 order_dict[key].append(assigned_number)
         
+
         condition = all(check_consecutive_same(order_dict[key]) for key in order_dict)
         
         if condition:
@@ -76,11 +98,11 @@ def generate_order_dict(num_participants, num_samples_per_interval, min_particip
                 for i in range(1, len(order_dict[key])):
                     order_dict[key][i] += num_participants * i
         
-            condition = all(check_spacing(order_dict[key], min_participant_break, probe_interval)[0] for key in order_dict)
+            condition = all(check_spacing(order_dict[key],  min_participant_break, probe_interval)[0] for key in order_dict)
             
             if condition:
                 for key in order_dict:
-                    _, spacings = check_spacing(order_dict[key], min_participant_break, probe_interval)
+                    _, spacings = check_spacing(order_dict[key],  min_participant_break, probe_interval)
                     spacing_dict[key] = spacings  # Store the spacings in spacing_dict
     
     for key in order_dict:
@@ -112,23 +134,29 @@ def create_value_mapping(num_participants, probe_interval):
     return value_mapping
 
 
+############################## User Input #####################################
+# set absolute path for saving order and duration dictionaries
+directory = "C:\\Users\\bront\\Documents\\CanadaPostdoc\\audio\\Movie-Battery\\Tasks\\taskScripts\\resources\\Movie_Task\\csv"
+
 # Experiment parameters
-num_clips = 3
-clip_min = 8
-probe_coverage_duration_min = 2 # how often, roughly, do you want to interupt
-probe_interval = 20  # seconds
-min_participant_break = 80  # seconds
-num_samples_per_interval = 10
+num_clips = 3 # set to how many clips you have
+preclip_min = 1 # set to how many minutes before 1st probe
+clip_min = 8 # set to how many minutes of probing in each clip
+probe_coverage_duration_min = 2 # how often, roughly, do you want to interupt each person (in minutes)
+probe_interval = 20  # how often do you want probes across participants (in seconds)
+min_participant_break = 80  # what is the min amount of time between a probe for a person (in seconds)
+num_samples_per_interval = 10 # how many participants do you want at each interval
 
-# Calculations
-total_duration = clip_min * 60  # 8 minutes in seconds
-probe_coverage_duration_secs = probe_coverage_duration_min * 60  # 2 minutes in seconds
-num_probes = int(clip_min / probe_coverage_duration_min)
-num_participants = int(probe_coverage_duration_secs / probe_interval)
-num_participants_full_sample = num_participants * num_samples_per_interval
+############################## Calculations ###################################
+preclip_secs = preclip_min * 60 # how many seconds before 1st probe
+total_duration = clip_min * 60  # how many seconds of probing in each clip
+probe_coverage_duration_secs = probe_coverage_duration_min * 60  # how often, roughly, do you want to interupt each person (in seconds)
+num_probes = int(clip_min / probe_coverage_duration_min) # how many probes per person
+num_participants = int(probe_coverage_duration_secs / probe_interval) # how many participants needed for full coverage
+num_participants_full_sample = num_participants * num_samples_per_interval # how many participants needed for full coverage and enough power
 
-# print out
-print ("total clip duration in seconds:", total_duration, "\n")
+# print out calculations
+print ("Total clip duration in seconds:", total_duration, "\n")
 print (f"""If you want to sample each participant roughly every {probe_coverage_duration_min} minutes / 
 {probe_coverage_duration_secs} seconds, each participant can provide {num_probes} probes \n""")
 print (f"""If you want to sample each participant roughly every {probe_coverage_duration_min} minutes,
@@ -138,63 +166,86 @@ therefore, {num_participants} different orders. \n""")
 print (f"""Therefore, if you want {num_samples_per_interval} observations every {probe_interval} seconds,
 you need {num_participants_full_sample} participants. \n""")
 
-# Create value_mapping
+######################## Create orders and durations ##########################
+
+# Create value_mapping for going from 'order space' to actual seconds
 value_mapping = create_value_mapping(num_participants, probe_interval)
 
+# create order dictionary and duration dictionary (in 'order space')
 order_dict, dur_dict = generate_order_dict(num_participants, num_samples_per_interval, min_participant_break, probe_interval)
     
 print("Order dictionary:\n", order_dict, "\n")
 print("Duration dictionary:\n", dur_dict, "\n")
 
-# Apply value_mapping to each order_dict
+# Apply value_mapping to order_dict to get into 'seconds space'
 for key in order_dict:
-    print ("key:", key)
+    # print ("key:", key)
     for i in range(len(order_dict[key])):
-        print ("i:", i)
+        # print ("i:", i)
         if order_dict[key][i] in value_mapping:
-            print (order_dict[key][i])
-            order_dict[key][i] = value_mapping[order_dict[key][i]] + i * probe_coverage_duration_secs
+            # print (order_dict[key][i])
+            order_dict[key][i] = (value_mapping[order_dict[key][i]] + i * probe_coverage_duration_secs) + preclip_secs
             
 print("Order dictionary in seconds:\n", order_dict, "\n")
 
+# do something similar for duration dictionary to get into 'seconds space'
 for key in dur_dict:
     for i in range(len(dur_dict[key])):
-        dur_dict[key][i] = dur_dict[key][i]*probe_interval
-        
+        if key == '1':
+            dur_dict[key][i] = dur_dict[key][i]*probe_interval+ preclip_secs
+        else:
+            dur_dict[key][i] = dur_dict[key][i]*probe_interval
+            
 print("Duration dictionary in seconds:\n", dur_dict, "\n")
 
-# set absolute path
-script_directory = "C:\\Users\\bront\\Documents\\CanadaPostdoc\\audio\\Movie-Battery\\Tasks\\taskScripts\\resources\\Movie_Task\\csv"
+######################## Save orders and durations ############################
 
 # Construct the full path for the CSV file
-csv_file_path = os.path.join(script_directory, "probe_orders.csv")
+csv_file_path_orders = os.path.join(directory, "probe_orders.csv")
+csv_file_path_durations = os.path.join(directory, "probe_durations.csv")
 
 # Convert order_dict to a list of lists for CSV
-csv_data = []
+csv_data_orders = []
+csv_data_durs = []
 for key in order_dict:
-    csv_data.append(order_dict[key])
+    csv_data_orders.append(order_dict[key])
+    csv_data_durs.append(dur_dict[key])
 
-# Create column names for the CSV
+# Create column names for the order CSV
 column_names = [f"Probe {i+1}" for i in range(num_probes)]
 
-# Save the data to the CSV file
-with open(csv_file_path, "w", newline="") as csvfile:
+# Save the order data to the CSV file
+with open(csv_file_path_orders, "w", newline="") as csvfile:
     csv_writer = csv.writer(csvfile)
     
     # Write the column names
     csv_writer.writerow(column_names)
     
     # Write the data rows
-    csv_writer.writerows(csv_data)
+    csv_writer.writerows(csv_data_orders)
 
-print(f"Data saved to {csv_file_path}")
+print(f"Order dictionary saved to {csv_file_path_orders}")
 
+# Save the duration data to the CSV file
+with open(csv_file_path_durations, "w", newline="") as csvfile:
+    csv_writer = csv.writer(csvfile) 
 
-# Get the list of clip numbers (assuming clips are numbered 1, 2, and 3)
+    # Write the data rows
+    csv_writer.writerows(csv_data_durs,header = None)
+    
+print(f"Duration dictionary saved to {csv_file_path_durations}")
+
+############################# Counterbalancing ################################
+# Get the list of clip numbers 
 clip_numbers = list(range(1, num_clips + 1))
 
 # Get a list of keys (orders) from order_dict
 order_keys = list(order_dict.keys())
+
+## This first bit selects orders per clip across the min number of participants
+# for full coverage (e.g., 6 participants)
+# ensuring that for any one person, clip orders are not the same between clips
+# and that, for each clip every N participants, one of the orders is used
 
 while True:
     # Create the new dictionary to store selected orders for each clip and participant
@@ -238,9 +289,9 @@ while True:
 print("Selected orders dictionary:\n")
 print(selected_orders_dict)
 
-# now I just want to loop over num_samples_per_interval
+# now to loop over num_samples_per_interval
 # randomly shuffle the values of selected_orders_dict
-# modify keys according to iteration, so second iteration = keys + num_participants * 2
+# modify keys according to iteration, so, e.g., second iteration = keys + num_participants * 2
 
 # Create a dictionary to store shuffled and modified dictionaries
 shuffled_dicts = {}
