@@ -9,18 +9,40 @@ import random
 import csv
 import os
 
-
 def check_consecutive_same(lst):
     for i in range(len(lst) - 2):
         if lst[i] == lst[i+1] == lst[i+2]:
             return False
     return True
 
+# def check_spacing(numbers, min_participant_break, probe_interval):
+#     spacings = set()  # To keep track of encountered spacings
+    
+#     for i in range(len(numbers) - 1):
+#         spacing = abs(numbers[i] - numbers[i+1])
+        
+#         if spacing < (min_participant_break / probe_interval) or spacing in spacings:
+#             return False
+        
+#         spacings.add(spacing)
+    
+#     return True
+
 def check_spacing(numbers, min_participant_break, probe_interval):
+    spacings = set()
+    encountered_spacings = []  # List to store encountered spacings
+    
     for i in range(len(numbers) - 1):
-        if abs(numbers[i] - numbers[i+1]) < min_participant_break / probe_interval:
-            return False
-    return True
+        spacing = abs(numbers[i] - numbers[i+1])
+        
+        if spacing < (min_participant_break / probe_interval) or spacing in spacings:
+            return False, []  # Return an empty list along with False
+        
+        spacings.add(spacing)
+        encountered_spacings.append(spacing)  # Save the encountered spacing
+    
+    return True, encountered_spacings  # Return True and the list of encountered spacings
+
 
 def initialize_flexible_dict(num_keys):
     order_dict = {}
@@ -31,9 +53,11 @@ def initialize_flexible_dict(num_keys):
 
 def generate_order_dict(num_participants, num_samples_per_interval, min_participant_break, probe_interval):
     condition = False
+    spacing_dict = {}  # Initialize spacing dictionary
 
     while condition == False:
         order_dict = initialize_flexible_dict(num_participants)
+        spacing_dict.clear()  # Clear spacing_dict for each attempt
     
         for segment in range(num_probes):
             available_numbers = list(range(1, num_participants + 1))
@@ -44,27 +68,49 @@ def generate_order_dict(num_participants, num_samples_per_interval, min_particip
                 order_dict[key].append(assigned_number)
         
         condition = all(check_consecutive_same(order_dict[key]) for key in order_dict)
-    
+        
         if condition:
+            spacing_dict = {}  # Clear spacing_dict to ensure it only stores spacings for successful order
+            
             for key in order_dict:
                 for i in range(1, len(order_dict[key])):
                     order_dict[key][i] += num_participants * i
         
-            condition = all(check_spacing(order_dict[key], min_participant_break, probe_interval) for key in order_dict)
-
+            condition = all(check_spacing(order_dict[key], min_participant_break, probe_interval)[0] for key in order_dict)
+            
+            if condition:
+                for key in order_dict:
+                    _, spacings = check_spacing(order_dict[key], min_participant_break, probe_interval)
+                    spacing_dict[key] = spacings  # Store the spacings in spacing_dict
+    
     for key in order_dict:
         for i in range(1, len(order_dict[key])):
             order_dict[key][i] -= num_participants * i
 
-    return order_dict
+    return order_dict, spacing_dict  # Return both order_dict and spacing_dict
+    
+    #     if condition:
+    #         spacing_dict = {}
+    #         for key in order_dict:
+    #             for i in range(1, len(order_dict[key])):
+    #                 order_dict[key][i] += num_participants * i
+        
+    #         condition = all(check_spacing(order_dict[key], min_participant_break, probe_interval) for key in order_dict)
 
-def create_value_mapping(num_participants, probe_interval, probe_coverage_duration_secs):
+    # for key in order_dict:
+    #     for i in range(1, len(order_dict[key])):
+    #         order_dict[key][i] -= num_participants * i
+
+    # return order_dict
+
+def create_value_mapping(num_participants, probe_interval):
     num_keys_value_mapping = num_participants
     value_mapping = {}
     for i in range(1, num_keys_value_mapping + 1):
         value_mapping[i] = probe_interval + (i - 1) * probe_interval
 
     return value_mapping
+
 
 # Experiment parameters
 num_clips = 3
@@ -93,26 +139,35 @@ print (f"""Therefore, if you want {num_samples_per_interval} observations every 
 you need {num_participants_full_sample} participants. \n""")
 
 # Create value_mapping
-value_mapping = create_value_mapping(num_participants, probe_interval, probe_coverage_duration_secs)
+value_mapping = create_value_mapping(num_participants, probe_interval)
 
-
-order_dict = generate_order_dict(num_participants, num_samples_per_interval, min_participant_break, probe_interval)
+order_dict, dur_dict = generate_order_dict(num_participants, num_samples_per_interval, min_participant_break, probe_interval)
     
 print("Order dictionary:\n", order_dict, "\n")
+print("Duration dictionary:\n", dur_dict, "\n")
 
 # Apply value_mapping to each order_dict
 for key in order_dict:
+    print ("key:", key)
     for i in range(len(order_dict[key])):
+        print ("i:", i)
         if order_dict[key][i] in value_mapping:
+            print (order_dict[key][i])
             order_dict[key][i] = value_mapping[order_dict[key][i]] + i * probe_coverage_duration_secs
-
+            
 print("Order dictionary in seconds:\n", order_dict, "\n")
+
+for key in dur_dict:
+    for i in range(len(dur_dict[key])):
+        dur_dict[key][i] = dur_dict[key][i]*probe_interval
+        
+print("Duration dictionary in seconds:\n", dur_dict, "\n")
 
 # set absolute path
 script_directory = "C:\\Users\\bront\\Documents\\CanadaPostdoc\\audio\\Movie-Battery\\Tasks\\taskScripts\\resources\\Movie_Task\\csv"
 
 # Construct the full path for the CSV file
-csv_file_path = os.path.join(script_directory, "order_dict.csv")
+csv_file_path = os.path.join(script_directory, "probe_orders.csv")
 
 # Convert order_dict to a list of lists for CSV
 csv_data = []
