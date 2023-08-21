@@ -6,6 +6,9 @@ Created on Fri Aug 18 09:03:04 2023
 """
 
 import random
+import csv
+import os
+
 
 def check_consecutive_same(lst):
     for i in range(len(lst) - 2):
@@ -105,62 +108,31 @@ for key in order_dict:
 
 print("Order dictionary in seconds:\n", order_dict, "\n")
 
-# # Create the new dictionary to store selected keys for each participant
-# selected_keys_dict = {}
+# set absolute path
+script_directory = "C:\\Users\\bront\\Documents\\CanadaPostdoc\\audio\\Movie-Battery\\Tasks\\taskScripts\\resources\\Movie_Task\\csv"
 
-# # Iterate over num_participants using enumerate
-# for participant_num, _ in enumerate(range(num_participants), start=1):
-#     # Get three random keys without replacement from the order_dict
-#     random_keys = random.sample(list(order_dict.keys()), 3)
-#     selected_keys_dict[participant_num] = random_keys
+# Construct the full path for the CSV file
+csv_file_path = os.path.join(script_directory, "order_dict.csv")
 
-# print("Selected keys dictionary:\n")
-# print(selected_keys_dict)
+# Convert order_dict to a list of lists for CSV
+csv_data = []
+for key in order_dict:
+    csv_data.append(order_dict[key])
 
-# # Create the new dictionary to store selected orders for each clip and participant
-# selected_orders_dict = {}
+# Create column names for the CSV
+column_names = [f"Probe {i+1}" for i in range(num_probes)]
 
-# # Get the list of clip numbers (assuming clips are numbered 1, 2, and 3)
-# clip_numbers = list(range(1, num_clips + 1))
-
-# # Get a list of keys (orders) from order_dict
-# order_keys = list(order_dict.keys())
-
-# # Create a list of available orders for each clip
-# available_orders = {clip_num: list(order_keys) for clip_num in clip_numbers}
-
-# # Iterate over num_participants
-# for participant_num in range(1, num_participants + 1):
-#     selected_orders_dict[participant_num] = {}
+# Save the data to the CSV file
+with open(csv_file_path, "w", newline="") as csvfile:
+    csv_writer = csv.writer(csvfile)
     
-#     # Select an order for each clip
-#     for clip_num in clip_numbers:
-#         # Select a random order from available_orders for the current clip
-#         selected_order = random.choice(available_orders[clip_num])
-        
-#         # Remove the selected order from the available options
-#         available_orders[clip_num].remove(selected_order)
-        
-#         # Add the selected order to the participant's entry in the dictionary
-#         selected_orders_dict[participant_num][clip_num] = selected_order
-
-# print("Selected orders dictionary:\n")
-# print(selected_orders_dict)
-
-# # Loop over the outer keys (participant numbers) in the selected_orders_dict
-# for participant_num, participant_data in selected_orders_dict.items():
-#     # Create a set to store the selected orders for the current participant
-#     selected_orders_set = set()
+    # Write the column names
+    csv_writer.writerow(column_names)
     
-#     # Loop over the inner keys (clip numbers) and values (selected orders) for the current participant
-#     for clip_num, selected_order in participant_data.items():
-#         # Check if the selected order has been seen before
-#         if selected_order in selected_orders_set:
-#             print("Same order selected for different clips")
-#             break  # No need to check further, we found a duplicate
-#         else:
-#             selected_orders_set.add(selected_order)
+    # Write the data rows
+    csv_writer.writerows(csv_data)
 
+print(f"Data saved to {csv_file_path}")
 
 
 # Get the list of clip numbers (assuming clips are numbered 1, 2, and 3)
@@ -211,9 +183,47 @@ while True:
 print("Selected orders dictionary:\n")
 print(selected_orders_dict)
 
-# now I just want to loop over 
+# now I just want to loop over num_samples_per_interval
+# randomly shuffle the values of selected_orders_dict
+# modify keys according to iteration, so second iteration = keys + num_participants * 2
 
+# Create a dictionary to store shuffled and modified dictionaries
+shuffled_dicts = {}
 
+# Loop over num_samples_per_interval
+for iteration in range(1, num_samples_per_interval + 1):
+    # Shuffle the values in selected_orders_dict
+    shuffled_dict = {}
+    shuffled_values = list(selected_orders_dict.values())
+    random.shuffle(shuffled_values)
+    
+    # Reassign shuffled values to each participant while keeping keys intact
+    shuffled_dict = {participant_num: shuffled_values[i] for i, participant_num in enumerate(selected_orders_dict)}
+    print (shuffled_dict)
+    
+    # Modify keys based on the iteration
+    if iteration > 1:
+        new_shuffled_dict = {}
+        for participant_num, participant_data in shuffled_dict.items():
+            new_participant_num = participant_num + num_participants * (iteration - 1)
+            new_shuffled_dict[new_participant_num] = participant_data
+        shuffled_dict = new_shuffled_dict
+    
+    shuffled_dicts[iteration] = shuffled_dict
+    
+# TO DO:
+    # probably make it about duration between probes being the same, rather than
+    # 3 consecutive orders being the same
+    
+    # save probe durations of final selection out too
+    
+    # zero index the order numbers that will be inputted into GUI (so need 0-5, not 1-6)
+    
+    # save shuffled_dicts as a csv file, where key = participant number column
+    # next three columns are populated by inner key's values
+    
+    # once all that is done, can consider whether you want to automate
+    # so only ID needs to be entered, then probes selected from file instead
 
 
 
