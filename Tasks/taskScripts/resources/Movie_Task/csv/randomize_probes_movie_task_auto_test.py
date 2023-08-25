@@ -8,12 +8,11 @@ Created on Fri Aug 18 09:03:04 2023
 import random
 import csv
 import os
+import copy
 
-# def check_consecutive_same(lst):
-#     for i in range(len(lst) - 2):
-#         if lst[i] == lst[i+1] == lst[i+2]:
-#             return False
-#     return True
+# Set the seed value to ensure reproducibility
+seed_value = 42
+random.seed(seed_value)
 
 def check_spacing(numbers, min_participant_break, probe_interval):
     """
@@ -49,7 +48,7 @@ def check_spacing(numbers, min_participant_break, probe_interval):
     for i in range(len(numbers) - 1):
         spacing = abs(numbers[i] - numbers[i+1])
         
-        if spacing < (min_participant_break / probe_interval) or spacing in spacings:
+        if spacing < (min_participant_break ) or spacing in spacings:
             return False, []  # Return an empty list along with False
         
         spacings.add(spacing)
@@ -79,7 +78,7 @@ def initialize_flexible_dict(num_keys):
         order_dict[key] = []
     return order_dict
 
-def generate_order_dict(num_participants, num_samples_per_interval, min_participant_break, probe_interval):
+def generate_order_dict(value_mapping, preclip_secs, num_participants, num_samples_per_interval, min_participant_break, probe_interval):
     condition = False # set condition to false so that while loop continues until conditions met
     spacing_dict = {}  # Initialize spacing dictionary for returning durations
 
@@ -104,10 +103,22 @@ def generate_order_dict(num_participants, num_samples_per_interval, min_particip
         # if condition:
         # spacing_dict = {}  # Clear spacing_dict to ensure it only stores spacings for successful order
         
-        # add num_participants*which iteration to values for checking spacing
+        # put into seconds space here for evaluating spaces
+        # but also keep normal order space
+        order_dict_num = copy.deepcopy(order_dict)
+        
+        # Apply value_mapping to order_dict to get into 'seconds space'
         for key in order_dict:
-            for i in range(1, len(order_dict[key])):
-                order_dict[key][i] += num_participants * i
+            for i in range(len(order_dict[key])):
+                if order_dict[key][i] in value_mapping:
+                    # print (order_dict[key][i])
+                    order_dict[key][i] = (value_mapping[order_dict[key][i]] + i * probe_coverage_duration_secs) + preclip_secs
+                    
+        # adjust so includes first probe interval and omits last one essentially
+        for key in order_dict:
+            # print ("key:", key)
+            for i in range(len(order_dict[key])):
+                order_dict[key][i] -= probe_interval
     
         # check spacing and only return true if both conditions are met (see function above)
         condition = all(check_spacing(order_dict[key],  min_participant_break, probe_interval)[0] for key in order_dict)
@@ -116,13 +127,17 @@ def generate_order_dict(num_participants, num_samples_per_interval, min_particip
             for key in order_dict:
                 _, spacings = check_spacing(order_dict[key],  min_participant_break, probe_interval)
                 spacing_dict[key] = spacings  # Store the spacings in spacing_dict
-    
-    # take away num_participants*which iteration to values to put back in 'order space'
-    for key in order_dict:
-        for i in range(1, len(order_dict[key])):
-            order_dict[key][i] -= num_participants * i
-
-    return order_dict, spacing_dict  # Return both order_dict and spacing_dict
+                
+        # spacing_dict_num = copy.deepcopy(spacing_dict)
+                
+        # for key in spacing_dict:
+        #     for i in range(len(spacing_dict[key])):
+        #         if i == 0:  # Adjust the first item in the list
+        #             spacing_dict[key][i] = (spacing_dict[key][i] * probe_interval)-probe_interval + preclip_secs
+        #         else:
+        #             spacing_dict[key][i] = spacing_dict[key][i]* probe_interval
+                
+    return order_dict_num, order_dict, spacing_dict
     
 
 def create_value_mapping(num_participants, probe_interval):
@@ -186,38 +201,14 @@ you need {num_participants_full_sample} participants. \n""")
 value_mapping = create_value_mapping(num_participants, probe_interval)
 
 # create order dictionary and duration dictionary (in 'order space')
-order_dict, dur_dict = generate_order_dict(num_participants, num_samples_per_interval, min_participant_break, probe_interval)
+order_dict_num, order_dict_secs, spacing_dict_secs = generate_order_dict(value_mapping, preclip_secs, 
+                                           num_participants, num_samples_per_interval,
+                                           min_participant_break, probe_interval)
     
-print("Order dictionary:\n", order_dict, "\n")
-print("Duration dictionary:\n", dur_dict, "\n")
+print("Order dictionary:\n", order_dict_num, "\n")
 
-# Apply value_mapping to order_dict to get into 'seconds space'
-for key in order_dict:
-    # print ("key:", key)
-    for i in range(len(order_dict[key])):
-        # print ("i:", i)
-        if order_dict[key][i] in value_mapping:
-            # print (order_dict[key][i])
-            order_dict[key][i] = (value_mapping[order_dict[key][i]] + i * probe_coverage_duration_secs) + preclip_secs
-            
-# adjust so includes first probe interval and omits last one essentially
-for key in order_dict:
-    # print ("key:", key)
-    for i in range(len(order_dict[key])):
-        order_dict[key][i] -= probe_interval
-        
-print("Order dictionary in seconds:\n", order_dict, "\n")
-
-dur_dict_ref = dur_dict.copy()
-
-for key in dur_dict:
-    for i in range(len(dur_dict[key])):
-        if i == 0:  # Adjust the first item in the list
-            dur_dict[key][i] = (dur_dict[key][i] * probe_interval)-probe_interval + preclip_secs
-        else:
-            dur_dict[key][i] = dur_dict[key][i]* probe_interval
-            
-print("Duration dictionary in seconds:\n", dur_dict, "\n")
+print("Order dictionary in seconds:\n", order_dict_secs, "\n")
+print("Duration dictionary in seconds:\n", spacing_dict_secs, "\n")
 
 ######################## Save orders and durations ############################
 
@@ -228,9 +219,9 @@ csv_file_path_durations = os.path.join(directory, "probe_durations.csv")
 # Convert order_dict to a list of lists for CSV
 csv_data_orders = []
 csv_data_durs = []
-for key in order_dict:
-    csv_data_orders.append(order_dict[key])
-    csv_data_durs.append(dur_dict[key])
+for key in order_dict_secs:
+    csv_data_orders.append(order_dict_secs[key])
+    csv_data_durs.append(spacing_dict_secs[key])
 
 # Create column names for the order CSV
 column_names = [f"Probe {i+1}" for i in range(num_probes)]
@@ -252,7 +243,7 @@ with open(csv_file_path_durations, "w", newline="") as csvfile:
     csv_writer = csv.writer(csvfile) 
 
     # Write the data rows
-    csv_writer.writerows(csv_data_durs,header = None)
+    csv_writer.writerows(csv_data_durs)
     
 print(f"Duration dictionary saved to {csv_file_path_durations}")
 
@@ -260,8 +251,12 @@ print(f"Duration dictionary saved to {csv_file_path_durations}")
 # Get the list of clip numbers 
 clip_numbers = list(range(1, num_clips + 1))
 
-# Get a list of keys (orders) from order_dict
-order_keys = list(order_dict.keys())
+# Assuming order_keys is a list of strings
+order_keys_from1 = list(order_dict_num.keys())
+
+# Convert keys to integers, subtract 1, and convert back to strings in a single list comprehension
+# this is so that numbers to be inputted match up to probe_order indexing
+order_keys = [str(int(key) - 1) for key in order_keys_from1]
 
 ## This first bit selects orders per clip across the min number of participants
 # for full coverage (e.g., 6 participants)
@@ -338,9 +333,34 @@ for iteration in range(1, num_samples_per_interval + 1):
     
     shuffled_dicts[iteration] = shuffled_dict
     
-# TO DO:
-    # zero index the order numbers that will be inputted into GUI (so need 0-5, not 1-6)
+# Save shuffled_dicts as a CSV file
+csv_filename = os.path.join(directory, f"counterbalanced_orders_n{num_participants_full_sample}.csv")
+
+# Flatten the shuffled_dicts structure for easier processing
+flattened_data = []
+for participant_group, participant_data in shuffled_dicts.items():
+    for participant_num, clip_data in participant_data.items():
+        row = {
+            "participant_number": participant_num,
+            "Clip 1": clip_data[1],
+            "Clip 2": clip_data[2],
+            "Clip 3": clip_data[3]
+        }
+        flattened_data.append(row)
+        
+with open(csv_filename, 'w', newline='') as csvfile:
+    fieldnames = ["participant_number", "Clip 1", "Clip 2", "Clip 3"]
+    csv_writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     
+    # Write header row
+    csv_writer.writeheader()
+    
+    # Write data rows
+    csv_writer.writerows(flattened_data)
+
+print("CSV file saved:", csv_filename)
+    
+# TO DO:    
     # save shuffled_dicts as a csv file, where key = participant number column
     # next three columns are populated by inner key's values
     
