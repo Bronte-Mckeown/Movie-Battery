@@ -1,0 +1,22 @@
+pygame 2.5.0 (SDL 2.28.0, Python 3.6.13)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[2016467, '7']
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+4.0286 	WARNING 	Speech-to-text recognition module not available (use command `pip install SpeechRecognition` to get it. Transcription will be unavailable.
+4.2944 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+12.5785 	WARNING 	Monitor specification not found. Creating a temporary one...
+23.9683 	WARNING 	0.20182926673442125: Video catchup needed, advancing self._nextFrameT from 0.1 to 0.13333333333333333
+23.9683 	WARNING 	0.2019320665858686: Video catchup needed, advancing self._nextFrameT from 0.13333333333333333 to 0.16666666666666666
+24.0519 	WARNING 	0.2854751665145159: Video catchup needed, advancing self._nextFrameT from 0.19999999999999998 to 0.2333333333333333
+24.1026 	WARNING 	0.3361621666699648: Video catchup needed, advancing self._nextFrameT from 0.26666666666666666 to 0.3
+25.1359 	WARNING 	1.3695003665052354: Video catchup needed, advancing self._nextFrameT from 1.3000000000000007 to 1.3333333333333341
+25.3356 	WARNING 	1.5691342665813863: Video catchup needed, advancing self._nextFrameT from 1.5000000000000013 to 1.5333333333333348
+25.4020 	WARNING 	1.6355854666326195: Video catchup needed, advancing self._nextFrameT from 1.5666666666666682 to 1.6000000000000016
+25.4693 	WARNING 	1.7028612666763365: Video catchup needed, advancing self._nextFrameT from 1.633333333333335 to 1.6666666666666685
+25.5347 	WARNING 	1.768265766557306: Video catchup needed, advancing self._nextFrameT from 1.700000000000002 to 1.7333333333333354
+25.7690 	WARNING 	2.0025953666772693: Video catchup needed, advancing self._nextFrameT from 1.933333333333336 to 1.9666666666666694
+25.7691 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+29.8662 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+76.2011 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)

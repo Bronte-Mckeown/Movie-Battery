@@ -4,6 +4,8 @@
 from psychopy import visual 
 from psychopy import core, gui, event
 
+import pandas as pd
+
 import time
 import csv
 
@@ -32,7 +34,8 @@ class metadatacollection():
                 self.sbINFO = gui.DlgFromDict(self.INFO)
 
         # This writes info collected from the GUI into the logfile
-        def collect_metadata(self):  
+        def collect_metadata(self):
+
                 print(self.sbINFO.data)
                 if os.path.exists(os.path.join(os.getcwd()+self.sbINFO.data[-1])): 
                         os.remove(os.path.join(os.getcwd()+self.sbINFO.data[-1]))
@@ -240,7 +243,7 @@ class task(taskbattery,metadatacollection):
                 writer2 = csv.DictWriter(fr, fieldnames=taskbattery.resultdict)
                 fre.writerow(["EXPERIMENT DATA:",self.name])
                 fre.writerow(["Start Time", taskbattery.time.getTime()])
-                taskbattery.resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : self.name, 'Task Iteration': '1', 'Probe Order': self.trialclass[1], 'Response_Key' : None, 'Auxillary Data': None, 'Assoc Task':None}
+                taskbattery.resultdict = {'Timepoint': None, 'Time': None, 'Is_correct': None, 'Experience Sampling Question': None, 'Experience Sampling Response':None, 'Task' : self.name, 'Task Iteration': 'ignore', 'Probe Order': self.trialclass[1], 'Response_Key' : None, 'Auxillary Data': None, 'Assoc Task':None}
                 if self.esq == False:
                         if self.ver == 1:
                                 dataver = self.task_module.runexp(self.backup_log_location, taskbattery.time, taskbattery.win, [writer,writer2], taskbattery.resultdict, self.runtime, self._ver_a_name, int(metacoll.INFO['Experiment Seed']),self.probever, metacoll.INFO['Subject'])
@@ -341,20 +344,27 @@ if __name__ == "__main__":
         # Info Dict
         INFO = {
                         'Experiment Seed': random.randint(1, 9999999),  
-                        'Subject': 'Enter ID Here', 
-                        "Probe 1 Version":"",
-                        "Probe 2 Version":"",
-                        "Probe 3 Version":"",
-  
+                        'Subject': 'MUST be number only.'
                 }
-
-
 
         # Main and backup data file
 
         # Run the GUI and save output to logfile
         metacoll = metadatacollection(INFO)
         metacoll.rungui()
+        
+        # Defining each task as a task object
+        # use subject number to select probe order
+        probeorders = pd.read_csv("taskScripts/resources/Movie_Task/csv/counterbalanced_orders_n120.csv")
+        probe1_version = probeorders.loc[probeorders['participant_number'] == int(metacoll.INFO['Subject']), 'Clip 1'].values
+        probe2_version = probeorders.loc[probeorders['participant_number'] == int(metacoll.INFO['Subject']), 'Clip 2'].values
+        probe3_version = probeorders.loc[probeorders['participant_number'] == int(metacoll.INFO['Subject']), 'Clip 3'].values
+        
+        # Extracting single values from NumPy arrays
+        probe1_version = probe1_version[0]
+        probe2_version = probe2_version[0]
+        probe3_version = probe3_version[0]
+
         metacoll.collect_metadata()
         metacoll.INFO['Block Runtime'] = 48000
         
@@ -367,10 +377,10 @@ if __name__ == "__main__":
         #         pkl.dump([datafile,datafileBackup,metacoll.sbINFO.data,int(metacoll.INFO['Block Runtime'])],frrr)
         ESQTask = task(taskScripts.ESQ, datafile, datafileBackup, "Experience Sampling Questions", metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources/GoNoGo_Task/gonogo_stimuli.csv',1, esq=True)
         
-        # Defining each task as a task object
-        movieTask1 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders_test.csv","resources/Movie_Task/videos/test1.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1,int(metacoll.INFO['Probe 1 Version']))
-        movieTask2 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders_test.csv","resources/Movie_Task/videos/test2.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2,int(metacoll.INFO['Probe 2 Version']))
-        movieTask3 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probetimes_orders_test.csv","resources/Movie_Task/videos/test3.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3,int(metacoll.INFO['Probe 3 Version']))
+
+        movieTask1 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probe_orders.csv","resources/Movie_Task/videos/run1.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1,int(probe1_version))
+        movieTask2 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probe_orders.csv","resources/Movie_Task/videos/run2.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2,int(probe2_version))
+        movieTask3 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probe_orders.csv","resources/Movie_Task/videos/run3.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3,int(probe3_version))
 
         moviegroup = [movieTask1,movieTask2,movieTask3]
 

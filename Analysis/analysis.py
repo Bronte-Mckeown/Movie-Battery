@@ -8,16 +8,17 @@ graddict = {}
 global sentimentdict
 sentimentdict = {}
 
+import glob
+
 n_probes_per_clip = 4
 num_esq = 16
 
-probeorders= pd.read_csv("Tasks/taskScripts/resources/Movie_Task/csv/probetimes_orders_test.csv",header=None, index_col = False).to_dict()
-probedurs = pd.read_csv("Tasks/taskScripts/resources/Movie_Task/csv/probe_durations_test.csv",header=None).to_dict()
+probeversions_df = pd.read_csv("Tasks/taskScripts/resources/Movie_Task/csv/counterbalanced_orders_n120.csv",index_col = False)
+probeorders= pd.read_csv("Tasks/taskScripts/resources/Movie_Task/csv/probe_orders.csv",header=None, index_col = False).to_dict()
+probedurs = pd.read_csv("Tasks/taskScripts/resources/Movie_Task/csv/probe_durations.csv",header=None).to_dict()
 
 line_dict= {"Task_name":None,
-        "Participant #":None,
-        "Runtime_mod":None,
-        "Movie_time":None,
+        "idno":None,
         "Absorption_response":None,
         "Other_response":None,
         "Problem_response":None,
@@ -40,10 +41,10 @@ line_dict= {"Task_name":None,
         "Probe Duration":None,
         }
 
-if os.path.exists(os.path.join(os.getcwd(),"Analysis/output.csv")):
-        os.remove(os.path.join(os.getcwd(),"Analysis/output.csv"))
+if os.path.exists(os.path.join(os.getcwd(),"Analysis/audio_esq_output.csv")):
+        os.remove(os.path.join(os.getcwd(),"Analysis/audio_esq_output.csv"))
 
-with open(os.path.join(os.getcwd(),"Analysis/output.csv"), 'a', newline="") as outf:
+with open(os.path.join(os.getcwd(),"Analysis/audio_esq_output.csv"), 'a', newline="") as outf:
     wr = csv.writer(outf)
     wr.writerow(list(line_dict.keys()))
 
@@ -81,9 +82,7 @@ for file in os.listdir("Tasks/log_file"):
 
     if not 'full' in ftemp.split('_'):
         line_dict= {"Task_name":None,
-        "Participant #":None,
-        "Runtime_mod":None,
-        "Movie_time":None,
+        "idno":None,
         "Absorption_response":None,
         "Other_response":None,
         "Problem_response":None,
@@ -108,8 +107,18 @@ for file in os.listdir("Tasks/log_file"):
         import re
         probe_iteration = 0
         _,_,subject,seed = ftemp.split("_")
+        
+        probe1_version = probeversions_df.loc[probeversions_df['participant_number'] == int(subject), 'Clip 1'].values
+        probe2_version = probeversions_df.loc[probeversions_df['participant_number'] == int(subject), 'Clip 2'].values
+        probe3_version = probeversions_df.loc[probeversions_df['participant_number'] == int(subject), 'Clip 3'].values
+        
+        probeversions = [probe1_version[0], probe2_version[0], probe3_version[0]]
+        
         subject = "subject_"+str(int(re.findall(r'\d+', subject)[0]))
-        line_dict["Participant #"] = subject
+
+        
+        
+        line_dict["idno"] = subject
         readstart = False
         initstart = True
         skipstart = False
@@ -119,8 +128,8 @@ for file in os.listdir("Tasks/log_file"):
             # loop over rows in every log file with enumerate
             for en,row in enumerate(reader):
                 # if it's the second row, extra probe order versions
-                if en == 2:
-                    probeversions = [row[1],row[2],row[3]]
+                #if en == 2:
+                #    probeversions = [row[1],row[2],row[3]]
                     # v = 0
                 
                 # on first row, this will always be false
@@ -137,7 +146,7 @@ for file in os.listdir("Tasks/log_file"):
                         
                         # movie time is kinda pointless
                         # it is the difference between 'start time' of movie task and 'start time' of first ESQ item
-                        line_dict["Movie_time"] = float(row[1])-float(starttime)
+                        #line_dict["Movie_time"] = float(row[1])-float(starttime)
                         readstart = False
                     else:
                         skipstart = True;
@@ -147,8 +156,8 @@ for file in os.listdir("Tasks/log_file"):
                     starttime = row[1]
                     readstart = True
                 
-                if row[0] == 'Runtime Mod':
-                    line_dict["Runtime_mod"] = row[1]
+                #if row[0] == 'Runtime Mod':
+                    #line_dict["Runtime_mod"] = row[1]
                 
                 if row[0] == 'ESQ':
                     enum +=1
@@ -170,18 +179,18 @@ for file in os.listdir("Tasks/log_file"):
                     if task_name == row[10]:
                         line_dict[row[3]]=row[4]
                     if enum == 16:
-                        if task_name in ("Movie Task-Movie Task-test1", "Movie Task-test1"):
+                        if task_name in ("Movie Task-Movie Task-run1", "Movie Task-run1"):
                             
-                            line_dict["Task_name"] = "Movie Task-test1"
+                            line_dict["Task_name"] = "run1.mp4"
                             linenumber = 0
 
-                        if task_name in ("Movie Task-Movie Task-test2", "Movie Task-test2"):
+                        if task_name in ("Movie Task-Movie Task-run2", "Movie Task-run2"):
                             
-                            line_dict["Task_name"] = "Movie Task-test2"
+                            line_dict["Task_name"] = "run2.mp4"
                             linenumber = 1
-                        if task_name in ("Movie Task-Movie Task-test3", "Movie Task-test3"):
+                        if task_name in ("Movie Task-Movie Task-run3", "Movie Task-run3"):
                             
-                            line_dict["Task_name"] = "Movie Task-test3"
+                            line_dict["Task_name"] = "run3.mp4"
                             linenumber = 2
 
                         line_dict["Probe Version"] = probeversions[linenumber]
@@ -190,7 +199,7 @@ for file in os.listdir("Tasks/log_file"):
                         line_dict["Probe Duration"] = probedurs[probe_iteration][int(probeversions[linenumber])]
                         line_dict["Probe Time"] = probeorders[probe_iteration][int(probeversions[linenumber])+1]
 
-                        with open("Analysis/output.csv", 'a', newline="") as outf:
+                        with open("Analysis/audio_esq_output.csv", 'a', newline="") as outf:
                             wr = csv.writer(outf)
                             wr.writerow(list(line_dict.values()))
                             ect = 0
@@ -241,3 +250,67 @@ for file in os.listdir("Tasks/log_file"):
                         sortingfunction(expdict["Experiment"],row,resps)  
                     
                 print(row)
+                
+## comprehension merging
+
+
+comp_files = glob.glob('Tasks/comp_file/*_run*_comp_output.csv')
+
+# Initialize an empty list to store individual DataFrames
+comp_dfs = []
+
+# Read each CSV file and append its DataFrame to the list
+for file in comp_files:
+    comp_df = pd.read_csv(file)  # Read the CSV file into a DataFrame
+    comp_dfs.append(comp_df)  # Append the DataFrame to the list
+
+# Concatenate all DataFrames in the list into a single DataFrame
+concatenated_comps = pd.concat(comp_dfs, ignore_index=True)
+
+# change videoname to Task_name
+concatenated_comps.rename(columns={'videoname': 'Task_name'}, inplace=True)
+
+# add subject string to idno
+concatenated_comps['idno'] = 'subject_' + concatenated_comps['idno'].astype(str)
+
+correct_responses = concatenated_comps[concatenated_comps['correctness'] == 'correct'] \
+                    .groupby(['idno', 'Task_name'])['correctness'].agg('count').reset_index()
+
+# Generate a multi-index with all unique combinations of idno and Task_name
+multi_index = pd.MultiIndex.from_product([concatenated_comps['idno'].unique(), concatenated_comps['Task_name'].unique()], names=['idno', 'Task_name'])
+
+# Create an empty DataFrame with the multi-index
+result_df = pd.DataFrame(index=multi_index).reset_index()
+
+# Merge result_df with correct_responses using a left join
+result_df = pd.merge(result_df, correct_responses, on=['idno', 'Task_name'], how='left')
+
+# Fill NaN values (occurs when there are no correct instances) with 0
+result_df['correctness'] = result_df['correctness'].fillna(0).astype(int)
+
+result_df.rename(columns={'correctness': 'correct_per_run'}, inplace=True)
+
+# read output back in 
+esq_output = pd.read_csv('Analysis/audio_esq_output.csv')
+
+# add comp data to esq_output
+all_output = pd.merge(esq_output, result_df, on = ['idno','Task_name'])
+
+# Group result_df by idno and sum the correct_per_run values for each idno
+overall_correctness_count = result_df.groupby('idno')['correct_per_run'].sum().reset_index()
+
+# Merge overall_correctness_count with all_output using a left join on idno
+all_output = pd.merge(all_output, overall_correctness_count, on='idno', how='left')
+
+# Fill NaN values (occurs when there are no correct instances for a specific idno) with 0
+all_output['correct_overall'] = all_output['correct_per_run_y'].fillna(0).astype(int)
+
+# Drop the intermediate column 'correct_per_run_y' if you want to
+all_output.drop(columns=['correct_per_run_y'], inplace=True)
+
+# Rename the final column to 'overall_correctness_count'
+all_output.rename(columns={'correct_per_run_x': 'correct_per_run'}, inplace=True)
+
+all_output.to_csv('Analysis/audio_esq_comp_output.csv', index = False)
+
+

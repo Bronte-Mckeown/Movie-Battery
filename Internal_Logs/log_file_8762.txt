@@ -1,0 +1,61 @@
+pygame 2.5.0 (SDL 2.28.0, Python 3.6.13)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[4815643, '1']
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+Now initializing Movie Task
+Now setting up Movie Task
+Now running Movie Task
+Success
+3.2598 	WARNING 	Speech-to-text recognition module not available (use command `pip install SpeechRecognition` to get it. Transcription will be unavailable.
+3.5106 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+37.9730 	WARNING 	Monitor specification not found. Creating a temporary one...
+80.1351 	WARNING 	0.18737726658582687: Video catchup needed, advancing self._nextFrameT from 0.1 to 0.13333333333333333
+80.2846 	WARNING 	0.33686546655371785: Video catchup needed, advancing self._nextFrameT from 0.26666666666666666 to 0.3
+80.4533 	WARNING 	0.5055277666542679: Video catchup needed, advancing self._nextFrameT from 0.4333333333333333 to 0.4666666666666666
+80.5201 	WARNING 	0.5723232666496187: Video catchup needed, advancing self._nextFrameT from 0.49999999999999994 to 0.5333333333333333
+80.6032 	WARNING 	0.6554434665013105: Video catchup needed, advancing self._nextFrameT from 0.5666666666666667 to 0.6
+80.6694 	WARNING 	0.7216188665479422: Video catchup needed, advancing self._nextFrameT from 0.6333333333333333 to 0.6666666666666666
+80.7363 	WARNING 	0.7885385665576905: Video catchup needed, advancing self._nextFrameT from 0.7 to 0.7333333333333333
+80.8032 	WARNING 	0.8554780667182058: Video catchup needed, advancing self._nextFrameT from 0.7666666666666666 to 0.7999999999999999
+80.8863 	WARNING 	0.9385762666352093: Video catchup needed, advancing self._nextFrameT from 0.8333333333333333 to 0.8666666666666666
+80.8864 	WARNING 	0.9386747665703297: Video catchup needed, advancing self._nextFrameT from 0.8666666666666666 to 0.8999999999999999
+80.8864 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+183.9349 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+365.8330 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+701.3483 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1772.4548 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+1886.0393 	WARNING 	0.1802504665683955: Video catchup needed, advancing self._nextFrameT from 0.1 to 0.13333333333333333
+1886.2075 	WARNING 	0.3484182667452842: Video catchup needed, advancing self._nextFrameT from 0.26666666666666666 to 0.3
+1886.2903 	WARNING 	0.43123536673374474: Video catchup needed, advancing self._nextFrameT from 0.3333333333333333 to 0.36666666666666664
+1886.3739 	WARNING 	0.5148476667236537: Video catchup needed, advancing self._nextFrameT from 0.39999999999999997 to 0.4333333333333333
+1886.3740 	WARNING 	0.5149103666190058: Video catchup needed, advancing self._nextFrameT from 0.4333333333333333 to 0.4666666666666666
+1886.4574 	WARNING 	0.5983576665166765: Video catchup needed, advancing self._nextFrameT from 0.49999999999999994 to 0.5333333333333333
+1886.5404 	WARNING 	0.6813042666763067: Video catchup needed, advancing self._nextFrameT from 0.5666666666666667 to 0.6
+1886.5404 	WARNING 	0.681366266682744: Video catchup needed, advancing self._nextFrameT from 0.6 to 0.6333333333333333
+1886.6054 	WARNING 	0.7463201666250825: Video catchup needed, advancing self._nextFrameT from 0.6666666666666666 to 0.7
+1886.9406 	WARNING 	1.0815851667430252: Video catchup needed, advancing self._nextFrameT from 0.9999999999999999 to 1.0333333333333332
+1886.9407 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+2221.2942 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2425.6936 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2538.0350 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2667.3786 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+2858.3234 	WARNING 	0.23875326663255692: Video catchup needed, advancing self._nextFrameT from 0.16666666666666666 to 0.19999999999999998
+2858.3898 	WARNING 	0.3051362666301429: Video catchup needed, advancing self._nextFrameT from 0.2333333333333333 to 0.26666666666666666
+2858.4570 	WARNING 	0.37235536659136415: Video catchup needed, advancing self._nextFrameT from 0.3 to 0.3333333333333333
+2858.5413 	WARNING 	0.45668376656249166: Video catchup needed, advancing self._nextFrameT from 0.36666666666666664 to 0.39999999999999997
+2858.6237 	WARNING 	0.5390480665955693: Video catchup needed, advancing self._nextFrameT from 0.4333333333333333 to 0.4666666666666666
+2858.6238 	WARNING 	0.5391576667316258: Video catchup needed, advancing self._nextFrameT from 0.4666666666666666 to 0.49999999999999994
+2858.7072 	WARNING 	0.6226410665549338: Video catchup needed, advancing self._nextFrameT from 0.5333333333333333 to 0.5666666666666667
+2858.7905 	WARNING 	0.7058650667313486: Video catchup needed, advancing self._nextFrameT from 0.6 to 0.6333333333333333
+2858.7905 	WARNING 	0.7059061666950583: Video catchup needed, advancing self._nextFrameT from 0.6333333333333333 to 0.6666666666666666
+2858.8903 	WARNING 	0.8056248666252941: Video catchup needed, advancing self._nextFrameT from 0.7 to 0.7333333333333333
+2858.8903 	WARNING 	Max reportNDroppedFrames reached, will not log any more dropped frames
+2935.3866 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3318.1365 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3482.1502 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)
+3695.7345 	WARNING 	RatingScale unnamed RatingScale: len(labels) not equal to len(tickMarks)

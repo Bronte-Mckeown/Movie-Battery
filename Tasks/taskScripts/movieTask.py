@@ -13,11 +13,11 @@ import csv
 import random
 
 ###################################################################################################
-def save_csv(responses_data, participant_id):
+def save_csv(responses_data, participant_id, clipname):
     current_directory = os.path.dirname(os.path.abspath(__file__))
     log_folder = os.path.join(current_directory, "..", "comp_file")
         
-    csv_path = os.path.join(log_folder, f"{participant_id}_comp_output.csv")
+    csv_path = os.path.join(log_folder, f"{participant_id}_{clipname}_comp_output.csv")
     
     with open(csv_path, "w", newline="") as csvfile:
         fieldnames = ['idno', 'videoname', 'qnumber', 'response', 'correctness']
@@ -112,7 +112,7 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever, p
                            depth=0.0)
 
     # update text stim to include instructions for task. 
-    if filename[1] == "resources/Movie_Task/videos/test1.mp4":
+    if filename[1] == "resources/Movie_Task/videos/run1.mp4":
         stim.setText(instructions1)
     else:
         stim.setText(instructions2)
@@ -216,32 +216,29 @@ def runexp(filename, timer, win, writer, resdict, runtime,dfile,seed,probever, p
             break
         
     # at the end of each clip, present comprehension questions
-    if filename[1] == "resources/Movie_Task/videos/test1.mp4":
+    if filename[1] == "resources/Movie_Task/videos/run1.mp4":
+        base_name = os.path.splitext(os.path.basename(filename[1]))[0]
+        clipname = base_name.split('.')[0]
         responses_data = present_comprehension_question(win, stim, 1, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
         responses_data = present_comprehension_question(win, stim, 2, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
         responses_data = present_comprehension_question(win, stim, 3, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
         responses_data = present_comprehension_question(win, stim, 4, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
-    if filename[1] == "resources/Movie_Task/videos/test2.mp4":
+        save_csv(responses_data, participant_id, clipname)
+    if filename[1] == "resources/Movie_Task/videos/run2.mp4":
+        base_name = os.path.splitext(os.path.basename(filename[1]))[0]
+        clipname = base_name.split('.')[0]
         responses_data = present_comprehension_question(win, stim, 5, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
         responses_data = present_comprehension_question(win, stim, 6, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
         responses_data = present_comprehension_question(win, stim, 7, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
         responses_data = present_comprehension_question(win, stim, 8, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
-    if filename[1] == "resources/Movie_Task/videos/test3.mp4":
+        save_csv(responses_data, participant_id, clipname)
+    if filename[1] == "resources/Movie_Task/videos/run3.mp4":
+        base_name = os.path.splitext(os.path.basename(filename[1]))[0]
+        clipname = base_name.split('.')[0]
         responses_data = present_comprehension_question(win, stim, 9, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
         responses_data = present_comprehension_question(win, stim, 10, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
         responses_data = present_comprehension_question(win, stim, 11, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
         responses_data = present_comprehension_question(win, stim, 12, participant_id, videoname, responses_data)
-        save_csv(responses_data, participant_id)
+        save_csv(responses_data, participant_id, clipname)
 
     return trialname
