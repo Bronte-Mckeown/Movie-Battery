@@ -27,6 +27,16 @@ Ian's TODO:
 
 ####################### Notes specific to mp4 studies (e.g., movie watching, audiobook, music), written by Bronte ##########################################
 
+Ok so here in the overview for how it all works (assume 3 clips):
+- Each subject has a predefined probe order for each clip and this is set up and read in from 'counterbalanced_orders_n{nparticipants}.csv' (e.g., subject 17 has the order 0,3,1)
+- When that subject number (e.g., 17) is entered into the GUI, probe orders are set to 0,3,1 for each clip respectively
+- Each of these orders corresponds to a row number in 'resources/Movie_Task/csv/probe_orders.csv'
+	- each row contains the time in seconds when each probe will be presented (so if there are 4 probes, 4 columns)
+		- e.g. order 0 stops at 60,200,300,420 so the first clip would stop at those times to present a probe
+- This information is also used to create the output file at the end (again, it uses subject number to get all this info)
+- 'resources/Movie_Task/csv/probe_durations.csv' has the same structure as 'resources/Movie_Task/csv/probe_orders.csv' but is the duration between each probe in seconds
+	- this is used in output file
+
 Ok, so for making new studies, the following python scripts are relevant:
 - Tasks/mainscript.py: this script calls the movieTask.py script and handles general things like the GUI, order of task presentation etc.
 - Tasks/taskScripts/movieTask.py: this script deals with the specifics of presenting movie/mp4 stimuli.
@@ -102,5 +112,35 @@ Modifying Tasks/taskScripts/movieTask.py to work with new stimuli:
 			- modify if statements to match the clip name
 				- "if filename[1] == "resources/Movie_Task/videos/run1.mp4":"
 			- repeat the responses_data and save_csv lines for as many questions you have for each clip and modify the question number
+
+## ANALYSIS
+Run Analysis/analysis.py to merge all ESQ output as well as comprehension output.
+- creates a column for correct per run and a column for correct over all
+
+Things to change/ might need to change:
+- it reads in the counterbalanced probe order csv that is generated using Tasks/taskScripts/resources/Movie_Task/csv/create_probe_orders_movie_task.py
+	- so this needs to match the filename created using that script
+- the name of the output file
+	- currently set to 'Analysis/audio_esq_output.csv' but can change to be specific to project
+- if there are a different number of clips to 3, you would need to add to this section:
+"probe1_version = probeversions_df.loc[probeversions_df['participant_number'] == int(subject), 'Clip 1'].values
+ probe2_version = probeversions_df.loc[probeversions_df['participant_number'] == int(subject), 'Clip 2'].values
+ probe3_version = probeversions_df.loc[probeversions_df['participant_number'] == int(subject), 'Clip 3'].values
+ probeversions = [probe1_version[0], probe2_version[0], probe3_version[0]]"
+
+- this section can be changed to have names that work for your project / whatever names are used in comprehension outputs:
+"if task_name in ("Movie Task-Movie Task-run1", "Movie Task-run1"):
+                            
+                            line_dict["Task_name"] = "run1.mp4"
+                            linenumber = 0
+
+                        if task_name in ("Movie Task-Movie Task-run2", "Movie Task-run2"):
+                            
+                            line_dict["Task_name"] = "run2.mp4"
+                            linenumber = 1
+                        if task_name in ("Movie Task-Movie Task-run3", "Movie Task-run3"):
+                            
+                            line_dict["Task_name"] = "run3.mp4""
+        
 
 

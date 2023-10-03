@@ -115,8 +115,6 @@ for file in os.listdir("Tasks/log_file"):
         probeversions = [probe1_version[0], probe2_version[0], probe3_version[0]]
         
         subject = "subject_"+str(int(re.findall(r'\d+', subject)[0]))
-
-        
         
         line_dict["idno"] = subject
         readstart = False
