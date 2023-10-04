@@ -75,14 +75,15 @@ It will save the following csvs:
 
 - this will need updating if there are a different number of clips (remove if less than 3, add more if more than 3)
 	- this is reading in probe order for each clip based on subject number inputted to GUI by user.
-        probe1_version = probeorders.loc[probeorders['participant_number'] == int(metacoll.INFO['Subject']), 'Clip 1'].values 
-        probe2_version = probeorders.loc[probeorders['participant_number'] == int(metacoll.INFO['Subject']), 'Clip 2'].values
-        probe3_version = probeorders.loc[probeorders['participant_number'] == int(metacoll.INFO['Subject']), 'Clip 3'].values
+probe1_version = probeorders.loc[probeorders['participant_number'] == int(metacoll.INFO['Subject']), 'Clip 1'].values 
+probe2_version = probeorders.loc[probeorders['participant_number'] == int(metacoll.INFO['Subject']), 'Clip 2'].values
+probe3_version = probeorders.loc[probeorders['participant_number'] == int(metacoll.INFO['Subject']), 'Clip 3'].values
     
 - the name of each mp4 clip will need changing as well as the number of clips if using a different number than 3 (remove if less than 3, add more if more than 3)
-        movieTask1 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probe_orders.csv","resources/Movie_Task/videos/run1.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1,int(probe1_version))
-        movieTask2 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probe_orders.csv","resources/Movie_Task/videos/run2.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2,int(probe2_version))
-        movieTask3 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probe_orders.csv","resources/Movie_Task/videos/run3.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3,int(probe3_version))
+  
+movieTask1 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probe_orders.csv","resources/Movie_Task/videos/run1.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 1,int(probe1_version))
+movieTask2 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probe_orders.csv","resources/Movie_Task/videos/run2.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 2,int(probe2_version))
+movieTask3 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/probe_orders.csv","resources/Movie_Task/videos/run3.mp4"],"Movie Task",  metacoll.sbINFO.data, int(metacoll.INFO['Block Runtime']),'resources//Movie_Task//csv//sorted_filmList.csv', 3,int(probe3_version))
 
 - this will only need changing if different number of clips used
         moviegroup = [movieTask1,movieTask2,movieTask3]
@@ -94,10 +95,12 @@ It will save the following csvs:
 - modify instructions1 and instructions2 if you are using something other than audiobooks. 
 	- currently set up so instructions1 is shown before 1st clip, instructions2 is shown after every other clip but this is set based on filename which might not be appropriate if you are randomizing clip presentation.
 		- if you are randomizing presentation, just figure out one set of instructions and remove if statement:
-	       if filename[1] == "resources/Movie_Task/videos/run1.mp4":
-  			stim.setText(instructions1)
-               else:
-    			stim.setText(instructions2)
+    
+if filename[1] == "resources/Movie_Task/videos/run1.mp4":
+	stim.setText(instructions1)
+else:
+	stim.setText(instructions2)
+ 
 - this script is currently set up to present comprehension questions at the end of each clip.
 	- the present_comprehension_question function presents the questions
 		- questions presented are set in Tasks/taskScripts/resources/Movie_Task/csv/questions.csv file (see above)
@@ -106,7 +109,9 @@ It will save the following csvs:
 		- these lines present questions at the end of each clip and save responses
 	- if you want to present your own questions:
 		- modify if statements to match the clip name
-		if filename[1] == "resources/Movie_Task/videos/run1.mp4":
+    
+if filename[1] == "resources/Movie_Task/videos/run1.mp4":
+
 	- repeat the responses_data and save_csv lines for as many questions you have for each clip and modify the question number
 
 ### ANALYSIS
@@ -119,6 +124,7 @@ It will save the following csvs:
 - the name of the output file
 	- currently set to 'Analysis/audio_esq_output.csv' but can change to be specific to project
 - if there are a different number of clips to 3, you would need to add to this section:
+
 probe1_version = probeversions_df.loc[probeversions_df['participant_number'] == int(subject), 'Clip 1'].values
 probe2_version = probeversions_df.loc[probeversions_df['participant_number'] == int(subject), 'Clip 2'].values
 probe3_version = probeversions_df.loc[probeversions_df['participant_number'] == int(subject), 'Clip 3'].values
