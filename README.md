@@ -89,6 +89,7 @@ movieTask3 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/pr
         moviegroup = [movieTask1,movieTask2,movieTask3]
 
 - if you want the clip order to be randomized, you should uncomment out the following:
+
 	random.shuffle(fulltasklist)
 
 ### Modifying Tasks/taskScripts/movieTask.py to work with new stimuli:
@@ -96,10 +97,10 @@ movieTask3 = task(taskScripts.movieTask, datafile, ["resources/Movie_Task/csv/pr
 	- currently set up so instructions1 is shown before 1st clip, instructions2 is shown after every other clip but this is set based on filename which might not be appropriate if you are randomizing clip presentation.
 		- if you are randomizing presentation, just figure out one set of instructions and remove if statement:
     
-if filename[1] == "resources/Movie_Task/videos/run1.mp4":
-	stim.setText(instructions1)
-else:
-	stim.setText(instructions2)
+		if filename[1] == "resources/Movie_Task/videos/run1.mp4":
+			stim.setText(instructions1)
+		else:
+			stim.setText(instructions2)
  
 - this script is currently set up to present comprehension questions at the end of each clip.
 	- the present_comprehension_question function presents the questions
@@ -110,7 +111,7 @@ else:
 	- if you want to present your own questions:
 		- modify if statements to match the clip name
     
-if filename[1] == "resources/Movie_Task/videos/run1.mp4":
+		if filename[1] == "resources/Movie_Task/videos/run1.mp4":
 
 	- repeat the responses_data and save_csv lines for as many questions you have for each clip and modify the question number
 
@@ -131,18 +132,14 @@ probe3_version = probeversions_df.loc[probeversions_df['participant_number'] == 
 probeversions = [probe1_version[0], probe2_version[0], probe3_version[0]]
 
 - this section can be changed to have names that work for your project / whatever names are used in comprehension outputs:
-if task_name in ("Movie Task-Movie Task-run1", "Movie Task-run1"):
-                            
-                            line_dict["Task_name"] = "run1.mp4"
-                            linenumber = 0
-
-                        if task_name in ("Movie Task-Movie Task-run2", "Movie Task-run2"):
-                            
-                            line_dict["Task_name"] = "run2.mp4"
-                            linenumber = 1
-                        if task_name in ("Movie Task-Movie Task-run3", "Movie Task-run3"):
-                            
-                            line_dict["Task_name"] = "run3.mp4"
+if task_name in ("Movie Task-Movie Task-run1", "Movie Task-run1"):                    
+    line_dict["Task_name"] = "run1.mp4"
+    linenumber = 0
+if task_name in ("Movie Task-Movie Task-run2", "Movie Task-run2"):                     
+    line_dict["Task_name"] = "run2.mp4"
+    linenumber = 1
+if task_name in ("Movie Task-Movie Task-run3", "Movie Task-run3"):
+    line_dict["Task_name"] = "run3.mp4"
         
 
 
